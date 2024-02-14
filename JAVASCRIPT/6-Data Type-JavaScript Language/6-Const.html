@@ -1,0 +1,22 @@
+<!--            Const
+Const:- It Configures a block Scope variable.
+-> It allows only Initialization.
+-> It will not allow declaring and Assignment.
+-> It is more restricted.
+
+const x; // invalid
+x=10;    // invalid
+const x = 10; // valid
+x = 20;   // invalid
+-> It will not allow Shadowing and Hoisting.
+-->
+
+<script>
+    "use strict";
+    function demo()
+    {
+        const x = prompt("Enter Number");
+        document.write("x=" + x);
+    }
+    demo();
+</script>

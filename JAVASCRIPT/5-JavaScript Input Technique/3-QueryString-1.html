@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query String</title>
+    <script>
+        function bodyload(){
+            querystring = location.search;
+            equalposition = querystring.indexOf("=");
+            foldername = querystring.slice(equalposition+1);
+            document.querySelector("p").innerHTML = "Folder Created :"  + foldername;
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <p></p>
+</body>
+</html>

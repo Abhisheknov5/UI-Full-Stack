@@ -1,0 +1,51 @@
+<!--
+FAQ: What is minfication?
+Ans:  It is a coding technique used by developers to compress the code.
+         Minified files are used in production.
+
+FAQ: How JavaScript refers HTML elements?
+Ans: JavaScript provides various reference techniques for developer in order to access HTML elements from page and handle dynamic interactions.
+
+1. JavaScript can refer HTML elements by using BOM hierarchy
+      [Browser Object Model]
+
+- It is the native method for browser.
+- Hence it is faster.
+- Refering using BOM hierarchy requires lot of index reference, which you have to update everytime when element position changes in page.
+
+Syntax:
+        window.document.images[]
+        window.document.forms[].elements[]
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Hierarchy 1</title>
+    <script type="text/javascript">
+        function bodyload() {
+             window.document.images[0].src="../public/images/Amazon1.jpg";
+             window.document.forms[0].elements[1].value= "Register";
+             window.document.forms[1].elements[1].value= "Login";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img border="1" width="100" height="100">
+    </div>
+    <div>
+        <h3>Register</h3>
+        <form>
+            User Name: <input type="email"> <input type="button">
+        </form>
+    </div>
+    <div>
+        <h3>Login</h3>
+        <form>
+            Mobile: <input type="text"> <input type="button">
+        </form>
+    </div>
+</body>
+</html>

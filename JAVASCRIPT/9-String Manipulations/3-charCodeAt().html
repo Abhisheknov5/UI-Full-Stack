@@ -1,0 +1,37 @@
+<!--
+3. charCodeAt()        : It returns the ASCII code of character a specified index.
+
+    var name = "Ajay";
+    name.charCodeAt(0);        65        => A-65, Z=90
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charCodeAt</title>
+    <script type="text/javascript">
+        function VerifyUserName() {
+            var username = document.getElementById("UserName").value;
+            var userError = document.getElementById("UserError");
+            if(username.charCodeAt(0)>=65 && username.charCodeAt(0)<=90){
+                userError.innerHTML = "";
+            } else {
+                userError.innerHTML = "User Name must start with Uppercase letter.".fontcolor("red");
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd>
+            <input type="text" onblur="VerifyUserName()" id="UserName">
+        </dd>
+        <dd id="UserError"></dd>
+    </dl>
+</body>
+</html>

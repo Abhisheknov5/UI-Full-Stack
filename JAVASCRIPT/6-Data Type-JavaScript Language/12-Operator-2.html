@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Odd</title>
+    <script>
+        function VerifyNumber() {
+            var n = parseInt(document.getElementById("Even").value);
+            var lblError = document.getElementById("lblError");
+            if(n % 2 == 0)
+            {
+                document.write("Submitted..");
+            } else {
+                lblError.innerHTML = "Not an Even Number";
+            }
+        }
+    </script>   
+</head>
+<body>
+    Enter Even Number: <input type="text" onblur="VerifyNumber()" id="Even"> <span id="lblError">
+    </span>
+</body>
+</html>

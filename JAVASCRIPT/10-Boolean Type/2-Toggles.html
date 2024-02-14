@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function sortClick() {
+            var btnSort = document.getElementById("btnSort");
+            var lblSort = document.getElementById("lblSort");
+            btnSort.className = (btnSort.className === "bi bi-sort-alpha-down")?"bi bi-sort-alpha-up":"bi bi-sort-alpha-down";
+            lblSort.innerHTML = (btnSort.className === "bi bi-sort-alpha-down")?"Sort Ascending":"Sort Descending";
+        }   
+        function StockChange() {
+            var optStock = document.getElementById("optstock");
+            var lblStock = document.getElementById("lblStock");
+            lblStock.innerHTML = (optStock.checked)?"Available":"Out of Stock";
+
+            var btnCart = document.getElementById("btnCart");
+            btnCart.disabled = (optStock.checked)?false:true;
+
+            var img = document.querySelector("img");
+            img.style.display = (optStock.checked)?"block":"none";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="sortClick()" id="btnSort" class="bi bi-sort-alpha-down"></button> <span id="lblSort">Sort Ascending</span>
+    <br><br>
+    <input onchange="StockChange()" type="checkbox" id="optstock"> <label id="lblStock">Out of Stock</label>
+    <br><br>
+    <img style="display: none;" src="../public/images/Amazon1.jpg" width="200" height="200">
+    <br><br>
+    <button class="bi bi-cart4" id="btnCart" disabled> Buy </button>
+</body>
+</html>  
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emi Calculator</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        section {
+            height: 300px;
+        }
+        input[type="range"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="container-fluid bg-dark text-white">
+    <h1 class="text-center">Personal Loan EMI Calculator</h1>
+    <div class="bg-light text-dark p-3">
+        <div class="row">
+            <div class="col">
+                Amount You need &#8377; <input type="text">
+            </div>
+            <div class="col">
+                for <input type="text" size="4"> Years
+            </div>
+            <div class="col">
+                Interest rate <input type="text" size="4"> %
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <input type="range" min="100000" max="100000" value="10">
+            </div>
+            <div class="col">
+                <input type="range" min="1" max="5" value="2">
+            </div>
+            <div class="col">
+                <input type="range" min="10.45" max="18.45" value="12.445" step="0.01">
+            </div>
+            <div class="row mt-2">
+                <div class="col">
+                    <span>&#8377; 1,00,0000</span>
+                    <span class="float-end">&#8377; 10,00,0000</span>
+                </div>
+                <div class="col">
+                    <span>1</span>
+                    <span class="float-end">5</span>
+                </div>
+                <div class="col">
+                    <span>10.45%</span>
+                    <span class="float-end">18.45%</span>
+                </div>
+            </div>
+            <div class="mt-4">
+                <div class="col text-end">
+                    <button class="btn btn-primary">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

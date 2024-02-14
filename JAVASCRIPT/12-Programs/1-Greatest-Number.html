@@ -1,0 +1,30 @@
+<!--
+Programs:
+
+1.  Write a program to find the greatest among 2 numbers.
+
+     function FindGreatest(a, b)
+     {
+        //your code
+     }
+
+     FindGreatest(10, 30);            => b is greater than a
+     FindGreatest(20, 10);            => a is greater than b
+     FindGreatest(10, 10);            => a and b are equal
+-->
+<script>
+    function FindGreatest(a,b)
+    {
+        if(a==b)
+        {
+            document.write(`a=${a} and b=${b} are equal`);
+        }else {
+            if(a>b){
+                document.write(`a=${a}is greater than b=${b}`);
+            }else{
+                document.write(`b=${b}is greater than a=${a}`);
+            }
+        }
+    }
+    FindGreatest(40,40);
+</script>

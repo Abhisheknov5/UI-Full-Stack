@@ -1,0 +1,57 @@
+<!--   String Formatting in JavaScript
+String Formatting in JavaScript:-
+- JavaScript provides several methods that are used to format a string dynamically.
+- String formatting includes
+            bold()        <b>
+            italics()        <i>
+            sup()        <sup>            => They are RC data type
+            sub()        <sub>
+            fontcolor()    <font color>
+            fontsize()        <font size>
+            toUpperCase()
+            toLowerCase() etc..
+
+Syntax:
+    var msg = "Welcome to JavaScript";
+    document.querySelector("p").innerHTML = msg.bold().italics().fontcolor('red');
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ChangeCase() {
+            var UserTextBox = document.getElementById("UserName");
+            UserTextBox.value = UserTextBox.value.toUpperCase();
+        }
+        function VerifyMobile() {
+            var mobile = document.getElementById("Mobile").value;
+            var mobileError = document.getElementById("MobileError")
+            if(mobile.length==10) {
+                mobileError.innerHTML = "Mobile Verified Successfully..".fontcolor('green').bold().italics();
+            } else {
+                mobileError.innerHTML = "Invalid Mobile".fontcolor('red').italics();
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Register User</legend>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" id="UserName" onkeyup="ChangeCase()" placeholder="Block Letters"></dd>
+            <dt>Mobile</dt>
+            <dd><input type="text" id="Mobile" onblur="VerifyMobile()"></dd>
+            <dd id="MobileError"></dd>
+        </dl>
+    </fieldset>
+</body>
+</html>
+
+<!--
+You can implement  Style Binding and ClassBinding to apply more formats for elements dynamically. 
+-->

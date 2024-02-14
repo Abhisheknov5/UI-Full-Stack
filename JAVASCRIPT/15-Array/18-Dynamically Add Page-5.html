@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-Dynamically Add Page-5</title>
+    <script>
+        var categories = ["All","Electronic","Footwear", "Fashion"];
+        function LoadCLick() {
+            document.querySelector("ol").innerHTML = "";
+            document.querySelector("select").innerHTML = "";
+
+            categories.map(function(category){
+                var li = document.createElement("li");
+                li.innerHTML = category;
+
+                document.querySelector("ol").appendChild(li);
+
+                var option = document.createElement("option");
+                option.text = category;
+                option.value = category;
+
+                document.querySelector("select").appendChild(option);
+
+                var link = document.createElement("a");
+                link.href = "#";
+                link.innerHTML = category;
+                link.style.marginRight = "50px";
+
+                document.querySelector("nav").appendChild(link);
+
+                var ulli = document.createElement("li");
+                var input = document.createElement("input");
+                input.type = "checkbox";
+                var label = document.createElement("label");
+                label.innerHTML = category;
+
+                ulli.appendChild(input);
+                ulli.appendChild(label);
+
+                document.querySelector("ul").appendChild(ulli);
+            })
+        }
+    </script>
+</head>
+<body>
+    <button onclick="LoadCLick()">Load</button>
+    <br><br>
+    <ol>
+
+    </ol>
+    <br>
+    <select>
+
+    </select>
+    <br><br>
+    <nav>
+        
+    </nav>
+    <br><br>
+    <h3>Select categories</h3>
+    <ul style="list-style: none;">
+
+    </ul>
+</body>
+</html>

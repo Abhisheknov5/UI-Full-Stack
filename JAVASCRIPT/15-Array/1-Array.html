@@ -1,0 +1,141 @@
+<!--
+Array:-
+- Arrays are used in computer programming to reduce overhead and complexity.
+- Array can reduce overhead by storing values in sequential order.
+- Array can reduce complexity by storing multiple values under one reference name.
+- Array can store various types of values in sequential order.
+- Few technologies restrict array to same data type. However it is not same for other languages or technologies.
+- Array size can change dynamically, however some languages can't change the size of array dyamically.
+
+Array
+- Reduce Overhead
+- Reduce Complexity
+- JS array can store various types of values
+- JS array can change size dynamically
+
+
+Configuring Array :-
+- Array configuration comprises of declaring and initialization or assignment of memory.
+
+            var values;        // declaring array
+
+- Memory initialization and assignment can be done by using 2 techniques
+           
+            a) [ ]
+            b) Array()
+
+            var values = [ ];            => intialization
+            var values = new Array();
+
+                        (or)
+
+             var values;
+             values = [ ];                => assignment
+
+             var values;
+             values = new Array();
+new keyword => Dynamic memory Allocation Operator.
+Dynamic memory means Discrete DisConnected.
+[]=>This refers to Static.
+
+FAQ: What is difference between array meta character "[ ]" and  array constructor "Array()"?
+Ans :
+     - Meta character "[]" configures static memory
+     - Memory is allocated for first request and the same is used across multiple
+       requests.
+     - It refers to contineous memory.
+
+     - Array() constructor configures dynamic memory.
+     - "new" is dynamic memory allocation operator.
+     - It refers to discreet memory.
+     - Memory is newly allocated for every request.
+   
+
+Assign or Initialize Elements :-
+- Array values are known as elements.
+- You can initialize elements directly.
+
+Syntax:
+        var values = [ "A", 10, true];
+       
+        var values = new Array("A", 10, true);
+
+- You can assign elements using the reference of array properties, which map to array index.
+
+Syntax:
+        var values = [];
+        values[0] = 10;
+        values["1"] = 20;
+
+Note: Property is a string type that maps to index, which is number type.
+
+            ["0"] => [0]
+-->
+<script>
+    var values = [];
+    values["0"] = 40;
+    values[1] = 20;
+    values["2"] = "C";
+    values[3] = "B";
+    values[4] = true;
+
+    for(var property in values){
+        document.write(`${property} [${typeof property}] : ${values[property]} [${typeof values[property]}] <br>`);
+    }
+    document.write(values[4]);
+
+</script>
+
+<!--
+- You can access the elements using the reference of property.
+
+      var values = [10, 20, 30];
+
+      console.log(values[1]);            => 20
+      console.log(values["2"]);        => 30
+
+- You can store any type of data in array
+
+    a) Primitive
+    b) Non Primitive
+    c) Function Type
+
+
+Syntax:
+    var values = [number, string, boolean, array, function(){ }];
+
+- Function configured inside array is always anonymous [without name].
+- Anonymous functions are accessed using IIFE pattern.
+  [Immediately Invoked Function Expression]
+
+        values[5]()
+
+-->
+<br><br>
+<script>
+    var values = [10, true, "A", ["Delehi","Hyderabadd"], function(){document.write("Hello ! from Array")}];
+    document.write(values[3] + "<br>");
+    values[4]();
+</script>
+
+<br><br>
+<!--Annonymous Function Mechanism:-
+- Function configured inside array is always anonymous [without name].
+- Anonymous functions are accessed using IIFE pattern.
+  [Immediately Invoked Function Expression]
+
+        values[5]()
+
+-->
+<script>
+    (function()
+    {
+        document.write("Welcome");
+    }) ()
+</script>
+<br><br>
+
+<script>
+    var data = [[10,20],["Delhi","Hyderabad"],[true,false],[["HTML","CSS"]]];
+    document.write(data[3][0][0]);
+</script>

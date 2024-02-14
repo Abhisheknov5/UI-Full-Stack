@@ -1,0 +1,72 @@
+<!--
+Various Operations on Number Type:-
+- JavaScript provides operators and Math functions to handle various interactions with numeric values.
+
+- The operators for numeric types
+
+    +        Addition
+    -        Subtraction
+    *        Multiplication
+    /        Division
+    %        Modulus Division
+    **        Power            
+    ++        Increment
+    --        Decrement
+
+Power    =>  2**3 = 8        
+Increment => a++    => a = a + 1;
+Decrement  => a--  =>  a = a - 1;
+
+FAQ's:
+1. What is post increment or post decrement?
+A. It is the process of incrementing or decrementing a value after assignment.
+
+        var x = 10;
+        var y = x++;            x=11, y=10
+        var y = x--;            x=9 , y =10
+
+
+2. What is pre increment or pre decrement?
+A. It is the process of incrementing or decrementing a value before assignment.
+
+        var x = 10;
+        var y = ++x;            x=11, y=11
+        var y = --x;            x=9, y=9
+
+-->
+<!-- Rotation of Image-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotation of Image</title>
+    <script type="text/javascript">
+        var position = 0;
+        function RightButtonClick() {
+            position++;  // position=position+1
+            document.querySelector("img").style.marginLeft = position + "px"; 
+        }
+        function LeftButtonClick() {
+            position--;  // position=position-1
+            document.querySelector("img").style.marginLeft = position + "px";
+        }
+        var angle = 0;
+        function RotateClick(){
+            angle++;
+            document.querySelector("img").style.rotate = angle + "deg";
+        }
+
+    </script>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <button onclick="LeftButtonClick() " > &laquo; </button>
+    <button onclick="RightButtonClick()"> &laquo; </button>
+    <button onclick="RotateClick()" class="bi bi-arrow-clockwise"></button>
+    <br><br>
+    <div>
+        <img src="../public/images/Amazon1.jpg" width="200" height="200">
+    </div>
+</body>
+</html>

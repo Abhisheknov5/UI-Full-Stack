@@ -1,0 +1,46 @@
+<!-- JavaScript Output Techniques
+JavaScript Output Techniques:-
+- JavaScript provides various output techniques for emmiting a value.
+- Output is the process of rendering the emmited value.
+- JavaScript output techniques include
+
+        1. alert()
+        2. confirm()
+        3. document.write()
+        4. console methods
+        5. innerText
+        6. innerHTML
+        7. outerHTML
+        8. textContent
+
+alert():-
+- It is a javascript window method which can display output in a message box.
+- It can emit the value or result of any expression.
+
+Syntax:
+        alert("Hello !");
+        alert(30);
+        alert(20 + 20);    
+
+- It will not allow to cancel.
+- It is RC data type, will not allow formats for text.
+- It will not allow any markup.
+- You can display multi line content using "\n" for line break.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert</title>
+    <script>
+        function DeleteClick() {
+            alert("Record will be deleted\nAre you sure?");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+</body>
+</html>

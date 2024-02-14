@@ -1,0 +1,78 @@
+<!--
+  match()
+- It is a boolean function that verifies the given value with a regular expression and return true if value is matching with regular expression.
+
+- Regular expression is defined within "/  /".
+- A regular expression comprises of meta characters and quantifiers.
+
+Syntax:
+    var mobile = "+919876543210";
+    var regExp = /\+91\d{10}/;
+
+    if(mobile.match(regExp))
+    {
+     console.log("Valid");
+    }
+    else {
+      console.log("Invalid");
+    }
+code logic:- 
+4 to 15 chars with atleast one Upper case Letter.
+<4 Poor Password
+4 to 15 but no uppercase Weak Password
+4 to 15 with uppercase Strong Password
+\w refer to alphanumeric and underscore
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Pssword</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function VerifyPassword() {
+            var password = document.getElementById("txtPassword").value;
+            var regExp = /(?=.*[A-Z])\w{4,15}/;
+            var lblError = document.getElementById("lblError");
+            var peogress = document.getElementById('progress');
+
+            if(password.length==0){
+                lblError.innerHTML = "Password Required";
+            } else {
+            if(password.match(regExp)){  
+                lblError.innerHTML = "Strong Password";
+                progress.style.width = "100%";
+                progress.className = "progress-bar bg-success"
+            } else {
+                if(password.length<4) {
+                    lblError.innerHTML = "Poor Password";
+                    progress.style.width = "20%"; 
+                    progress.className ="progress-bar bg-danger"
+                } else  {
+                    lblError.innerHTML = "Weak Password".fontcolor('gold');
+                    progress.style.width = "60%";
+                    progress.className = "progress-bar bg-warning"
+                }
+            }
+
+        }
+    }
+
+    </script>
+</head>
+<body class="container-fluid">
+    <h2>Register User</h2>
+    <dl class="w-25">
+        <dt>Password</dt>
+        <dd>
+            <input type="password" onkeyup="VerifyPassword()" id="txtPassword" class="form-control">
+            <div class="progress mt-1">
+                <div class="progress-bar" id="progress">
+                    <span id="lblError"></span>
+                </div>
+            </div>
+        </dd>
+    </dl>
+</body>
+</html>

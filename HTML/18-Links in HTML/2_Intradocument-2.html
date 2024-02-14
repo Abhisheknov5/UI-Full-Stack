@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intra Document 2</title>
+    <style>
+        .card {
+            width: 200px;
+            box-shadow: 2px 2px 2px gray;
+            padding: 5px;
+            margin: 10px;
+            height: 200px;
+            text-align: center;
+        }
+        .card:target {
+            background-color: black;
+            color: white;
+            border-radius: 200px;
+        }
+        main {
+            display: flex;
+        }
+        nav {
+            text-align: center;
+            padding: 20px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <span><a href="#html">HTML</a></span>
+        <span><a href="#CSS">CSS</a></span>
+        <span><a href="#js">JavaScript</a></span>
+    </nav>
+    <main>
+        <div class="card" id="html">
+            <h2>HTML</h2>
+            <p>It is a markup language</p>
+        </div>
+        <div class="card" id="CSS">
+            <h2>CSS</h2>
+            <p>It configures Style</p>
+        </div>
+        <div class="card" id="js">
+            <h2>JavaScript</h2>
+            <p>It manipulates DOM.</p>
+        </div>
+    </main>
+    
+</body>
+</html>

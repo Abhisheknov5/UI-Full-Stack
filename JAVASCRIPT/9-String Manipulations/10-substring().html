@@ -1,0 +1,17 @@
+<!--
+10. substring():- It can read and returns the chars between specified index, but
+bi-directional.
+ 
+Syntax: substring
+
+    msg.substring(startIndex, endIndex);   => end can be bi-directional
+    msg.substring(7, 16)    => from 7 to 16 index
+    msg.substring(7,0)        => from 7 to 0 index [left]    
+    msg.substring(7,3)        => from 7 to 3 index [left]
+    msg.substring(7)        => from 7 to end
+-->
+
+<script>
+    var msg = "Welcome to JavaScript";
+    document.write(msg.substring(7, 16) + "<br>");
+</script>

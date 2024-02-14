@@ -1,0 +1,23 @@
+<!--
+Symbol:-
+- It is a primitive data type used to configure unique hidden fields in an object.
+- Field is available and used individually, however it is hidden over iterations.
+
+Syntax:
+      var Id = Symbol();
+     
+       [Id] : value
+-->
+<script>
+    var Id = Symbol();
+    var product = {
+        [Id]: 2,
+        Name: "Tv",
+        Price: 35000.44
+    }
+    for(var property in product)
+    {
+        document.write(`${property}-${product[property]}<br>`);
+    }
+    document.write(`Id=${product[Id]}`);
+</script>

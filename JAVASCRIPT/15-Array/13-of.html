@@ -1,0 +1,24 @@
+<!--
+- Explicitly you can read array elements and properties by using loops and iterators
+
+    for..in  : It returns all properties of array [0, 1, 2, 3..]
+    for..of  : It returns all values of array
+
+Syntax:
+    for(var property in collection)
+    {
+    }
+
+    for(var value of collection)
+    {
+    }
+-->
+<script>
+    document.write(" of = <br>");
+   var sales = [45000, 24000, 67000, 26000, 78000];
+   for(var property of sales)
+   {
+       document.write(`${property} : ${sales[property]} <br>`);
+   }
+
+</script>

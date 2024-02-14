@@ -1,0 +1,44 @@
+<!--
+3. JavaScript can refer HTML elements by using "ID".
+
+- Every element can have a unique ID.
+- JavaScript can access elements directly using the ID reference method
+   
+    document.getElementById(" ");
+
+- You can access element from any level of hiearchy without refering to its parent.
+- ID reference is also used by CSS selectors, where ID can be common for multiple elements.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Hierarchy 3</title>
+    <script type="text/javascript">
+        function bodyload(){
+            document.getElementById("pic").src="../public/images/Amazon1.jpg";
+            document.getElementById("btnLogin").value="Login";
+            document.getElementById("btnRegister").value="Register";
+        }
+        
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img width="100" id="pic" height="100" border="1">
+    </div>
+    <div>
+        <form>
+            <h2>Register User</h2>
+            Your Name: <input type="text" > <input id="btnRegister" type="button">
+        </form> 
+    </div>
+    <div>
+        <form>
+            <h2>Login</h2>
+            Your Email: <input type="email"> <input id="btnLogin" type="button">
+        </form>
+    </div>
+</body>
+</html>

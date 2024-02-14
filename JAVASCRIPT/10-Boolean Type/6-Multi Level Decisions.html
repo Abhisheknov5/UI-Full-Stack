@@ -1,0 +1,93 @@
+<!--
+Multi Level Decisions:-
+
+- In this approach check a condition and move forward only when condition evalutes to true.
+- It also uses only one condition to verify to report the exact issues when a set of conditions are checked.
+
+Bad Code:
+    if (card==="" &&  cvv===""  && expiry==="")
+    {
+      statements;
+    }
+    else {
+      statements;
+    }
+
+Good Code
+    if (condition1)
+    {
+        if(condition2) {
+          statement on all conditions true;
+        }
+        else {
+        statement on  condition2 false;
+        }
+    }
+    else
+    {
+      statement on condition1 false;
+    }
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiLevel Decision</title>
+    <script>
+        function PayClick() {
+            var card = document.getElementById("Card").value;
+            var cvv =  document.getElementById("Cvv").value;
+            var expiry = document.getElementById("Expiry").value;
+            var msg = document.querySelector("p");
+
+            if(card=="123456789") {
+                if(cvv==="456")
+                {
+                    if(expiry==="2024") {
+                        document.write("<h2>Payment Successfully..</h2>")
+
+                    } else {
+                        msg.innerHTML = "Invalid Expiry".fontcolor('red');
+                    }
+                }
+                else {
+                    msg.innerHTML = "Invalid Cvv".fontcolor('red');
+                }
+            }
+            else {
+                msg.innerHTML = "Invalid Card".fontcolor('red');
+            }
+        }
+    </script>
+   </head> 
+<body>
+    <fieldset>
+        <legend>Payment Details</legend>
+        <dl>
+            <dt>Card Number</dt>
+            <dd><input type="text" id="Card"></dd>
+            <div id="CvvContainer">
+                <dt>Cvv</dt>
+                <dd><input type="text" id="Cvv" size="4"></dd>
+            </div>
+        <div id="ExpiryContainer">
+            <dt>Expiry</dt>
+            <dd>
+                <select id="Expiry">
+                    <option>Select Expiry</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                </select>
+            </dd>
+            
+        </div>
+        </dl>
+        <button id="btnPay" onclick="PayClick()">Pay</button>
+    </fieldset>
+    <p align="center"></p>
+</body>
+</html>

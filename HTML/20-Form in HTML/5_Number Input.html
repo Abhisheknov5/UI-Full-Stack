@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Input</title>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text"></dd>
+            <dt>Password</dt>
+            <dd><input type="password" required pattern="\w{4,10}" placeholder="Password must have 4 to 10 character"></dd>
+            <dt>Age</dt>
+            <dd><input type="number" min="15" max="35" name="age" step="3"></dd>
+            <dt>Interest Rate</dt>
+            <dd><input type="number" name="Rate" min="10.34" max="18.46" step="0.01"></dd>
+            </dl>
+            <button>Register</button>
+    </form>
+
+</body>
+</html>

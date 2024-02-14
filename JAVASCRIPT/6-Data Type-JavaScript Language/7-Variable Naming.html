@@ -1,0 +1,43 @@
+<!--         Variable Naming
+Variable Naming:- Variable Name must start with an Alphabet.
+-> You can start with "_" but not recommended to use Special Characters.
+-> It can have alpha numeric name.
+-> It can not be a Keyword.
+var Sales2023; // valid
+var 2023Sales; // invalid
+var _2023; // Valid
+var for; // invalid
+var class; //invalid
+-> It can be max 255 char long[ECMA].
+-> It must speak what it is
+var userName;
+var userAge;
+-->
+
+<!--   Global Scope for Variable
+Global Scope for Variable:- It refers to Variable, which is accessible to all functions.
+-> To make a Variable global in scope, You have to declare or initialize at module level.
+-> module level means 
+     <script>           index.js
+        // module       //module
+     </script>
+-> You can declare  or initialize global variables using var, let and const.
+
+-->
+<script>
+    //module
+    var x = 10;
+    let y = 20;
+    const z =30;
+    function f1()
+    {
+        document.write("Function-1 <br>  x=" + x + "<br>y=" + y + "<br>z=" + z + "<br>");
+    }
+    function f2()
+    {
+        document.write("Function-2 <br>  x=" + x + "<br>y=" + y + "<br>z=" + z +"<br>");
+    }
+    f1();
+    f2();
+</script>
+

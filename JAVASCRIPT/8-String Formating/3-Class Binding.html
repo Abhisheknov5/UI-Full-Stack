@@ -1,0 +1,51 @@
+<!--
+Class Binding:
+- It is a technique used to apply any CSS class dynamically to element so that it can be formatted according to state and situation.
+
+- CSS classes can be configured by using "className" property.
+
+Syntax:
+    document.querySelector("p").className = "class1  class2..";
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Binding</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function ThemeChange() {
+            var chkTheme = document.getElementById("chkTheme");
+            var form = document.querySelector("form");
+            if(chkTheme.checked) {
+                form.className = 'border border-2 border-dark p-4 bg-dark text-white';
+                document.querySelector("button").className = "btn btn-warning w-100";
+            } else {
+                form.className = 'border border-2 p-4';
+                document.querySelector("button").className = "btn btn-dark w-100";
+            }
+        }
+    </script> 
+</head>
+<body>
+    <body class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center" style="height:100vh">
+            <form class="border border-2 border-dark p-4">
+                <div class="form-switch">
+                    <input type="checkbox" onchange="ThemeChange()" id="chkTheme" class="form-check-input"> <label class="form-check-label"> Dark Mode</label>
+                </div>
+                <h2>User Login</h2>
+                <d1>
+                    <dt>User Name</dt>
+                    <dd><input type="text" class="form-control"></dd>
+                    <dt>Password</dt>
+                    <dd><input type="password" class="form-control"></dd>
+                </d1>
+                <button class="btn btn-dark w-100">Login</button>
+            </form>
+        </div>
+    </body> 
+</body>
+</html>

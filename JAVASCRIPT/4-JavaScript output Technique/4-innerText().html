@@ -1,0 +1,28 @@
+<!--
+innerText:-
+- It is a property used for any HTML element that can display text inside container, like
+    <p> <div> <span> <blockquote> <dt> <dd> <td> <li> etc..
+- It will not support formats and markup.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerText()</title>
+    <script>
+        function DeleteClick(){
+            result=confirm("Reord will be deleted\nAre you sure?");
+            if(result==true){
+                document.write("<b><font color='red'>Record Deleted..</font></b><br><a href='4-innerText().html'>Back</a>");
+            } else {
+                document.querySelector("h2").innerText="You Canceled..";
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+    <h2></h2>
+</body>
+</html>

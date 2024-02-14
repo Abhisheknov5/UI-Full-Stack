@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occurance and Behavioral 1</title>
+    <style>
+        ol {
+            display: flex;
+            list-style: none;
+        }
+        li::after {
+            content: "=>";
+        }
+        li:last-child::after {
+            content: "";
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Shopper</li>
+        <li>Electronic</li>
+        <li>Mobiles</li>
+        <li>Realme</li>
+        <li>C55</li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!--
+2. JavaScript can refer HTML elements by using a reference name.
+
+- Every element can be defined with a name
+
+    <img name="pic">
+    <input type="text" name="UserName">
+   
+- JavaScript can access element with reference of name
+
+    pic.src = "name.jpg";
+
+- You can't refer a child element directly with name, it requires always reference of parent and child.
+
+- Name can be common for several elements.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Hierarchy 2</title>
+    <script>
+        function bodyload() {
+            pic.src="../public/images/Amazon1.jpg";
+            frmRegister.btnRegister.value = "Register";
+            frmLogin.btnLogin.value = "Login";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img width="100" name="pic" height="100" border="1">
+    </div>
+    <div>
+        <form name="frmRegister">
+            <h2>Register User</h2>
+            Your Name: <input type="text"> <input name="btnRegister" type="button">
+        </form>
+    </div>
+    <div>
+        <form name="frmLogin">
+            <h2>Login</h2>
+            Your Email: <input name="txtEmail" type="email"> <input name="btnLogin" type="button">
+        </form>
+    </div>
+
+    
+</body>
+</html>

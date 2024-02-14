@@ -1,0 +1,34 @@
+<!--
+Destructuring:-
+Destructuring means to break down a complex structure into simpler parts.
+With the syntax of destructuring, you can extract smaller fragments from 
+objects and arrays. It can be used for assignments and declaration of a variable.
+
+Destructuring is an efficient way to extract multiple values from data that 
+is stored in arrays or objects. 
+When destructuring an array, we use their positions (or index) in an assignment.
+-->
+<!-- ES-4 -->
+<script>
+    var values = ["john-manager-45000", "david-clerk-56000"];
+    var john = values[0];
+    var david = values[1];
+    document.write(john +"<br>");
+    document.write(david);
+</script>
+
+<br> <br>
+<!-- 
+    ES-5+ -->
+<script>
+    var data = [[10,20],["Delhi","Hyderabaad"],[true, false],[["HTML","CSS"]]];
+    var [a,b,c,d] = data;
+    document.write(d[0][1]);
+</script>
+
+<br><br>
+<script>
+    var products = ["Samsung TV-56000", "Iphone-67000.44"];
+    var [tv, phone] = products;
+    document.write(tv);
+</script>

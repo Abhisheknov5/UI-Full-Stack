@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button</title>
+    <style>
+        .options{
+            list-style: none;
+            margin-top: 10px;
+            columns: 2;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <ol>
+            <li> These elements does not require tokens
+                <ol class="options">
+                    <li><input name="q1" value="Normal" type="radio"><label for="q1">Normal Elements</label></li>
+                    <li><input name="q1" value="Raw Text" type="radio" checked><label for="q1">Raw Text Elements</label></li>
+                    <li><input name="q1" value="RC Data" type="radio"><label for="q1">RC Data Elements</label></li>
+                    <li><input name="q1"  value="Void" type="radio"><label for="q1">VOid Elements</label></li>
+                </ol>
+
+            </li>
+        </ol>
+        <button>Submit</button>        
+    </form>
+</body>
+</html>

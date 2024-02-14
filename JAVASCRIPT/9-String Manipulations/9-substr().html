@@ -1,0 +1,14 @@
+<!--
+9. substr():- It is used to return specified number of chars from given index.
+Syntax: Substr
+    msg.substr(startIndex, countOfChars)
+    msg.substr(7,4);            // from 7 index it can read 4 chars
+    msg.substr(7);                // from 7 upto end
+    msg.substr(7,0);            // empty
+    msg.substr(7,-4);            // invalid
+-->
+
+<script>
+    var msg = "Welcome to JavaScript";
+    document.write(msg.substr(7,4) + "<br>");
+</script>

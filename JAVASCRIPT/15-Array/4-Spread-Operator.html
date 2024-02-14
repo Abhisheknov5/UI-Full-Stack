@@ -1,0 +1,39 @@
+<!--
+Spread Operator:- 
+The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+
+- It can spread the array elements and store under the reference on specific memory.
+
+         var  values = ["A", "B"];
+         console.log(...values);    => A B
+   
+         console.log([...values])    => ["A", "B"]
+
+- You can concat the values using spread operator
+
+         console.log([...values, "C"])    => ["A", "B", "C"]
+-->
+<script>
+    var one = ["A", "B"];
+    var two = "C";
+    console.log([...one, two]);
+</script>
+
+<br><br>
+
+<script>
+    var one = ["A", "B"];
+    var two = ["C", "D"];
+    var result1 = [...one, ...two];
+    var result2 = [one, two];
+    console.log(result1);
+    console.log(result2);
+</script>
+
+<br><br>
+
+<script>
+    var one = ["A", "B"];
+    var result1 = [...one, function(){ document.write("Welcome")}];
+    result1[2]();
+</script>

@@ -1,0 +1,143 @@
+<!--
+4. Reading Elements from array using iterators
+
+        toString()
+        join()
+        find()
+        filter()
+        map()
+        forEach()
+-->
+<!--
+ toString():- It returns all array elements separated with "," delimeter.
+             It concats all elements and forms a string.
+             Syntax:
+             collection.toString()
+-->
+<script>
+    document.write("toString =");
+    var values = [10, 20, 30, 40];
+    document.write(values.toString());
+</script>
+<br>
+<!--
+  join():- It returns all array elements with custom delimeter.
+           Syntax:
+           collection.join("your separator")
+-->
+<script>
+    document.write("join =");
+    var values = [10, 20, 30, 40];
+    document.write(values.join("-->"));
+</script>
+<br>
+<!--
+  map():- It is an iterator that reads and returns every element from
+          array in sequential order.
+          Syntax:
+          collection.map(function(arrayElement){
+          })
+-->
+<script>
+    document.write("map =");
+    var categories = ["All", "Electronics", "Footwear", "Fashion"];
+    categories.map(function(item){
+        document.write(`<li>${item}</li>`);
+    })
+</script>
+<br>
+
+<!--
+forEach():- It is an iterator that reads every element and returns with its
+            index number.
+            Syntax:
+            collection.forEach(function(item, index){
+             })
+-->
+<script>
+    document.write("forEach = <br>");
+    var categories = ["All", "Electronics", "Footwear", "Fashion"];
+    categories.forEach(function(item, index){
+        document.write(`[${index}] : ${item} <br>`);
+    })
+</script>
+<br>
+
+<!--
+   slice():- It reads elements between specified index.
+   Syntax:
+   collection.slice(startIndex, endIndex)
+-->
+
+<!--
+find():- It reads and returns the first occurance element that matches
+         the given condition.
+         Syntax:
+         collection.find(function(item){
+            return  condition_for_item;
+            })
+-->
+<script>
+    document.write("find = <br>");
+    var sales = [45000, 24000, 67000, 26000, 78000];
+    var result = sales.find(function(item){
+        return item>=50000;
+    })
+    document.write(result);
+</script>
+<br>
+
+<!--
+    filter():- It reads and returns every occurance of element that matches
+               the given condition.
+               Syntax:
+                     collection.filter(function(item){
+                         return  condition_for_item;
+                      })[ ].length
+                        .toString()
+                        .slice()  etc..
+-->
+<script>
+    document.write("filter = <br>");
+    var sales = [45000, 24000, 67000, 26000, 78000];
+    var result = sales.filter(function(item){
+        return item>=50000;
+    }).join();
+    document.write(result);
+</script>
+<br>
+<!--
+- Explicitly you can read array elements and properties by using loops and iterators
+
+    for..in            : It returns all properties of array [0, 1, 2, 3..]
+    for..of            : It returns all values of array
+
+Syntax:
+    for(var property in collection)
+    {
+    }
+
+    for(var value of collection)
+    {
+    }
+-->
+<script>
+     document.write(" in = <br>");
+    var sales = [45000, 24000, 67000, 26000, 78000];
+    for(var property in sales)
+    {
+        document.write(`${property} : ${sales[property]} <br>`);
+    }
+
+</script>
+
+<br>
+<script>
+    document.write(" of = <br>");
+   var sales = [45000, 24000, 67000, 26000, 78000];
+   for(var property of sales)
+   {
+       document.write(`${property} : ${sales[property]}  <br>`);
+   }
+
+</script>

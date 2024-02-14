@@ -1,0 +1,32 @@
+<!--
+document.write():-
+- It renders output on new screen.
+- It can render any markup.
+- It can use value, expression or a markup.
+
+Syntax:
+    document.write("Hello !");
+    document.write(20 + 20);
+    document.write("<a> Home </a>");
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document.write()</title>
+    <script>
+        function DeleteClick() {
+            result=confirm("Record will be deleted\nAre you sure?");
+            if(result==true){
+                document.write("<b><font color='red'>Record Deleted..</font></b><br><a href='3-document.write().html'>Back</a>");
+            } else {
+                alert("You Cancel");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+</body>
+</html>

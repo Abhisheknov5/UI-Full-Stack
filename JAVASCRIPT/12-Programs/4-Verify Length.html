@@ -1,0 +1,29 @@
+<!--
+4. Write a program to verify string length.
+
+     function VerifyName(userName)
+     {
+
+     }
+
+    // name must be 4 to 10 chars only
+
+    VerifyName("sam");                    => Name too short
+    VerifyName("rakesh kumar @ gmail.com")   => Name too long
+    VerifyName("David");                    => Verified
+-->
+<script>
+    function VerifyName(userName)
+    {
+        if(userName.length>=4 && userName.length<=10){
+            document.write("Name Verified");
+        } else {
+            if(userName.length<4) {
+                document.write("name too short min 4 chars required");
+            } else {
+                document.write("name too long max 10 chars required");
+            }
+        }
+    }
+    VerifyName(prompt("Enter Your Name"));
+</script>

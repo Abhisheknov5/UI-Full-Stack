@@ -1,0 +1,27 @@
+<!--
+innerHTML:-
+- It is similar to inner Text but allows format and markup.
+- It can render the elements into the context of existing elements.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inner Html()</title>
+    <script>
+        function DeleteClick(){
+            result=confirm("Record will be deleted\nAre You sure?");
+            if(result==true){
+                document.querySelector("p").innerHTML="<b><font color='red'>Record Deleted..</font></b>";
+            } else {
+                document.querySelector("p").innerText="You Canceled..";
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+    <p></p>
+</body>
+</html>

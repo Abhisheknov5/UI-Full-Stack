@@ -1,0 +1,48 @@
+<!--
+Switch Selector :-
+- A switch is used to interrupt the flow of electrons in a circuit.
+- Switches are classified into various types and groups
+    a) Push Button
+    b) Toggle
+    c) Joystick
+    d) Selector etc..
+
+- A selector switch can choose exactly the matching block and execute the statements defined in block.
+
+Syntax:
+ 
+    switch(value|expression)
+    {
+     
+       case value|expression:
+        statements;
+        jump_statement;
+     
+        default:
+        statements as clause;
+        jump_statement;
+
+    }
+-->
+<script>
+    var n = parseInt(prompt("Enter Number"));
+    switch(n)
+    {
+        case 1:
+        document.write("One");
+        break;
+        case 2:
+        document.write("Two");
+        break;
+        case 3:
+        document.write("Three");
+        break;
+        case 4:
+        document.write("Four");
+        break;
+        default:
+        document.write("Plese enter 1 to 4 only");
+        break;
+
+    }
+</script>

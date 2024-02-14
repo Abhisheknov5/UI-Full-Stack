@@ -1,0 +1,57 @@
+<!--
+JavaScript Input Techniques:
+1. prompt()
+2. query string
+3. form input elements
+
+
+                               prompt()
+- It is an input box provided by browser window object.
+- It allows to input a value.
+
+Syntax:
+        prompt("Your Message", "Default_Value");
+        prompt("Your Message");
+
+- Prompt method returns
+
+        null            => on Cancel click
+        string        => on OK click
+        " " [empty]    => on OK click without value
+
+Syntax:
+          result  = prompt("Enter Your Name");
+
+          if(result==null)
+        {
+         else if(result==" ")
+         {
+         }
+        else {
+        }
+          }
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+    <script>
+        function bodyload() {
+            result = prompt("Enter Your Name");
+            if(result==null){
+                alert("You canceled..");
+            } else if(result=="") {
+                alert("Please provide a name - It can't be empty");
+            } else {
+                document.getElementById("lblName").textContent = result;
+            }
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <p>Hello ! <span id="lblName"></span></p>
+</body>
+</html>

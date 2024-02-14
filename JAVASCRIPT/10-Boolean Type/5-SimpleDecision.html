@@ -1,0 +1,79 @@
+<!--
+Simple Decision :-
+- It is a decision making approach where only one alternative is provided.
+- It executes a set of statement when given condition evaluates to true and another set when condition evaluates to false.
+
+Syntax:
+    if (booleanExpression | booleanValue)
+    {
+       statements on true;
+    }
+    else
+    {
+     statements on false;
+    }
+
+- Else is a clause that exectues when condition evalutes to false.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Decision</title>
+    <script>
+        function VerifyCard(){
+            var card = document.getElementById("Card").value;
+            if(card==="123456789") {
+                document.getElementById("CvvContainer").style.display="block";
+            } else {
+                alert("Invalid Card");
+            }
+        }
+        function VerifyCvv() {
+            var cvv = document.getElementById("Cvv").value;
+            if(cvv==="456") {
+                document.getElementById("ExpiryContainer").style.display="block";
+            } else {
+                alert("Invalid Cvv");
+            }
+        }
+        function VerifyExpiry() {
+            var expiry = document.getElementById("Expiry").value;
+            if(expiry==="2024") {
+                document.getElementById("btnPay").style.display="block";
+            } else {
+                alert("Invalid Expiry");
+            }
+        }
+    </script>
+</head> 
+<body>
+    <fieldset>
+        <legend>Payment Details</legend>
+        <dl>
+            <dt>Card Number</dt>
+            <dd><input type="text" id="Card" onblur="VerifyCard()"></dd>
+            <div id="CvvContainer" style="display: none;">
+                <dt>Cvv</dt>
+                <dd><input type="text" id="Cvv" onblur="VerifyCvv()" size="4"></dd>
+            </div>
+        <div id="ExpiryContainer" style="display: none;">
+            <dt>Expiry</dt>
+            <dd>
+                <select id="Expiry" onchange="VerifyExpiry()">
+                    <option>Select Expiry</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                </select>
+            </dd>
+            
+        </div>
+        </dl>
+        <button id="btnPay" style="display: none;">Pay</button>
+    </fieldset>
+</body>
+</html>

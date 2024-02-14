@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamically Adding Elements into Page-3</title>
+    <script>
+        function UplodClick(){
+             var table = document.createElement("table");
+             table.width = "100%";
+             table.border = "1";
+
+             var thead = document.createElement("thead");
+             var tr_head = document.createElement("tr");
+             var th = document.createElement("th");
+             th.innerHTML = "Name";
+
+             thead.appendChild(tr_head);
+             tr_head.appendChild(th);
+
+             var tbody = document.createElement("tbody");
+             var tr_body = document.createElement("tr");
+             var td = document.createElement("td");
+             td.innerHTML = "Samsung Tv";
+
+             tr_body.appendChild(td);
+             tbody.appendChild(tr_body);
+
+             table.appendChild(thead);
+             table.appendChild(tbody);
+
+             document.getElementById("container").appendChild(table);
+
+        }
+    </script>
+</head>
+<body>
+    <button onclick="UplodClick()">Upload Photo</button>
+    <br><br>
+    <div id="container">
+
+    </div>
+    
+</body>
+</html>

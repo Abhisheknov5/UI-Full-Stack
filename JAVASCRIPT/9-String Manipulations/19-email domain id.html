@@ -1,0 +1,21 @@
+<!--
+Q1: Separate the given string into domain and Id?
+
+    var email = "john_nit@gmail.com";  => any email
+    var id = ?
+    var domain = ?
+There are 2 Solution with split without without split.
+-->
+<script>
+    var email = prompt("Enter Your Email");
+    var[id, domain] = email.split('@');
+    document.write(`Your ID: ${id}<br>Registered At:${domain}`);
+</script>
+<br>
+<script>
+    var email = prompt("Enter Your Email");
+    var atPos = email.indexOf("@");
+    var id = email.substring(0,atPos);
+    var domain = email.substring(atPos+1);
+    document.write(`Your ID:${id}<br>Registered At:${domain}`);
+</script>

@@ -1,0 +1,29 @@
+<!--
+7. How to define case for range of values?
+A. You can use a boolean expression with switch using boolean "true".
+
+Syntax:
+    switch(true)
+    {
+      case  booleanExpression:
+       statements;
+       break;
+    }
+
+-->
+<!--
+case 1 to 10 => Your number is between 1 to 10.
+case 11 to 20 => number between 11 to 20.
+-->
+<script>
+    var choice = parseInt(prompt("Enter Your Number"));
+    switch(true)
+    {
+        case (choice>1 && choice<=10):
+        document.write(`Your number ${choice} is between 1 to 10`);
+        break;
+        case(choice>10 && choice<=20):
+        document.write(`Your number ${choice} is between 11 to 20`);
+        break;
+    }
+</script>

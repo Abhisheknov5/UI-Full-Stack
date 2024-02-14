@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Example</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function AddClick() {
+            folderName = prompt("Enter Folder Name");
+            document.querySelector("p").innerHTML += "Folder Created: " + folderName + "<button class='bi bi-trash-fill'></ button>"+ "<br>";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="AddClick()">+</button>
+    <p></p>
+</body>
+</html>

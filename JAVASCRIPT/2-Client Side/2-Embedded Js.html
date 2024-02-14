@@ -1,0 +1,35 @@
+<!--
+Embedded JavaScript:-
+- You can embed JavaScript functions into page by using <script> container.
+- You can embed in <head> or <body> sections.
+- So that you can reuse the functions across various elements.
+- However it is slower when compared to Inline and can't reuse across pages.
+
+Syntax:
+    <script>
+        function PrintPage()
+        {
+          window.print();
+        }
+    </script>
+    <button  onclick="PrintPage()"> Print </button>
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Javascript</title>
+    <script>
+        function PrintPage() 
+        {
+            window.print();
+        }
+    </script>
+</head>
+<body>
+    <h1>Ticket</h1>
+    <button onclick="PrintPage()">Print</button>
+</body>
+</html>

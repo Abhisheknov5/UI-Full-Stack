@@ -1,0 +1,32 @@
+><!--
+textContent:-
+- It is a light weight property to render plain text content into any HTML element that cand display text.
+- It will not allow any formats of content.
+
+Syntax:
+    document.querySelector("p").textContent = "message";
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent()</title>
+    <script>
+        function DeleteClick(){
+            result=confirm("Record will be deleted\nAre you Sure");
+            if(result==true) {
+                document.querySelector("p").textContent="<h1>Record Deleted</h1>";
+            } else {
+                document.querySelector("p").innerText="You canceled..";
+                console.log("Cancel Clicked");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onClick="DeleteClick()">Delete</button>
+        <p></p>
+    </button>
+</body>
+</html>

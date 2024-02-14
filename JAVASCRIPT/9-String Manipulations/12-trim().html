@@ -1,0 +1,18 @@
+<!--
+trim()
+- It is used to remove the leading spaces in a string.
+- leading space is blank space that occurs before or after string.
+
+Syntax:    
+    var  msg = "    welcome    ";
+
+    msg.trim();    => "welcome"
+-->
+<script>
+    var otp = prompt("Enter OTP");
+    if(otp.trim()=="5432") {
+        document.write("Success..");
+    } else {
+        document.write("Invalid OTP");
+    }
+</script>

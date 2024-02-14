@@ -1,0 +1,32 @@
+<!--
+Q4: How to remove blank spaces in a string and print?
+
+var str = "Wel  come"
+-->
+<script>
+    var word = prompt("Enter Your text");
+    var result = word.replaceAll(" ", "");
+    document.write(result);
+</script>
+ 
+<br>
+
+<script>
+    var word = prompt("Enter Your text");
+    var count = 0;
+    for(var char of word ) {
+        document.write(char + "<br>");
+    }
+</script>
+<!--Ex: Find the total count of repeated character in a string-->
+
+<script>
+    var word = prompt("Enter Your text:");
+    var count = 0;
+    for(var char of word) {
+        if(char == "e") {
+            count++;
+        }
+    }
+    document.write(`E repeated ${count} times`);
+</script>

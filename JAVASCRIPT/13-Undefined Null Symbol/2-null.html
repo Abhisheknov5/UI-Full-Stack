@@ -1,0 +1,28 @@
+<!--
+Null :-
+- Null specifies that value is not provided at runtime of application.
+- At compile time if value is not provided then it sets undefined, and at runtime if value is not provided then it sets null.
+- You can verify by using "null" keyword.
+
+Syntax:
+        var name = prompt("Enter Name");
+       
+         name==null    => when prompt is canceled.
+         name==""        => when clicked ok without value.
+
+
+Note: undefined is at compile time and null is at runtime.
+-->
+
+<script>
+    var userName = prompt("Enter Your Name");
+    if(userName==null) {
+        alert("You Canceled...");
+    }
+    else if(userName=="") {
+        alert("Plese provide a name");
+    }
+    else {
+        document.write(`Hello ! ${userName}`);
+    }
+</script>

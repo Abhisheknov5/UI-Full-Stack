@@ -1,0 +1,30 @@
+<!-- What is difference between var let and const -->
+<!--
+Var:- It is used to configure a function scope Variable.
+-> You can declare in any block of a function and access from any another block in
+function.
+-> Var allows declaring, assignment and initialization.
+-->
+<script> 
+    function demo()
+    {
+        var x; // declaring a variable.
+        x = 10; // Assigning a value into variable.
+        if(x==10) // Compare right value equal to left value. 
+        {         // If the right value is equal to left value then it will return true.
+            var y=20; // Initialization
+        }
+        document.write("x=" + x + "<br>" + "y=" +y);
+    }
+    demo(); // call the function
+</script> 
+
+<!--Actually It have 2 block first is Function Block another is if block
+ There are two concept Inner block and Outer block and var y = "20"; is Inner block.
+Now var y= "20"; is initialized with value It is present in if block and I am trying to access 
+y Outside the Block.
+
+->It allows Shadowing 
+
+-->
+

@@ -1,0 +1,78 @@
+<!--FAQ: How to turn on JavaScript strict mode?
+Ans: By using "use strict"  statement.
+
+Ex:
+<script>
+    x = 10;            // valid - you can assign a value without declaring a variable
+</script>
+
+Ex:
+ <script>
+    "use strict";
+     x = 10;        // invalid -  x is not defined, in strict mode you must declare.
+ </script>
+
+FAQ: How to target Javascript for Legacy browsers?
+Ans:  By enclosing JavaScript functions in HTML comments.
+
+Syntax:
+    
+        function name()
+        {
+        }
+
+3. JavaScript in External file
+- You can configure JavaScript functions in a script file with extention ".js".
+- You can link script file by using <script> token.
+- Functions in external file can be accessed from any page.
+- You can reuse across pages.
+- However using external file will increase the number of requests and also page load time.
+
+
+Ex:
+- Add a new file into "src"  by name "print.js"
+
+     "use strict";
+        
+            function PrintPage(){
+            window.print();
+            }    
+        
+
+- Go to HTML page and link script file
+
+    <script src="../src/scripts/print.js" type="text/javascript"> </script>
+
+    <button onclick="PrintPage()"> Print </button>
+
+FAQ: What is minfication?
+Ans:  It is a coding technique used by developers to compress the code.
+         Minified files are used in production.
+
+FAQ: How JavaScript refers HTML elements?
+Ans: JavaScript provides various reference techniques for developer in order to access HTML elements from page and handle dynamic interactions.
+
+1. JavaScript can refer HTML elements by using BOM hierarchy
+      [Browser Object Model]
+
+- It is the native method for browser.
+- Hence it is faster.
+- Refering using BOM hierarchy requires lot of index reference, which you have to update everytime when element position changes in page.
+
+Syntax:
+        window.document.images[]
+        window.document.forms[].elements[]
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External File </title>
+    <script src="./src/print.js" type="text/Javascript"></script>
+</head>
+<body>
+    <h1>Ticket</h1>
+    <button onclick="PrintPage()">Print</button>
+</body>
+</html>

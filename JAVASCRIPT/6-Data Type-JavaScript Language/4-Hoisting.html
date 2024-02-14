@@ -1,0 +1,17 @@
+<!--     Hoisting
+Hoisting:- Hoisting is the process of configuring a Variable declaration or initialization after 
+using the Variable.
+-> There is no Order dependency for declaring and using.
+-> Only var is allow to Hoist.
+-->
+
+<script>
+    "use strict";
+    function demo() 
+    {
+        x = 10;
+        document.write("x=" + x);
+        var x; // hoisting
+    }
+    demo();
+</script>

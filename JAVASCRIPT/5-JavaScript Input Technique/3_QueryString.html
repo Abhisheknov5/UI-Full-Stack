@@ -1,0 +1,45 @@
+<!--
+Query String:- 
+- It is a "Key-Value" collection.
+- It is appended into URL with "?".
+- You can view and input query string from browser address bar.
+
+       http://127.0.0.1:5500/page.html?key=value
+       http://127.0.0.1:5500/page.html?userName=John
+                                   ?a=10
+
+- You can access the querystring using "location.search".
+
+- "location" is a javascript browser object, which provides "search" property to read the complete query string in URL.
+
+- You have to use string handling methods to extract specified characters from query string.
+            a) indexOf()        : It returns the index number of character in a string.
+
+            b) slice()            : It returns the chars between specified index.
+
+Syntax:
+        QueryString =  "?userName=John";
+
+        index =  QueryString.indexOf("=");
+       
+        Name  = QueryString.slice(index + 1);        // John
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QueryString 3</title>
+    <script>
+        function bodyload() {
+            QueryString = location.search;  // Get the query string from the URL
+            EqualPosition = QueryString.indexOf("=");
+            Value = QueryString.slice(EqualPosition + 1);
+            document.getElementById("lblName").innerHTML = Value;
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <p>Hello ! <span id="lblName"></span> </p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!--
+Math-library:-
+- JavaScript provides a "Math" library, which you can access using "Math" object.
+- It comprises of various mathematical functions to handle complex operations
+
+        Math.sqrt()
+        Math.random() :- Every time generating a random Number.
+        Math.round()
+        Math.ceil()
+        Math.floor()
+        Math.pow()        => Math.pow(2,3)  => 2**3
+        Math.sin()
+        Math.cos()
+        Math.tan()
+        Math.PI  etc...
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Library</title>
+    <script>
+        function bodyload(){
+            var a = Math.round(Math.random() * 10);
+            var b = Math.round(Math.random() * 10);
+            var c = Math.round(Math.random() * 10);
+            var d = Math.round(Math.random() * 10);
+            var e = Math.round(Math.random() * 10);
+            var f = Math.round(Math.random() * 10);
+            document.getElementById("lblCode").innerHTML = a + " " + b + " " + c + " " + d + " " + e + " " + f;
+        }
+    </script>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body onload="bodyload()">
+    <dl>
+        <h2>User Login</h2>
+        <dt>User Name</dt>
+        <dd><input type="text"></dd>
+        <dt>Password</dt>
+        <dd><input type="password"></dd>
+        <dt>Verify Code <button class="bi bi-arrow-clockwise"></button></dt>
+        <dd id="lblCode"></dd>
+    </dl>
+    <button>Login</button>
+    
+</body>
+</html>

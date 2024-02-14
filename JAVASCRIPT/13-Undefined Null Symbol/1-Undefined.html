@@ -1,0 +1,42 @@
+<!--
+Undefined:-
+- It is a type defined for variable if value is not specified into reference during compile time.
+
+            var x;
+            console.log("x=" + x);        x = undefined
+
+- You can verify value using "undefined" keyword.
+
+FAQ: What is difference between undefined and not-defined?
+Ans:  undefined is about value.
+      not-defined is about reference.
+
+Syntax:
+        var x;
+        console.log(x);        undefined
+        console.log(y);        y not defined
+-->
+<!-- Ex:  Not good code -->
+<script>
+    var name = "Samsung Tv";
+    var price;
+    if(price==undefined)
+    {
+        document.write(`Name=${name}`);
+    } else {
+        document.write(`Name=${name}<br>Price=${price}`);
+    }
+</script>
+
+<!--Ex: Good Code-->
+<br>
+<script>
+    var name = "Samsung Tv";
+    var price;
+    if(price)
+    {
+        document.write(`Name=${name}<br>Price=${price}`);
+    } else {
+        document.write(`Name=${name}`);
+    }
+</script>

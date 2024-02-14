@@ -1,0 +1,37 @@
+<!--
+6. How to execute same block for multiple conditions?
+A. You can write multiple cases for single block of statements.
+-->
+<script>
+    var choice = prompt("Enter Your Choice", "y/n");
+    switch(choice)
+    {
+        case "y":
+            document.write("You selected Yes to continue..");
+            break;
+            case "n":
+            document.write("You selected no, so stop");
+            break;
+            default:
+            document.write("Plese Enter Y on n only");
+    }
+
+</script>
+<br> <br>
+<script>
+    var choice = prompt("Enter Your Choice", "y/n");
+    switch(choice)
+    {
+        case"y":
+        case "y":
+        document.write("You selected Yes to continue..");
+        break;
+        case "n":
+        case "N":
+        document.write("You selected no, so stop");
+        break;
+        default:
+        document.write("Plese Enter Y or n only");
+        break;
+    }
+</script>

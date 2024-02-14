@@ -1,0 +1,62 @@
+<!--
+7. lastIndexOf() : It returns the last occurance index number of given character.
+                   It returns -1 if not found.
+
+Syntax:
+    var msg = "Welcome";
+    msg.lastIndexOf("e");    // 6
+   
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lastIndexOf</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function VerifyCard() {
+            var card = document.getElementById("txtcard").value;
+            var img = document.getElementById("imgcard");
+            if(card.startsWith("4455")){ 
+                img.src = "../public/images/visaCard.jpg";
+                
+            } else {
+                img.src =  "../public/images/Mastercard.jpg";
+            }
+        }
+
+        function VerifySkype() {
+            var skypeId = document.getElementById("txtSkype").value;
+            var skypeError = document.getElementById("skypeError");
+            if(skypeId.endsWith("outlook.com")){
+                if(skypeId.indexOf("@")==-1){
+                    skypeError.innerHTML = "Plese include @".fontcolor="red";
+                } else {
+                    skypeError.innerHTML = "";
+                }
+            } else {
+                skypeError.innerHTML = "Invalid Skype ID".fontcolor("red");
+            }
+
+        }
+
+    </script>
+</head>
+<body class="container-fluid">
+    <dl class="w-25">
+        <h2>Payment</h2>
+        <dt>Your card Number</dt>
+        <dd class="input-group">
+            <input type="text" class="form-control" onblur="VerifyCard()" id="txtcard">
+            <img class="input-group-text" id="imgcard" width="80">
+        </dd>
+        <dt>Your Skype Id</dt>
+        <dd>
+            <input type="text" id="txtSkype" onblur="VerifySkype()" class="form-control">
+        </dd>
+        <dd id="skypeError"></dd>
+    </dl>    
+</body>
+</html>

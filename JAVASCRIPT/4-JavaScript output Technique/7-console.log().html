@@ -1,0 +1,42 @@
+<!--
+console methods:
+- Console is CLI [Command Line Tool] of browser.
+- Developer can test all commands in console.
+- Designing and Testing requires lot of messages to log into console, so that developer can know the status of any task performed in page.
+
+    console.log()
+    console.error()
+    console.warn()
+    console.debug()
+    console.info() etc..
+
+Syntax:
+    console.log("value | expression")
+
+- Console is not for markup.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>console method</title>
+    <script>
+        function DeleteClick(){
+            console.warn("Delete Button Clicked..");
+            result=confirm("Record will be deleted\nAre You Sure?");
+            if(result==true){
+                document.querySelector("p").outerHTML="<h1>Record Deleted</h1>";
+                console.error("OK clicked");
+            } else {
+                document.querySelector("p").innerText="You canceled..";
+                console.info("Cancel Clicked");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onClick="DeleteClick()">Delete</button>
+    <p></p>
+</body>
+</html>

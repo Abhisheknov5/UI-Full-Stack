@@ -1,0 +1,34 @@
+<!-- Display Content Center Screen
+      .d-flex
+      .justify-content-center
+      .align-items-center
+    -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap Center</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+            body {
+                height: 100vh;
+            }
+        </style>
+    </head>
+    <body class="container-fluid d-flex justify-content-center align-items-center">
+        <div>
+            <form class="border w-100 border-primary rounded-2 p-2">
+                <dl>
+                    <h3>User Login</h3>
+                    <dt>User Name</dt>
+                    <dd><input type="text"></dd>
+                    <dt>Password</dt>
+                    <dd><input type="password"></dd>
+                </dl>
+                <button class="btn btn-warning w-100">Login</button>
+            </form>
+        </div>
+    </body>
+    </html>

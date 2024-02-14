@@ -1,0 +1,23 @@
+<!--
+3. Write a program to find the range of given value.
+
+    function FindRange(value, min, max)
+    {
+
+    }
+
+    FindRange(20, 10, 40)        => your value is with in range of 10 to 40
+    FindRange(20, 30,50)        => your value is not in range of 30 to 50
+-->
+<script>
+    function FindRange(value, min, max) 
+    {
+        if(value>=min && value<=max)
+        {
+            document.write(`Your value ${value} is with in range of ${min}-${max}`);
+        } else {
+            document.write(`Your value ${value} is NOT in range of ${min}-${max}`);
+        }
+    }
+    FindRange(30, 20, 50);
+</script>

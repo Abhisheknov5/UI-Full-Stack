@@ -1,0 +1,67 @@
+<!--
+Style Binding:-
+- It is a technique used in UI designing where CSS styles are applied to element dynamically.
+- It allows to change the appearence of element according to state and situation.
+- You can bind CSS styles by using "style" property.
+- Style properties a configured in "CamelCase"
+   
+            font-size            fontSize
+            color                color
+            font-style           fontStyle    
+            text-align           textAlign
+            background-color     backgroundColor
+            text-shadow          textShadow
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Binding</title>
+    <script>
+        function sizeChange() {
+            // document.getElementById("msg").innerHTML = "Text Formatting".fontsize(document.getElementById("sizeSlider").value);
+            document.getElementById("msg").style.fontSize = document.getElementById("sizeSlider").value + "px";
+        }
+        function HorizontalShadow() {
+            document.getElementById("msg").style.textShadow = `${document.getElementById("hSlider").value}px ${document.getElementById("vSlider").value}px ${document.getElementById("blurSlider").value}px ${document.getElementById("colorPicker").value}`;
+        }
+
+        function SetShadow(){
+            document.getElementById("msg").style.textShadow = `${document.getElementById("hSlider").value}px ${document.getElementById("vSlider").value}px ${document.getElementById("blurSlider").value}px ${document.getElementById("colorPicker").value}`;
+        }
+        function HorizontalShadow() {
+            SetShadow();
+        }
+        function VerticalShadow() {
+            SetShadow();
+        }
+        function BlurShadow() {
+            SetShadow();
+        }
+        function ShadowColor() {
+            SetShadow();
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Shadow Attributes</legend>
+        <dl>
+            <dt>Font Size</dt>
+            <dd><input id="sizeSlider" onchange="sizeChange()" type="range" min="1" max="100" value="15 "></dd>
+            <dt>Horizontal</dt>
+            <dd><input id="hSlider" onchange="HorizontalShadow()" type="range" min="1" max="50" value="1"></dd>
+            <dt>Vertical</dt>
+            <dd><input id="vSlider" onchange="VerticalShadow()" type="range" min="1" max="50" value="1" ></dd>
+            <dt>Blur</dt>
+            <dd><input id="blurSlider" onchange="BlurShadow()" type="range" min="1" max="10" value="1"></dd>
+            <dt>Color</dt>
+            <dd ><input id="colorPicker" onchange="ShadowColor()" type="color"></dd>
+        </dl>
+    </fieldset>
+    <p align="center" id="msg">Text Formatting</p>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!--
+String Manipulation Methods & Properties
+
+1. length:- It returns the total count of characters in a string.
+
+Syntax:
+    var msg = "Welcome";
+    msg.length;            => 7
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length</title>
+    <script type="text/javascript">
+        function VerifyUserName() {
+            var username = document.getElementById("UserName").value;
+            var useError = document.getElementById("UseError");
+            if(username.length==0){
+                useError.innerHTML = "User Name Required".fontcolor("red");
+            } else {
+                useError.innerHTML = "";
+            }
+        }
+        function VerifyLength() {
+            var username = document.getElementById("UserName").value;
+            if(username.length<4){
+                document.getElementById("UseError").innerHTML = "name min 4 chars".fontcolor("red");
+            } else {
+                document.getElementById("UseError").innerHTML = "";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd>
+            <input type="text" onkeyup="VerifyLength()" onblur="VerifyUserName()" id="UserName">
+        </dd>
+        <dd id="UseError"></dd>
+    </dl>
+    
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!-- Binding Experision-->
+<script>
+    var title = prompt("Enter Component Title");
+    var label = prompt("Enter Input Label");
+    var type = prompt("Enter Input type","text|password|number|email..");
+    var btnText = prompt("Enter Button Text");
+
+    var component = `
+      <h2>${title}</h2>
+      <dl>
+         <dt>${label}</dt>
+         <dd><input type=${type}></dd>
+      </dl>
+      <button>${btnText}</button>
+    `;
+    document.write(component);
+</script>

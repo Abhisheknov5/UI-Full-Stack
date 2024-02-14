@@ -1,0 +1,90 @@
+<!--
+ Boolean Type:-
+- Boolean is used in decision making.
+- JavaScript boolean value can be true or false.
+- JavaScript can handle boolean using 0 or 1 for comparision.
+       
+        0 = false
+        1 = true
+
+- Decision making is used to control the execution flow in a computer program.
+
+Note: You can handle decision making with numeric value 0 or 1, but it is always recommended to use "true" or "false" keywords.
+
+Syntax:
+    var stock = true;
+   
+    if(stock==1)        => not good
+    if(stock==true)        => good
+    if(stock=="true")    => invalid
+
+- To handle decision making JavaScript provides various operators
+
+    1. Comparision Operators
+
+        ==        Equal
+        ===        Identical Equal
+        !=        Not Equal
+        !==        Not Identical
+        <        less than
+        <=        less than or equal
+        >        greater than
+        >=        greater than or equal
+
+    2. Logical Operators
+
+        &&        AND
+        ||        OR
+        !        NOT
+
+FAQ: What is difference between "=="  &&  "===" ?
+Ans:  "==" can compare values of 2 different data types.
+           
+            "10" == 10    => true
+
+     "===" can compare only the values of same data type.
+
+            "10" === 10    => false
+            10 === 10    => true
+           
+FAQ: What is purpose of Local operators?
+Ans:    They are used to build a statement with multiple conditions.
+
+        condition1 && condition2  &&  condition3 => true if all 3 are true
+        condition1 ||  condition2  || condition3  => true if any one is true
+
+        They are also used in configuring negation of given expression.
+       
+         !true        => false
+         !false        => true
+<script>
+    var x;
+    if(x !== undefined){
+        document.write(x);
+    }
+   
+</script>
+
+3. Ternary Operator:-
+
+(condition) ? statement_on_true :  statement_on_false
+
+FAQ: Can you name the element attributes which are boolen type?
+Ans:      readonly, disabled, required, checked etc..
+
+      <input type="text"  required>         required=true
+      <input type="text"  disabled>      disabled=true
+      <input type="checkbox" checked>  checked = true
+
+-->
+<script>
+    var stock = 1;
+    if(stock == true)  
+    {
+        document.write("Available");
+    } else {
+        document.write("Out od Stock");  
+    }
+
+</script>
+

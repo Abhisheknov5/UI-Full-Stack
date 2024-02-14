@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamically Adding Elements into Page-2</title>
+    <script>
+        function UplodClick(){
+            var ol = document.createElement("ol");
+            ol.type = "a";
+            ol.start = "5";
+            var li1 = document.createElement("li");
+            li1.innerHTML = "HTML";
+
+            var li2 = document.createElement("li");
+            li2.innerHTML = "CSS";
+
+            ol.appendChild(li2);
+            ol.appendChild(li1);
+            document.getElementById("container").appendChild(ol);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="UplodClick()">Upload Photo</button>
+    <br><br>
+    <div id="container">
+
+    </div>
+    
+</body>
+</html>

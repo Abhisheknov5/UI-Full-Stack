@@ -1,0 +1,30 @@
+<!--
+confirm():-
+- It is similar to alert but allows to cancel.
+- It is a boolean method that returns
+
+        true        : on OK click
+        false        : on Cancel click
+
+Syntax:
+    confirm("message | expression");
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>confirm</title>
+    <script>
+        function DeleteClick() {
+            result=confirm("Record will be deleted\nAre you sure?");
+            if(result==true){
+                alert("Deleted..");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+</body>
+</html>

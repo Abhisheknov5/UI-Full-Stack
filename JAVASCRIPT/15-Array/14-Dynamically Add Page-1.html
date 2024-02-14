@@ -1,0 +1,54 @@
+<!--
+Dynamically Adding Elements into Page: [HTML Elements]
+
+1. You have to create an HTML element dynamically
+
+    document.createElement("token");    => h1, p, img, a, div, span etc..
+   
+    var pic = document.createElement("img");
+
+
+2. You have to configure the properties for element
+
+    pic.height = "100";
+    pic.width= "200";
+    pic.alt = " ";
+    pic.src = " ";
+    pic.className ="cssClass";
+
+3. Append element into page or any container in page.
+
+    document.querySelector("body").appendChild(pic);
+    document.getELementById("parentId").appendChild(pic);
+
+
+4. Creating and Adding elements into page are managed on various events.
+
+    onload, onclick, onchange etc..
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamically Adding Elements into Page-1</title>
+    <script>
+        function UplodClick() {
+            var pic = document.createElement("img");
+            pic.src = "../public/images/Amazon1.jpg";
+            pic.width = "200";
+            pic.height = "300";
+            document.getElementById("container").appendChild(pic);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="UplodClick()">Uplod Photo</button>
+    <br><br>
+    <div id="container">
+        
+    </div>
+    
+</body>
+</html>

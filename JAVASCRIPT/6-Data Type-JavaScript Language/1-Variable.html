@@ -1,0 +1,56 @@
+<!-- Variable in JavaScript -->
+<!-- Variable:- Variable are Storage locations in memory Where You can Store a value
+and use it as a part of any expression.
+Variable Configuration comprises in 3 phases
+(a)Declaration
+(b)Assignment
+(c)Initialization
+(a)Declaration:- Declaring is the process of Configuring variable name  and its
+Specifications.
+var price;
+-> Variable in Javascript can be declared using "var","let" or "const".
+var price;
+let price;
+const price; [Const will not allow only declaraton.]
+
+(b)Assignment:- Assignment is the process of Storing Value into reference 
+Variable after declaration.
+var price; => declaring
+price = 3000.44; => assigning
+
+(c)Initialization:- Initialization is the process of configuring a value into
+Variable at the time of declaring.
+var price = 30000.44; => Initialization
+price = 3500.45; => Assignment
+Note:-If Value is not initalized or assigned into Variable then by default it comprises
+of "undefined" as value type.
+-> Javascript allows to assign Value directly without declaring a Variable if it is not
+Configured with strict mode.
+
+FAQ:-Can we use Variable without declaring ?
+Ans:- Yes If JavaScript is not in Strict Mode.
+-->
+
+<!-- Example Without Variable--> 
+<script>
+    document.write("Hello ! "+ prompt("Enter Your Name") + "<br>");
+    document.write("Hi !" + prompt("Enter Your Name"));
+</script>
+
+<!-- With Variable-->
+<script>
+    userName = prompt("Enter your Name");
+    document.write("Hello! + userName + <br>");
+    document.write("Hii!" + userName);
+</script>
+
+<!--
+ If Value is not initalized or assigned into Variable then by default it comprises
+of "undefined" as value type.
+<script>
+    "use strict";
+    price=500;
+    var price;
+    document.write("price=" + price);
+</script>
+-->

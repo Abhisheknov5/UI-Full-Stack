@@ -1,0 +1,45 @@
+<!--
+FAQ's:
+1. Can we define a switch without default?
+A. Yes.
+
+2. Can we define default before or between cases?
+A. Yes.
+
+3. Can we define a case without break?
+A. Yes. It executes all blocks until the next jump statement occurs. (or) It terminates
+     after the end of switch block.
+
+4. Can we define "return" as jump statement?
+A. Yes. But return requires the code kept in a function.
+
+5. What is difference between break and return?
+A. "break" is a jump statement that exits the current block but stays in the function.
+    "return" is a jump statement that terminates the block and the further compiliation.
+
+Note: "return" can be used only inside a function. Hence the code block must be in function.
+-->
+<script>
+    function PrintNumber(){
+        var n = parseInt(prompt("Enter Number"));
+        switch(n)
+        {
+            case 1:
+            document.write("One");
+            break;
+            case 2:
+            document.write("Two");
+            return;
+            case 3:
+            document.write("Three");
+            break;
+            case 4:
+            document.write("Four");
+            break;
+            default:
+            document.write("Plese enter 1 to 4 only");
+            break;
+        }
+    }
+    PrintNumber();
+</script>

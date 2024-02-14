@@ -1,0 +1,94 @@
+<!-- 
+ Multiple Choices:-
+- It is a decision making approach where several choices are provided to handle a specific task.
+- It is easy to identify the exact choice using this approach.
+ 
+Syntax:
+    if (condition1)
+    {
+    }
+    else if (condition2)
+    {
+    }
+    else if (condition3)
+    {
+    }
+    else
+    {
+      statement on all conditions false;
+    }
+FAQ: What is the issue with multiple choices?
+Ans:  The statement "if else" have to execute all other conditions until or
+unless the given condition is satisfied. This increases the compile
+time and reduces the performance.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Login</title>
+    <title>Multiple Choices</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        var flag = "";
+        function ContinueClick() {
+            var userId = document.getElementById("UserId").value;
+            var PwdContainer = document.getElementById("PasswordContainer");
+            var emialContainer = document.getElementById("EmailContainer");
+            if(userId==="+917870408926") {
+                flag = `Login Sucess- OTP Sent to your mobile ${userId}`;
+                PwdContainer.style.display = "block";
+                emialContainer.style.display = "none";
+            }
+            else if (userId==="John123@outlook.com") {
+                flag = `Verification Email sent to Your address ${userId}`;
+                PwdContainer.style.display = "block";
+                emialContainer.style.display = "none";
+            }else {
+                document.getElementById("UserError").innerHTML = `${userId} does not exist`;
+            }
+        }
+        function LoginClick() {
+            var password =  document.getElementById("Password").value;
+            if(password==="john@11") {
+                document.write(`<h2>${flag}</h2>`);
+            } else {
+                document.getElementById("PasswordError").innerHTML = "Invalid Password";
+            }
+        }
+
+    </script>
+   </head> 
+<body class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div>
+        <div>
+            <h2>SigIn</h2>
+            <div id="EmailContainer">
+                <label class="form-label fw-bold">Your email or mobile phone number</label>
+                <div>
+                    <input type="text" id="UserId" class="form-control">
+                    <div id="UserError" class="text-danger"></div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <button onclick="ContinueClick()" class="btn btn-warning w-100">Continue</button>
+            </div>
+        </div>
+        <div id="PasswordContainer" style="display: none;" >
+            <div>
+                <label class="form-label" fw-bold>Your Password</label>
+                <div>
+                    <input type="password" id="Password" class="form-control">
+                    <div id="PasswordError" class="text-danger"></div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <button onclick="LoginClick()" class="btn btn-warning w-100">Login</button>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

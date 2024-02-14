@@ -1,0 +1,29 @@
+<!--
+outerHTML:-
+- It is similar to innerHTML, but will replace the existing content with new content.
+
+Syntax:
+    document.querySelector("p").innerHTML = "<h1> Welcome </h1>";
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outer Html</title>
+    <script>
+        function DeleteClick() {
+            result=confirm("Record will be deleted\nAre You sure");
+            if(result==true) {
+                document.querySelector("p").outerHTML="<h1>Record Deleted</h1>";
+            } else {
+                document.querySelector("p").innerText="You canceled";
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onClick="DeleteClick()">Delete</button>
+    <p></p>
+</body>
+</html>
