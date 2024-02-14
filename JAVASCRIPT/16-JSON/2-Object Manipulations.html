@@ -1,0 +1,102 @@
+<!--
+Object Manipulations:-
+
+1. How to assign value into a key ?
+
+     Syntax:
+            objectName.Key = value;
+            product.Name = “Samsung TV”;
+
+2. How to remove a Key?
+A. Using “delete” operator
+
+    Syntax:
+             delete   objectName.Key;
+             delete   product.Price;
+
+-->
+<script>
+    var tv = {
+        "Name": "Samsung Tv",
+        "Price": 45000.44,
+    }
+    delete tv.Price;
+    if(tv.Price)
+    {
+        document.write(`Name=${tv.Name}<br>Price=${tv.Price}`);
+    } else {
+        document.write(`Name=${tv.Name}`);
+    }
+
+</script>
+
+<!--
+3. How to search for a key?
+A. Using “in” operator
+
+    Syntax:
+             “Key”  in  objectName;    => true if key available in specified object
+
+Ex:
+-->
+<br> <br>
+
+<script>
+    var tv = {
+        "Name": "Samsung Tv",
+        "Price": 45000.44,
+    }
+    
+    document.write(`Is Price Available ? ${"Price" in tv}`);
+</script>
+
+<!--
+4. How to read all keys from object?
+A. By using
+        a) object.Keys()
+        b) for..in iterator
+
+Ex:
+-->
+<br> <br>
+
+<script>
+    var tv = {
+        "Name": "Samsung Tv",
+        "Price": 45000.44,
+        "Stock": true
+    }
+    for(var key in tv ) {
+        document.write(`${key}: ${tv[key]} <br>`);
+    }
+</script>
+
+<br><br>
+
+<script>
+    var tv = {
+        "Name": "Samsung Tv",
+        "Price": 45000.44,
+        "Stock": true
+    }
+    Object.keys(tv).map(function(key) {
+        document.write(`${key} : ${tv[key]}<br>`);
+    })
+</script>
+<br><br>
+
+<!--
+5. How to get the count of keys?
+A.  Object.Keys().length
+-->
+<script>
+    var tv = {
+        "Name": "Samsung Tv",
+        "Price": 45000.44,
+        "Stock": true
+    }
+    Object.keys(tv).map(function(key) {
+        document.write(`${key} : ${tv[key]}<br>`);
+    })
+    document.write(`Total No of Keys : ${Object.keys(tv).length}`);
+</script>
