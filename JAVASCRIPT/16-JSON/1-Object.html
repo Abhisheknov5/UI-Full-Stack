@@ -1,0 +1,82 @@
+<!--
+JavaScript Object Type :-
+
+- “Alan Kay” introduced the concept of object into computer programming in early 1960’s.
+- The intention of object is to keep all related data and logic together.
+-  JavaScript object comprises of data and logic configured under the reference of “Keys”
+-  Hence in JavaScript object is a key-value collection.
+
+Syntax:
+            {
+              “Key” : value
+            }
+
+- Key is string type and value can be any type [Primitive, Non-Primitive]
+- Multiple keys and values are separated with “,” delimeter.
+
+CSS Object
+            {
+             display: “none”;
+             color:white;
+            }
+
+JavaScript Object
+
+            {
+              “Name”: “TV”,
+              “Price”: 45000.44
+            }
+
+- Logic for object is defined by using “function”.
+
+            {
+             “Price”: 45000.44,
+            “Qty” : 2,
+            “Total”: function() { },
+            “Print” : function() { }
+            }
+
+CSS Object
+            {
+              display: “block”;
+              background-color: rgb();
+            }
+
+- Object enables
+   
+        a) Reusability
+        b) Separation
+        c) Extensibility
+
+- If object comprises of data only and it just represents data without function, then it is reffered as “JSON” type. [JavaScript Object Notation]
+
+- In a network data is transfered in Binary format, which can be blocked by firewalls.
+- All applications need data in a format, which is understandable to every OS & Device.
+- Modern software technologies transport data in 2 formats
+       
+        a) XML        [Extensible Markup Language]
+        b) JSON        [JavaScript Object Notation]
+
+- XML and JSON are the formats for data, which can reach any device and any OS service. And understandable to any browser.
+
+Syntax:
+
+    var  weather = {
+            “City”: “Hyderabad”,
+            “Day”: 28,
+            “Night”: 19
+            }
+
+     weather.City                    => returns  “Hyderabad”
+     weather.City= “Delhi”            => assigns Delhi by replacing Hyderabad
+-->
+<script>
+    var tv = {
+        "Name": "Samsung TV",
+        "Price": 45000.44,
+        "Stock": true,
+        "Cities": ["Delhi", "Hyderabaad"],
+        "Rating": {"Rate":4.3, "Count": 4200}
+    }
+    document.write(`Name=${tv.Name}<br>Price=${tv.Price}<br>Stock=${tv.Stock}<br>Cities=${tv.Cities.join(" / ")}<br>Rating=${tv.Rating.Rate} [${tv.Rating.Count}]`);
+</script>
