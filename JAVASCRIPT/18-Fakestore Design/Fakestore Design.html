@@ -1,3 +1,45 @@
+<!--
+fetch()  promise  - JSON
+
+                        Array of Objects
+- Data with multiple records is managed as a collection of objects in API's.
+
+Syntax:
+    [
+      { Key:value },
+      { Key:value }
+    ]
+
+    [0]    => { }        => [0].Key
+    [1]    => { }
+
+                          Fakestore API    
+                     [ http://fakestoreapi.com ]
+
+API Methods
+
+    /products                    It returns an array of all products [ { }, { } ]
+   
+    /products/1                It returns a specific product using id  { }
+
+    /products/categories        It returns a list of categories [" ", " "]
+
+    /products/category/electronics    It returns an array of products belong to specific
+                                 category. [ { }, { } ]
+
+
+    http://fakestoreapi.com/products
+
+- Every product comprises of following details
+    {
+     title: ' ',
+     price: 0,
+     image: ' ',
+     category: ' ',
+     description: ' ',
+     rating: { rate:0, count:0 }
+    }
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,8 +151,6 @@
                 document.querySelector("tbody").appendChild(tr);
             })
         }
-
-          
     </script>
 </head>
 <body class="container-fluid" onload="bodyload()">

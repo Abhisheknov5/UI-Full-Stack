@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API NASA GOV</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function bodyLoad() {
+            fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY&quot")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(item){
+                item.photos.map(function(photo){
+                    var tr = document.createElement("tr");
+                    var tdId = document.createElement("td");
+                    var tdImage = document.createElement("td");
+                    var tdRover = document.createElement("td");
+                    var tdCamera = document.createElement("td");
+
+                    tdId.innerHTML = photo.id;
+                    tdImage.innerHTML = `<a href=${photo.img_src}><img src=${photo.img_src} width="200" height="200" ></a>`;
+                    tdRover.innerHTML = photo.rover.name;
+                    tdCamera.innerHTML = photo.camera.full_name;
+
+                    tr.appendChild(tdId);
+                    tr.appendChild(tdImage);
+                    tr.appendChild(tdRover);
+                    tr.appendChild(tdCamera);
+
+                    document.querySelector("tbody").appendChild(tr);
+
+
+                })
+            })
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyLoad()">
+    <h2>Mars Rover Photos</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Photo Id</th>
+                <th>Review</th>
+                <th>Rover</th>
+                <th>Camera</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    
+</body>
+</html>

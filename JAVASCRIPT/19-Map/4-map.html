@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var data = [
+            {Title:"HTML", Description:"It is a markup language"},
+            {Title:"CSS", Description:"It configures styles"}
+        ]
+        function Loaddata(){
+            data.map(function(item){
+                var dt = document.createElement("dt");
+                var dd = document.createElement("dd");
+                dt.innerHTML = item.Title;
+                dd.innerHTML = item.Description;
+                document.querySelector("dl").appendChild(dt);
+                document.querySelector("dl").appendChild(dd);
+            })
+        }
+    </script>
+</head>
+<body onload="Loaddata()">
+    <dl>
+
+    </dl>
+    
+</body>
+</html>

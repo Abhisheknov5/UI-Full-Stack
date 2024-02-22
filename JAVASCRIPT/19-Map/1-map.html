@@ -1,0 +1,56 @@
+<!--
+Map Type:-
+- It is a key and value collection same as object type.
+- Map comprises of keys as "any" type.
+
+Syntax:
+
+    object = {  "Key": value }
+
+    Map        = { 1|"A"|true : value }
+
+- It provides all implicity methods and properties for manipulation.
+
+     size            : It returns total count of keys.
+     set()        : It adds a new key and value
+     get()        : It can fetch a value using key
+     delete()        : It removes specific value using key
+     clear()        : It removes all keys and values
+     has()        : It returns true if specified key available.
+     keys()        : It returns all keys.
+     values()        : It returns all values.
+     entries()        : It returns all keys and values.
+
+Syntax:
+        var  data = new Map();
+        data.set(key, value);
+        data.get(key);
+        data.delete(key);
+        data.keys();
+        data.has(key); etc..
+
+- Map is faster than object, however it is schema less [structure less].
+
+FAQ: What is the difference between object and map?
+Ans:
+        Object                    Map
+        -----------------------------------------------
+        Key is string            Key can be any type    
+
+        Provies access with    It provies accessbility using
+        explicit members        implicit members.
+
+        It is slow                It is faster than object
+   
+        Structured            Schema less [structure less]
+-->
+
+<script>
+    var data = new Map();
+    data.set("HTML","It is a markup Language");
+    data.set(1,{Name:"Samsung Tv",Price:45000.33});
+    document.write(data.get(1).Price+"<br>");
+    for(var key of data.entries()){
+        document.write(key+"<br>");
+    };
+</script>
