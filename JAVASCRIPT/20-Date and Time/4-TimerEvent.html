@@ -1,0 +1,57 @@
+<!--
+Timer Events
+setTimeout()
+clearTimeout()
+setInterval()
+clearInterval()
+
+setTimeout():
+- It is used to control bounce in electronic devices.
+- You can debounce by using setTimeout.
+- Bounce is  a mechanism where a task is released into process immediately.
+- You can lock the task for specific duration of time using setTimeout().
+
+Syntax:
+    setTimeout(function(){}, Interval);
+
+clearTimeout():
+- It removes the task from memory.
+- It will not release the task into process.
+
+Syntax:
+        var ref = setTimeout(function(){} , interval);
+        clearTimeout(ref);
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function msg1(){
+            document.querySelector("p").innerHTML = "Hello !";
+        }
+        function msg2(){
+            document.querySelector("p").innerHTML = "How are You ?";
+        }
+        function msg3(){
+            document.querySelector("p").innerHTML = "Welcome to JavaScript";
+        }
+        var m1, m2, m3;
+        function bodyload(){
+           m1 = setTimeout(msg1, 3000);
+           m2 = setTimeout(msg2, 6000);
+           m3 = setTimeout(msg3, 10000);
+        }
+        function Cancelclick() {
+            clearTimeout(m2);
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <button onclick="Cancelclick()">Cancel Msg2</button>
+    <p align="center"></p>
+</body>
+</html>

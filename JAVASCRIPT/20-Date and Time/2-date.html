@@ -1,0 +1,20 @@
+<!--
+- You can set a new date and time dynamically by using following functions
+
+        setHours()
+        setMinutes()
+        setSeconds()
+        setMilliSeconds()
+        setDate()
+        setMonth()
+        setFullYear()
+-->
+
+<script>
+    var Mfd = new Date("2023-02-22 21:30:22.46");
+    var months = ["January","February","March","April","May","June","july","August","sept","oct","nov","dec"];
+    var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thu", "Fri","Sat"];
+    Mfd.setMonth(3);
+    Mfd.setDate(18)
+    document.write(`Mfd=${weekdays[Mfd.getDay()]}, ${Mfd.getDate()}-${months[Mfd.getMonth()]}-${Mfd.getFullYear()}`)
+ </script>

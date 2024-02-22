@@ -1,0 +1,40 @@
+<!--
+Date Type:-
+
+- The date values are stored in memory using a "Date()" constructor.
+- It allocates memory for date type, so that your can store and manipulate date/time values.
+
+Syntax:
+        var ref = new Date();        => Loads the current date & time in memory.
+       
+- To load specific date and time into memory, you have to follow the given format
+
+            "yy-mm-dd  hrs:min:sec.millisec"
+
+Syntax:
+        var  ref = new Date("2023-12-11  10:30:21.56");
+
+- To read date and time values from memory javascript provides following methods
+
+    getHours()        : It returns hour number 0 to 23.
+    getMinutes()        : It returns the minutes number 0 to 59.
+    getSeconds()        : It returns the seconds number 0 to 59.
+    getMilliSeconds()    : It returns milliseconds 0 to 99.
+    getDate()            : It returns date number 1 to 28,29,30,31.
+    getDay()            : It returns weekday number 0=Sunday
+    getMonth()        : It returns month number 0=January
+    getFullYear()        : It returns year number 4 digits.
+    toLocaleString()
+    toLocaleDateString()
+    toLocaleTimeString()
+    toDateString()
+    toTimeString()
+
+Note: All date and time function return a numeric value.
+-->
+ <script>
+    var Mfd = new Date("2023-02-22 21:30:22.46");
+    var months = ["January","February","March","April","May","June","july","August","sept","oct","nov","dec"];
+    var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thu", "Fri","Sat"];
+    document.write(`Mfd=${weekdays[Mfd.getDay()]}, ${Mfd.getDate()}-${months[Mfd.getMonth()]}-${Mfd.getFullYear()}`)
+ </script>
