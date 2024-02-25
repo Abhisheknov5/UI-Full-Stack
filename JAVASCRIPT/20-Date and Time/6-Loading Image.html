@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Image in Html</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        progress {
+            width: 300px;
+            height: 30px;
+        }
+        @keyframes Zoom
+        {
+            from {
+                transform: scale(0.1);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+    </style>
+    <script>
+        var count = 1;
+        function Progress() {
+            var pic = document.querySelector("img");
+            count++;
+            if(count == 100){
+            document.getElementById("imageContainer").style.display = "block";
+            document.getElementById("loadingContainer").style.display = "none";
+            pic.style.animationName = "Zoom";
+            pic.style.animationDuration = "3s";
+
+        }
+            document.querySelector("progress").value = count;
+            document.getElementById("lblStatus").innerHTML = `${count} % completed`;
+        }
+        var timer;
+        function LoadClick(){
+            document.getElementById("buttonContainer").style.display = "none";
+            document.getElementById("loadingContainer").style.display = "block";
+            timer = setInterval(Progress,'100');
+        }
+
+        function PauseClick(){
+            clearInterval(timer);
+            document.getElementById("downloadStatus").innerHTML = "(paused)";
+        }
+        function PlayCLick(){
+            timer = setInterval(Progress,100);
+            document.getElementById("downloadStatus").innerHTML = "";
+        }
+    </script>
+</head>
+<body class="container-fluid d-flex justify-content-center align-items-center" style="height:100vh;">
+    <div>
+        <div>
+            <div id="buttonContainer">
+                <button onclick="LoadClick()" class="btn btn-primary">Load Image</button>
+
+            </div>
+        </div>
+        <div id="loadingContainer" class="text-center" style="display: none;">
+            <progress min="1" max="100"></progress>
+            <div id="lblStatus"></div>
+            <div id="downloadStatus"></div>
+            <div class="mt-2">
+                <button onclick="PauseClick()" class="btn btn-danger bi bi-pause"></button>
+                <button onclick="PlayCLick()" class="btn btn-success bi bi-play"></button>
+            </div>
+        </div>
+        <div id="imageContainer" style="display: none;">
+            <img src="../public/images/Amazon1.jpg" width="300" height="400">
+
+        </div>
+    </div>
+</body>
+</html>
