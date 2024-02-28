@@ -1,0 +1,127 @@
+<!--
+Body Section
+- It is defined using <body> element.
+- It comprises of content to display in browser workspace.
+
+Syntax:
+<!DOCTYPE html>
+<html lang="en-in">
+<head>
+</head>
+<body>
+
+</body>
+</html>
+
+Attributes:
+1. bgcolor        : It sets a background color for page.
+2. text            : It sets text color.
+
+Note: HTML colors are defined using 3 techiques
+        a) Color Name
+        b) Color Shade Name
+        c) Hexa Decimal Code
+
+Syntax:
+    <body bgcolor="red | green | blue..">         => color name
+    <body bgcolor="lightred | lightgreen..">         => shade name
+
+FAQ: How to configure Hexa decimal color code?
+Ans:  Hexa Decimal color code starts with "#" and contains 3 or 6 chars codes
+     
+            #RGB        => Red ,Green, Blue
+            #RRGGBB
+       
+      Every color value range will be from  0 to f.
+
+            "0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f"
+               dark                         bright
+
+            R    => 0 to f
+            G    => 0 to f
+            B    => 0 to f
+
+            #f00            => Red
+            #0f0            => Green
+            #00f            => Blue
+            #fff            => White
+            #000        => Black
+
+            #ff0000        => Red
+            #00ff00        => Green
+            #0000ff        => Blue
+
+        <body bgcolor="red">        => Good
+        <body bgcolor="#f00">
+
+        <body bgcolor="white">
+        <body bgcolor="#fff">        => Good
+
+Syntax:
+    <body bgcolor="#f00"  text="#fff">
+    <body bgcolor="red"  text="#fff">
+    <body bgcolor="#00ff00"  text="#0000ff">
+
+3. background        : It sets a background image for page.
+
+Note:
+  - Always use virtual path for any resource in website.
+            public/images/name.jpg
+  - Never use physical path
+            D:\MyImages\pic.jpg
+
+Syntax:
+    <body background="public/images/banner.jpg">
+
+FAQ: How to control background image?
+Ans : By using following CSS background attributes
+
+        background-size            : width, height, cover, contain
+        background-repeat            : repeat, no-repeat, repeat-x, repeat-y
+        background-position        : top, center, bottom, left, right, pixels
+        background-attachment        : fixed, scroll
+
+Syntax:
+ <head>
+   <style>
+      body  {
+      background-size: 200px 400px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+    }
+   </style>
+</head>
+ <body background="public/images/banner.jpg">
+ </body>
+ 4. align        : It aligns the body content left, center, right or justify.
+
+
+Syntax:
+    <body align="left | center | right | justify">
+
+5. leftmargin            ]
+6. rightmargin            ]   sets space between content and browser window
+7. topmargin            ]
+8. bottommargin        ]
+
+9. alink                : It sets color for active links in page.
+10. vlink                : It sets color for visited links in page.
+
+Syntax:
+    <body alink="red" vlink="green">
+    </body>
+
+
+Summary
+- bgcolor
+- text
+- background
+- align
+- leftmargin
+- rightmargin
+- topmargin
+- bottommargin
+- alink
+- vlink
+-->

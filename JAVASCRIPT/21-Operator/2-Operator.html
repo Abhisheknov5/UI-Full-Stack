@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function SubmitClick(){
+            var fee = 0;
+            var courses = document.getElementsByName("course");
+            for(var course of courses)
+            {
+                if(course.checked){
+                    fee += parseInt(course.value);
+                }
+            }
+            document.querySelector("p").innerHTML = fee;
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend> Select Courses</legend>
+        <ul style="list-style: none;">
+            <li>
+                <input type="checkbox" name="course" value="3000">Java
+            </li>
+            <li>
+                <input type="checkbox" name="course" value="5000">.NET
+            </li>
+            <li>
+                <input type="checkbox" name="course" value="10000">UI React
+            </li>
+            <button onclick="SubmitClick()">Submit</button>
+
+        </ul>
+    </fieldset>
+    <p></p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!--
+- Data list is designed for columns, you can split the terms and definitions into columns by using "display:grid".
+
+Syntax:
+    dl {
+        display:grid;
+        grid-template-columns: 3fr 9fr;
+     }
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataList-2</title>
+    <style>
+        dt {
+            background-color: lightgrey;
+            padding: 4px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        dl {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+            grid-gap: 5px;
+        }
+        dd {
+            background-color: black;
+            color: white;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>First Name</dt>
+        <dd>Some name</dd>
+        <dt>Last Name</dt>
+        <dd>Some name</dd>
+        <dt>Age</dt>
+        <dd>22</dd>
+        <dt>Email</dt>
+        <dd>Some email</dd>
+    </dl>
+    
+</body>
+</html>

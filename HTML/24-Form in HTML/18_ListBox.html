@@ -1,0 +1,53 @@
+<!--
+ListBox:-
+- A dropdown can transform into list box by using the attributes
+    a) multiple
+    b) size
+
+Syntax:
+    <select multiple size="4">
+
+    </select>
+
+- List box allows user to select multiple options. [enable multiple attribute]
+
+Ex:
+    <select name="City" size="3" multiple>
+            <option>Delhi</option>
+            <option>Hyd</option>
+            <option>Mumbai</option>
+        </select>
+
+Note: Dropdown and Listbox options are RC data type. You can present only plain
+      text content.
+
+      <select>
+            <option>Language</option>
+            <option>English</option>
+            <option>हिंदी</option>
+        </select>
+
+     - You can configure effects using style attributes.
+     - A dropdown can't be nested.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Box</title>
+</head>
+<body>
+    <form>
+        <h3>Select City</h3>
+        <select size="2" multiple name="city">
+            <option>Delhi</option>
+            <option>Hyderabaad</option>
+            <option>Mumbai</option>
+            <option>Chennai</option>
+        </select>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

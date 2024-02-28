@@ -1,0 +1,117 @@
+<!--
+HTML Tables:-
+
+- Tables are used in HTML to design data grids.
+- A data grid can display data arranged in rows and columns.
+- Grid is mostly used for presentation and manipulation of data.
+  [filter, sort, search, edit, insert, update, delete etc..]
+- HTML 5 provides various elements for designing tables
+
+    <table>              It configures a container with groups for head,body & footer.
+    <caption>          It makes table SEO friendly
+    <colgroup>          It can group a set of columns to highlight.
+    <thead>              It is header section
+    <tbody>              It is the body section
+    <tfoot>              It is the footer section
+    <tr>                  It is table row
+    <th>                  It is heading format cell
+    <td>                  It is normal table cell [table data]
+
+Table Attributes:
+
+1. Frame, Rules & Border
+
+
+    frame        : It sets a frame for table, which includes the values:
+                      box, rhs, lhs, above, below & void
+
+                 <table  frame="box | rhs | lhs..">
+
+    rules        : It is for rows, columns and groups in table.
+
+                 <table rules="all | rows | cols | groups | none">
+
+    border        : It is for cells in table. It can have value 0=no-border, 1=border
+                        0 = false
+                        1 = true
+
+                   <table  border="1">
+
+Note: You can't configure border for table if rules are defined. You have to remove rule attribute for table inorder to set border. If both rules & border are defined, then rules are applied to table.
+
+Syntax:
+    <table border="1" frame="void">
+    <table rules="all"  frame="box">
+    <table rules="rows" frame="void">
+    <table rules="all" border="1">         => only rules will apply
+
+2. Cellspacing and Cellpadding
+
+    cellspacing        : It sets space between cells in table
+    cellpadding        : It sets space between cell content and border.
+
+Syntax:
+    <table border="1" frame="void" cellspacing="5"  cellpadding="10">
+
+3. BgColor and Background
+
+    bgcolor            : It sets background color for table, group, row or cell.
+    background        : It sets background image for table, group, row or cell.
+
+Syntax:
+    <table bgcolor="yellow">
+    <thead bgcolor="yellow">
+    <tr bgcolor="yellow">
+    <td bgcolor="yellow">
+
+    <table background="public/images/cricket.jpg">
+    <tbody background="public/images/cricket.jpg">
+    <td background="public/images/cricket.jpg">
+
+4. width and height
+
+    - You can configure width only for "<th> or <td>".
+    - You can configure height for <tr> or <td>.
+
+Note: <table> element provides "width" as property but not "height".
+
+FAQ: What is difference between attribute & property?
+Ans :  Attribute is immutable, It can't change dynamically.
+      Property is mutable, It can change dynamically.
+     
+      Table width is available as both attribute and property.
+      Table height is available only as attribute.
+
+Syntax:
+        <table width="500">
+        <th width="200">
+        <td width="200">
+
+Note: Always configure height for "<tr>"  
+
+Syntax:
+         <tr height="100">
+         <td height="100">
+
+5. Align & Valign
+
+    align            : Horizontal alignment for table contents, left, center, right or justify.
+    valign        : Vertical alignment for table contents, top, center, bottom
+
+Syntax:
+        <tr align="center">
+        <td align="center">
+        <tr valign="bottom">
+        <td valign="top">
+
+6. Colspan & Rowspan
+
+        colspan        : It can merge multiple cells in a column into single cell
+        rowspan        : It can merge multiple cells in a row into single cell
+
+Syntax:
+         <td colspan="4">
+        <td rowspan="3">
+
+Note: You can configure row and col span only for <td> or <th>
+-->

@@ -1,11 +1,20 @@
+<!--
+14. Badge Class
+    .badge
+    .position-relative [for parent element]
+    .position-absolute [for child element that have badge class]
+    .bg-{contextual}
+    .rounded
+    .text-{contextual}
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Badge class</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body class="container-fluid">
     <button class="mt-3 btn btn-primary position-relative">
@@ -17,6 +26,8 @@
         Your Cart
         <span class="bi bi-cart4"></span>
         <span class="badge bg-danger rounded rounded-circle position-absolute">2</span>
+
     </button>
+    
 </body>
 </html>

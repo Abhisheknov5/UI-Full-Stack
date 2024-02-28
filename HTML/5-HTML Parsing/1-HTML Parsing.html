@@ -1,0 +1,64 @@
+<!--
+HTML Parsing:
+- Parse is the term used in computer programming, which refers to converting the code into understandable format of target component.
+- HTML markup is parsed in browser using a browser engine.
+
+Flow:
+  Markup => Bytes => Chars => Token => Node => DOM => Render => Layout => Paint
+
+Note: HTML is a collection of elements arranged in an hierarchial order called DOM.
+      [Document Object Model]
+
+- HTML elements are categorized into following groups
+
+1. Normal Elements
+2. Void Elements
+3. RC Data Elements
+4. Raw Text Elements
+5. Foriegn Elements
+
+Normal Elements:
+- It is an HTML element that returns presentation directly on callback.
+- It doesn't require additional attributes.
+- These elements start presentation but will not stop implicitly.
+- You have to stop explicitly by using end tokens.
+
+Ex:
+    <b>      start token
+    </b>        end token
+
+Void Elements:
+- Void refers to no return value.
+- They don't return any presentation directly on callback.
+- They can return specified  content using attributes.
+- They stop implicitly after returning the content, hence they doesn't require end token.
+
+Ex:
+<img>
+
+RC Data Elements:
+- Rich Content data elements.
+- These elements will not allow any another element with in the context.
+- They are used only for plain text content.
+
+Ex:
+  <textarea>  </textarea>
+
+Raw Text Elements:
+- These are the elements presented without using tokens.
+- A raw text is used for presentation.
+
+Ex:
+   &deg;
+   &#8377;
+
+Foreign Elements:
+- These are the elements not native to every browser.
+- They need additional plugin's to be installed and configured in order to use in browser.
+
+Ex:
+ Canvas
+ SVG
+ MathML
+
+-->

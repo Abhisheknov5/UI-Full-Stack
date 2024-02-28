@@ -1,0 +1,55 @@
+<!--
+Unorderd List :-
+- It is a bulleted list.
+- A bulleted list can have symbols of type : circle, square or disc.
+
+Syntax:
+    <ul type="circle | disc | square">
+     <li> Item - 1 </li>
+     <li> Item - 2 </li>
+    </ul>
+
+FAQ's:
+1. How to define a custom bullet symbol?
+A. You can create a symbol as image and set as list symbol by using
+     "list-style-image" attribute.
+
+Syntax:
+    ul {
+        list-style-image: url ("path");
+    }
+
+Ex:
+1. Draw an bullet symbol in ms-paint  & save in your project images folder
+            "bullet.gif"   [24 x 24 pixels]
+2. Link to list
+
+    ul {
+         list-style-image: url("public/images/bullet.gif");
+    }
+
+Note: You can also use bootstrap icons instead of creating custom icons.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unordered List custom bullet symbol</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="bi bi-tag-fill">Bank offer 5% Cashback on Flipkart Axis Bank Card T&c</li>
+        <li class="bi bi-tag-fill"> Special PriceGet extra ₹2000 off (price inclusive of cashback/coupon)T&C</li>
+        <li class="bi bi-tag-fill">Partner OfferSign-up for Flipkart Pay Later & get free Times Prime Benefits worth ₹10,000*Know More</li>
+        <li class="bi bi-tag-fill">Partner OfferPurchase now & get 1 surprise cashback coupon in FutureKnow More</li>
+    </ul> 
+</body>
+</html>

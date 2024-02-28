@@ -1,0 +1,70 @@
+<!--
+  Footer
+- Footer comprises of information displayed at bottom margin of page.
+- Typically footer contains information about services, copyrights, address etc.
+- Content in footer is used for SEO.
+
+Syntax:
+    <footer>
+        ... your content...
+    </footer>
+
+FAQ: How to keep content exactly center screen?
+Ans:
+    1. Make sure that all the content that you want to keep in center is inside one
+        container.
+                       
+                        <main>
+                        <div>Title</div>
+                        <div>Sub Title</div>
+                        </main>
+   
+    2. Set following attributes for parent container, that holds the single fragment in
+        page.
+                        <section>
+                            <main>
+                            <div> Title </div>
+                            <div> Sub Title </div>
+                           </main>
+                        </section>
+
+        section {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+         }
+
+CSS Box & Text Shadow
+
+    box-shadow : horizontalPixles, verticalPixels, blurPixels, color;
+    text-shadow : horizontalPixles, verticalPixels, blurPixels, color;
+
+Syntax:
+    .title {
+        text-shadow : 5px 4px 2px black;
+    }
+
+CSS Grid Display:
+- CSS Grid comprises of content arranged into fixed set of rows and columns.
+- CSS Flex don't have fixed set of rows, it changes according to device width.
+- Every page can split into 12 fractions for grid.
+- You can define columns in fractions or in pixels [1200px].
+
+Syntax:
+    .container {
+        display:grid;
+        grid-template-columns: 6fr 6fr;    (or) 600px  600px
+    }
+
+   Aside
+- Aside refers to content that is not relative to current context.
+- It comprises of information that can take user aside from current location.
+- Typically ads and social links are defined in aside.
+
+Syntax:
+    <aside>
+        ... your content...
+    </aside>
+
+-->

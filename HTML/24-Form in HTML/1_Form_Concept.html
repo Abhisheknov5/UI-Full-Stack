@@ -1,0 +1,402 @@
+<!--
+Forms in HTML :-
+- Form provides an UI from where user can interact with the data in application.
+- It enables CRUD operations on data.
+        C    Create
+        R    Read
+        U    Update
+        D    Delete
+- Form provides inerface with a set of elements like
+        button
+        textbox
+        checkbox
+        radio
+        listbox
+        dropdown etc..
+
+- Form is technically a "Generic" container, which can submit or reset data.
+- It is defined by using <form> element.
+- If you have to submit or reset data dynamically then it must be through <form> container.
+
+Syntax:
+    <form>
+        ... form elements...
+    </form>    
+
+Form Attributes:
+1. id                ]
+2. name            ]    used as reference for form in css and javascript.
+3. class            ]
+
+4. method        :     It defines the actions to perform.
+                    Every form can have 2 methods
+                        a) GET
+                        b) POST
+
+FAQ: What is GET ?
+Ans : It is a request method used by form to fetch data from server.
+
+        <form  method="get">
+
+FAQ: What is POST?
+Ans : It is a request method used by form to submit data to server.
+
+        <form method="post">
+
+FAQ: What is the default method for form?
+Ans : GET
+
+
+FAQ: Can we submit data to server on GET request?
+Ans :  Yes. But not recommended.
+
+GET Request:
+- It is used to fetch data.
+- It can submit data but not recommended.
+- It submits data into URL as querystring.
+- Every user can view the data.
+- It is not safe.
+- It is easy to hack your data.
+- It is stored in browser logs.
+- It can be bookmarked.
+- You can't submit complex data ie. binary type data
+- You can submit only 2048 chars.
+- It can cache the data.
+- It saves round trips.
+
+POST Request
+- It is used to submit data.
+- It submits data as form body
+- It is not visible to users
+- It is safe when compared to get
+- It is not stored in browser logs
+- It can't be bookmarked
+- You can submit complex data.
+- There is no limit for data.
+- It can't cache the data.
+
+Form Attributes
+1. id
+2. name
+3. class
+4. method
+
+FAQ: Where the data is present when form is submitted on GET request?
+Ans:  Query String
+
+FAQ: Where the data is present when form is submitted on POST request?
+Ans:  Form Body
+
+FAQ: What is the advantage of posting data on GET request?
+Ans:  It saves round trips.
+
+FAQ: How GET will save round trip?
+Ans: By caching the data.
+
+FAQ: What is round trip?
+Ans:  It is the process of communicating with server everytime when client requests data.
+
+5. action    :  It defines the target page where data is submitted. It is usually a server side
+           page. It is often required when submitting data to server.
+
+Syntax:
+    <form method="post"  action="page.jsp | php | asp..">
+
+6. novalidate : It is used to disable the default HTML validations.
+            Every validation of HTML is not according to various client requirements,
+            hence we have to disable default validation and define custom validation.
+
+Syntax:
+    <form method="post"  novalidate>
+
+
+FAQ: Can we define multiple forms in a page?
+Ans:  Yes.
+
+FAQ: Can we define nested forms in page?
+        <form>
+            parent
+            <form>
+               child
+            </form>
+        </form>
+Ans:  No. You can design pseudo nested forms using AJAX.
+
+
+                        Form Elements
+                        --------------------
+- Form comprises of various types of elements like buttons, textbox, checkbox, radio, listbox, dropdown etc.
+- HTML provides different types of tokens for creating form elements, like
+        <input>
+        <select>
+        <option>
+        <optgroup>
+        <textarea>
+        <meter>
+        <progress> etc..
+
+Note: <input> is an HTML form element that allows to input various types of values.
+      HTML 5 introduced several new data types to restrict input.
+
+                             Text Box
+- It is an input element used to manage string.
+- String is a literal with group of characters. [alpha numeric and special chars]
+- It allows user to view, edit and input value.
+- The attribute "type" is used to change the input type.
+
+Syntax:
+    <input type="text">            => string input
+
+Attributes:
+1. Id                ]
+2. name            ]   used to refer textbox in css and javascript
+3. class            ]
+
+Note: Every element in form must have "name" attribute.
+      If name is not defined for any element in form, then the value of element is not
+      submitted to server.
+
+4. value            : It defines the default value to display in textbox.
+
+Syntax:
+    <input type="text" name="UserName"  value="John">
+
+5. readonly        : It will not allow to modify the value in textbox.
+                  It will not allow to input a value if textbox is empty.
+                  It can submit the value.
+
+Syntax:
+    <input type="text"  name="UserName"  value="John" readonly>
+    <input name="UserName" readonly  value="David"  type="text">
+
+
+6. disabled        : It will not allows to modify and submit a value.
+
+Syntax:
+    <input type="text" name="UserName"  value="John" disabled>
+
+
+7. placeholder        : It defines the watermark text to display in textbox before any value
+                  is entered.
+
+Syntax:
+    <input type="text"  name="Mobile"  placeholder="eg: +91 and 10 digits">
+
+8. autofocus        : It sets focus to element automatically on page load.
+
+Syntax:
+    <input type="text"  name="Mobile" autofocus>
+
+9. size            :  It defines the width of textbox. It is not limit.
+
+Syntax:
+    <input type="text"  name="OTP"  size="4">
+
+10. maxlength        : It sets restriction for maximum number of characters.
+
+Syntax:
+    <input type="text" name="OTP" size="4" maxlength="4">
+
+11. minlength        : It sets validation for minimum number of characters.
+
+Syntax:
+    <input type="text" name="OTP" minlength="2" maxlength="4">
+
+12. required        : It will not allow to submit empty. It is used for mandatory fields.
+
+Syntax:
+    <input type="text"  name="OTP" required minlength="4" maxlength="4">
+
+Note: If input element is defined with multiple validations, then the first priority is for "required".
+
+13. list            : It is used to attach a data list to input element.
+                  The data list is a form element used for auto complete text.
+                  Form data list is configured with
+                    <datalist>
+                    <option>
+Syntax:
+    <input type="text"  name="search"  list="terms" size="40">
+    <datalist id="terms">
+      <option> Term-1 </option>
+      <option> Term-2 </option>
+    </datalist>
+
+Radio Buttons:-
+
+- Radio button allows to select one or multiple options from a group of choices.
+- Radio will not allow to uncheck any option after checked.
+- Hence radios are used with "Mutex" mechanism.
+- Mutex is Mutual Exclusion. It is a concept of multi threading.
+- You can configure mutex for radios by specifiying common reference name.
+- All radios in a category must have same name.
+
+Syntax:
+    <input type="radio"  name="gender"> Male
+    <input type="radio"  name="gender"> Female
+
+- If radios are configured with mutex then they allow user to select any one option from a group of choices.
+
+- You can make any radio selected by default by using "checked" attribute.
+
+    <input type="radio" name="gender"  checked>  Male
+
+- If selection is mandatory and user can switch the selection then better configure with "radios".
+
+- Every radio submits "on" as default value, hence we have to configure "value" attribute for radios.
+
+- Radio doesn't have text, we have to configure using <label> element.
+
+Syntax:
+<input type="radio" name="gender" value="Male"> <label for="gender"> Male </label>
+
+Check Box :-
+- It is similar to radio button, but enables the user to check and uncheck any option dynamically.
+
+Syntax:
+ <input type="checkbox"  name="course"  value="WebUI" checked> <label for="course"> Web UI </label>
+
+FAQ: How to design a check box list?
+Ans:  HTML doesn't provide any checkbox list element.
+     You have to design using CSS overflow attributes.
+
+Dropdown:- 
+- It allows user to select any one option from a group of choices.
+- It can drop a list and allow to select item from list.
+- It is designed by using following elements
+
+    <select>                It configures dropdown
+    <optgroup>            It configures a category in dropdown with label
+    <option>                It configures an item in dropdown
+
+Syntax:
+    <select>
+        <optgroup label="categoryName">
+             <option> Item 1 </option>        
+             <option> Item 2 </option>
+        </optgroup>
+    </select>
+
+- Every option comprises following attributes
+
+    a) value            : It defines the value to submit
+    b) selected        : It selects the option automatically on page load.
+    c) disabled        : It will not allow to select the option.
+
+    <option  value="delhi"  selected>
+    <option  value="delhi"  disabled>
+
+ListBox:-
+- A dropdown can transform into list box by using the attributes
+    a) multiple
+    b) size
+
+Syntax:
+    <select multiple size="4">
+
+    </select>
+
+- List box allows user to select multiple options. [enable multiple attribute]
+
+Ex:
+    <select name="City" size="3" multiple>
+            <option>Delhi</option>
+            <option>Hyd</option>
+            <option>Mumbai</option>
+        </select>
+
+Note: Dropdown and Listbox options are RC data type. You can present only plain
+      text content.
+
+      <select>
+            <option>Language</option>
+            <option>English</option>
+            <option>हिंदी</option>
+        </select>
+
+     - You can configure effects using style attributes.
+     - A dropdown can't be nested.
+
+Meter:-
+
+- It is used to display a grade meter.
+- It can be controlled by using the attributes
+    a) min
+    b) max
+    c) value
+    d) low
+    e) high
+
+Syntax:
+    <meter min="1" max="100" value="100">  </meter>  Green
+    <meter min="1" max="100" value="100" low="20" high="80"> Yellow
+
+Progress:-
+- It is used to show status of any task  performed in page.
+- Status includes the time taken to complete the task, such as installing, downloading, copying etc.
+
+Syntax:
+    <progress min="1" max="100"  value="30"> </progress>
+
+- You have to control progress using JavaScript.
+
+Textarea :-
+- It allows text in multiple lines.
+- It is multiline text box.
+
+Syntax:
+    <textarea> </textarea>        Empty Textarea
+
+    <textarea>                 Filled with default content
+        ...your text...
+    </textarea>
+
+Attributes:
+    rows                number of rows to display
+    cols                number of columns to display
+    disabled
+    readonly
+
+Syntax:
+    <textarea rows="4" cols="40"> </textarea>
+
+Label :-
+- It is used to set captions and titles for elements in Form.
+- You can bind label with any field in form by using "for" attribute.
+
+Syntax:
+    <div>
+        <label for="UserName"> User Name </label>
+        <div>
+        <input type="text" name="UserName">
+        </div>
+    </div>
+
+Buttons:-
+- A button is used to confirm user action.
+- HTML provides 2 types of buttons
+    1. Generic Buttons
+    2. Non Generic Buttons
+
+- Generic buttons have pre-defined functionality, HTML generic buttons are
+    a) Submit
+    b) Reset
+
+    <input type="submit"  value="Register">        HTML 4 Generic [Submit]
+    <input type="reset"    value="Cancel">            HTML 4 Generic [Reset]
+
+    <button type="submit> Text | Image | Icon </button>     HTML 5 Generic [Submit]
+    <button type="reset"> Text | Image | Icon </button>      HTML 5 Generic [Reset]
+
+ Note: Generic buttons can fireup any functionality only when they are defined in
+       <form> container.
+
+       If "type" is not defined for HTML 5 buttons, then the default type is "submit".
+
+- Non Generic button will not have any pre-defined functionality.
+
+      <input type="button" value="Print">        HTML 4
+      <button type="button>                    HTML 5
+        Image | Text | Icon
+      </button>
+
+-->

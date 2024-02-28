@@ -1,0 +1,60 @@
+<!--
+  Radio Buttons
+
+- Radio button allows to select one or multiple options from a group of choices.
+- Radio will not allow to uncheck any option after checked.
+- Hence radios are used with "Mutex" mechanism.
+- Mutex is Mutual Exclusion. It is a concept of multi threading.
+- You can configure mutex for radios by specifiying common reference name.
+- All radios in a category must have same name.
+
+Syntax:
+    <input type="radio"  name="gender"> Male
+    <input type="radio"  name="gender"> Female
+
+- If radios are configured with mutex then they allow user to select any one option from a group of choices.
+
+- You can make any radio selected by default by using "checked" attribute.
+
+    <input type="radio" name="gender"  checked>  Male
+
+- If selection is mandatory and user can switch the selection then better configure with "radios".
+
+- Every radio submits "on" as default value, hence we have to configure "value" attribute for radios.
+
+- Radio doesn't have text, we have to configure using <label> element.
+
+Syntax:
+<input type="radio" name="gender" value="Male"> <label for="gender"> Male </label>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button</title>
+    <style>
+        .options{
+            list-style: none;
+            margin-top: 10px;
+            columns: 2;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <ol>
+            <li> These elements does not require tokens
+                <ol class="options">
+                    <li><input name="q1" value="Normal" type="radio"><label for="q1">Normal Elements</label></li>
+                    <li><input name="q1" value="Raw Text" type="radio" checked><label for="q1">Raw Text Elements</label></li>
+                    <li><input name="q1" value="RC Data" type="radio"><label for="q1">RC Data Elements</label></li>
+                    <li><input name="q1"  value="Void" type="radio"><label for="q1">VOid Elements</label></li>
+                </ol>
+
+            </li>
+        </ol>
+        <button>Submit</button>        
+    </form>
+</body>
+</html>

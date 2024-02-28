@@ -1,0 +1,56 @@
+<!--
+3. How to open linked target in same tab along with exisiting content?
+A. By using HTML <iframe> element, you can embed target content into same page.
+     It can display the target along with exisiting content in same page.
+
+Syntax:
+    <a href="public/images/fashion.jpg" target="framebody"> Fashion </a>
+
+    <iframe  name="framebody"  width="100%  height="400"> </iframe>
+
+Ex: Embed youtube video
+
+<a href="https://www.youtube.com/embed/video_code&quot; target="framebody"> Click </a>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        ol {
+            list-style: none;
+        }
+        section {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        iframe {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Favorites</h1>
+    <section>
+        <nav>
+            <ol>
+                <li><a target="framebody" href="public/images/women-fashion.jpg"> <img src="public/images/women-fashion.jpg" width="60" height="60"> </a></li>
+                <li><a target="framebody" href="public/images/men-fashion.jpeg"> <img src="public/images/men-fashion.jpeg" width="60" height="60"> </a></li>
+                <li><a href="javascript:window.open('public/images/kids-fashion.jpg','Kids','width=300 height=400')"> <img src="public/images/kids-fashion.jpg" width="60" height="60"> </a></li>
+                <li>
+                    <a target="framebody" href="https://www.youtube.com/embed/8Xkjh0q-e5g&quot; >Python Training</a>
+                </li>
+                <li>
+                    <a target="framebody" href="https://www.youtube.com/embed/tm7kVn8abSg&quot; >React JS</a>
+                </li>
+            </ol>
+        </nav>
+        <main>
+            <iframe name="framebody" width="100%" height="500"></iframe>
+        </main>
+    </section>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!--
+Inter Document Links:-
+- An inter document links can handle various functionalities
+
+    a) Navigate to FILE
+    b) Navigate to URL
+    c) Invoke any application
+    d) Invoke any javascript function
+
+Navigate to FILE :
+
+- You can configure a link that navigates user to any specified file in application.
+- File can be any type : jpg, png, html, txt, json, xml, docx, xlsx, .mp3 etc..
+- Every file type can't open in browser. It requires suitable plugin to install.
+- If plugin is not available then linked document will download.
+
+Syntax:
+    <a href="public/images/fashion.jpg"> Fashion </a>
+    <a href="public/docs/tutorial.pdf"> Tutorial </a>
+   
+FAQ: How to configure a link that will always download the document?
+Ans : By using "download" attribute for <a> element.
+
+Syntax:
+    <a href="public/images/kids-fashion.jpg" download="kids">  Kids </a>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link File</title>
+</head>
+<body>
+    <h1>Favorites</h1>
+    <ol>
+        <li><a href="shopper-template.html">Shooper Template</a></li>
+        <li><a href="../public/images/Women-Fashion.jpg">Women Fashion</a></li>
+        <li><a download="kids" href="../public/images/kids-fashion.jpg">Kids Fashion</a></li>
+        <li><a href="../public/docs/Abhishek Resume .pdf">Resume</a></li>
+        <li><a href="../public/docs/Cover letter.pdf">Cover-Letter</a></li>
+    </ol>
+    
+</body>
+</html>

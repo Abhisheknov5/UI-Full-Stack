@@ -1,0 +1,62 @@
+<!--
+CSS Absolute & Relative Positions:-
+- Relative is the position defined for parent element.
+- Absolute is the position defined for child element.
+- Absolute can change the position with relative to its parent by using the attributes :
+  top, left, right & bottom.
+
+Syntax:
+    <nav>
+        <button> </button>
+    </nav>
+
+    nav {
+        position: relative;
+     }
+    button {
+         position: absolute;
+         top:0px;
+         right:0px;
+    }
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-card</title>
+    <style>
+        .women {
+            width: 700px;
+            height: 500px;
+            background-image: url("../public/images/Women-Fashion.jpg");
+            background-size: cover;
+            position: relative;
+        }
+        .offer {
+            width: 70px;
+            height: 70px;
+            background-color: red;
+            color: white;
+            padding: 5px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="women">
+        <div class="offer">
+            <div>Save</div>
+            <div>30% Off</div>
+        </div>
+    </div>
+</body>
+</html>

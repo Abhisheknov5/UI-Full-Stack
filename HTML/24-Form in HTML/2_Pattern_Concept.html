@@ -1,0 +1,234 @@
+<!--
+ pattern
+
+- Pattern is used to verify the format of input value.
+- Patterns are built by using regular expression.
+- Regular Expression returns a format.
+- Regular Expression is built by using "Meta Characters" & "Quantifiers".
+
+
+Meta Character            Description
+----------------------------------------------------------------------------------------------
+ ?                    Zero or One occurance of a character.
+
+                    pattern="colou?r"        => color, colour
+
+ +                    One or More occurances of character
+
+                    pattern="colou+r"        => colour, colouur, colouuur...
+
+ *                    Zero or More occurances of character
+
+                    pattern="colou*r"        => color, colour, colouur, colouuur..
+
+ .  (dot)                Any single character [alphabet, number, special character]
+
+                    pattern=".o."        => cow, dos, toy, $o4, 3o3, $o$ ...
+                    pattern=".at"        =>  cat, bat, $at, 4at, ...
+
+ \                    It is an escape sequence character. It can transform a
+                    meta character into normal character & vice versa.
+
+                    pattern="gmail.com"    => gmail$com, gmail4com...
+                    pattern="gmail\.com    => gmail.com
+
+ | [pipe]                 It refers to logical OR, any of the given chars or words.
+
+                    pattern="red|green|blue"   =>  red, green, blue
+
+ ( )                    It is used for union.
+
+ [ ]                    It is used for range and multiple.
+
+                    pattern="[a,d,s,5,7,$]"            => A - invalid
+                    pattern="[a-s,4-8, $, @, #]"
+                    pattern="[a-s,A-S]"
+
+ ^                    Exclude specified chars and allow others
+
+                    pattern="[^a-s, 4-8]"    => all other than specified are allowed
+                                              q, w, 2, 9
+\^                    Starts with
+
+$                    Ends with
+
+                    pattern="\^ your expression $"
+
+\d                    It refers to any single digit number.
+
+                    pattern="\d"        => 1, 4, 7, 8
+                    pattern="\d\d"        => 23, 66, 21
+                    pattern="\d\d?"    =>  1, 56
+
+\D                    It refers to non-numeric character. [a-zA-Z@$^&% ..]
+
+                    pattern="\D"        =>  A, $, g
+                    pattern="\d\D"        =>  2A, 2b, 3$
+
+\w                    It refers to word characters, which includes
+                    "A-Z, a-z, 0-9, _ "
+
+\W                    It refers to all chars other than "A-Z, a-z, 0-9, _ "
+
+                    pattern="\d\W"        =>  3$, 6&
+
+\s                    It configures a blank space.
+       
+                    pattern="\d\s\W"        => 2 $,  4 #
+
+\i                    It ignores the capitalization. [not case sensitive]
+
+                    pattern="color\i"        => color, Color, COLOR
+
+
+Quantifer                Description
+--------------------------------------------------------------------
+ {n}                    Exactly n - number of chars
+
+                     pattern="\d{4}"    exactly 4 digits
+
+ {n,m}                Minimum-n,  Maximum-m
+               
+                    pattern="\d{4,10}"        min=4, max=10
+
+ {n, }                    Minimum-n,  Maximum - any
+
+                    pattern="\d{4,}"
+
+Queries:
+1. Write a pattern to validate user name 4 to 15 character only uppercase letters.
+
+    <input type="text"  pattern="[A-Z]{4,15}">
+
+2. Write a pattern to validate user name alpha numeric with underscore and between 4 to 15 chars.
+
+    <input type="text"  pattern="\w{4,15}">
+    <input type="text"  pattern="[A-Za-z0-9_] {4,15}">
+
+3. Write a pattern to validate mobile number starting with +91 and having 10 digits.
+
+    <input type="text"  pattern="\+91\d{10}">
+    <input type="text"  pattern="\+91[0-9]{10}">
+
+4. Write a pattern to validate US phone format
+
+        +(1)(425) 555-0100
+
+    <input type="text" pattern="\+\(1\)\(\d{3}\)\s\d{3}-\d{4}" name="regExp">
+
+        +(44)(20) 1234 5678
+
+Built in Expressions
+
+    (?=.*[A-Z])        Atleast one upper case letter
+    (?=.*[a-z])        Atleast one lower case letter
+    (?=.*[0-9])        Atleast one numeric
+    (?=.*[!@#$&])        Atleast one special character
+
+Query: Write a pattern for validating user id 4 to 15 chars alpha numeric with at least one upper case letter.
+
+    <input type="text"  pattern="(?=.*[A-Z])[a-zA-Z0-9]{4,15}">
+
+Query: Write a patter for User Id 4 to 15 chars alpha numeric & special chars with atleast one uppercase letter, number and special char.
+        [1 upper case letter, 1 number , 1 special is mandatory]
+
+
+        pattern="(?=.*[A-Z])(?=*.[0-9])(?=.*\W)[a-zA-Z0-9\W]{4,15}"
+
+
+                        Password Input
+- It is similar to textbox but will mask the characters with "*".
+- All attributes are same, except that you can't use "list" for password.
+
+Syntax:
+<input type="password"  name="Password" required  pattern="(?=.*[A-Z])\w{4,15}">
+
+                        Number Input
+
+- It allows only numeric type characters.
+- How ever it can submit only a number.
+
+Syntax:
+    <input type="number" name="age">
+    [e => is an exponent character]
+   
+            2e3 = 2000   [ 2 x 10(3) ]
+
+- You can define range for values using "min & max" attributes.
+
+    <input type="number"  name="age" min="15"  max="30"  value="22">
+
+- You can define input step value.
+   
+    <input type="number" name="rate"  min="10.45" max="15.45" step="0.01" value="10.45">
+
+                        Range Input
+- It is similar to number, but will display a slider instead of numeric up-down control.
+
+Syntax:
+    <input type="range"  min="1" max="100" value="50"  step="5"  name="price">
+
+                        Color Input
+- It can display a color picker.
+- It uses 6 chars hexa decimal value for default color.
+
+Syntax:
+    <input type="color"  name="pick-color"  value="#ff0000">
+
+                         Email Input
+
+- It validates email format.
+
+Syntax:
+    <input type="email"  name="Email" required  placeholder="your email">
+
+- It verifies only the occurance of "@" in input string.
+
+                        URL Input
+- It validates URL format.
+- Every URL must start with protocol and have a domain extention.
+
+            www.amazon.in        => invalid url
+            https://www.amazon.in    => valid
+
+Syntax:
+    <input type="url"  name="address">
+
+                         Date & Time Input
+
+- It allows to input only date or time values.
+- The type includes
+            date
+            datetime-local
+            time
+            month
+            year
+            week
+
+Syntax:
+    <input type="date | time | month ...">
+
+- It will not allow to select a range of dates.
+- You can restrict the date or time range by using "min" & "max" attributes.
+- The date format for developer is "yy-mm-dd".
+
+Syntax:
+    <input type="date"  min="2023-10-13"   max="2023-11-12" name="dept">
+
+                          File Input
+- It will display a file browser.
+- It allows to select files from your device.
+
+Syntax:
+    <input type="file" name="photo">
+
+- You can set filter for selection using "accept" attribute.
+
+Syntax:
+    <input type="file" name="photo"  accept=".jpg, .png, .gif">
+   
+- You can enable selection of multiple files by using "multiple" attribute
+
+Syntax:
+    <input type="file" name="photos" accept=".jpg"  multiple>
+-->

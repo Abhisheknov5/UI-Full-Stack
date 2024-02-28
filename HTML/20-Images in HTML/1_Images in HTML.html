@@ -1,0 +1,161 @@
+<!--
+Images in HTML
+
+- Images are of various types and web will not support all types of images.
+- Web supports following image types
+
+
+  Type                                MIME                    Extention
+ ----------------------------------------------------------------------------------------------------------------
+ PNG                                 image/png                .png
+ [Portable Network Graphics]    
+
+ APNG                                image/apng                .apng
+ [Animated Portable Network Graphics]
+
+ JPEG
+ [Joint Photographic Expert Group]        image/jpeg                .jpg, .jpeg,
+                                                            .jfif
+
+ GIF                                    image/gif                    .gif
+ [Graphic Interchange Format]    
+
+ TIFF                                image/tiff                    .tiff
+ [Tagged Image File Format]
+
+ BMP (Bitmap)                            image/bmp                .bmp
+
+ ICO (Microsoft Icon)                    image/icon                .ico
+
+ SVG                                 application/xml            .svg            
+ Scalar Vector Graphics                    image/svg-xml
+
+ Webp (Web Picture)                    application/webp            .webp
+
+
+Note: MIME is Multi purpose Internet Mail Extention, it is used by server to identify the
+      file type.
+
+1. PNG & APNG
+ - HD, More pixel depth
+ - More pixels will keep image quality normal when it is stretched.
+ - More memory space
+ - It is recommended to use PNG only for downloadable images.
+ - Slow in rendering
+
+2. JPEG
+ - HD, Less pixel depth when compared to PNG
+ - Compressed Image format
+ - Less memory space
+ - It is good for on screen presentation.
+ 
+3. GIF
+ - 256 colors only
+ - Less pixels depth compared to JPG
+ - Space is same as JPG
+ - It is recommended to use GIF in bullets, icons, logos, lines, background patterns etc.
+ - GIF can be animated
+
+4. BMP
+ - Binary image format.
+ - Image is in bytes format.
+ - It is good for converting image into binary and store in any database.
+ 
+5. TIFF
+ - Sliced Image
+ - Modular Image
+ - It is used for scanned documents.
+ 
+6. ICO
+- It is used for short cut icons [favicon]
+
+7. SVG
+- Vector graphics
+- Not pixel based
+- Image is in XML format
+- Image quality will be same for various Zoom levels.
+
+8. Webp
+- It is an image embedded into page.
+- You can't save image.
+
+                          Image Containers
+- If you want images SEO friendly then keep them in
+        <figure>
+        <figcaption>
+- You can embed image using <img> element.
+
+Attributes:
+1. src            : It refers to path and name of image to display
+2. alt            : It defines alternative text to display when image fails to load.
+3. title            : It defines the title to display when mouse is over image.
+4. width            ]  define dimensions for image
+5. height            ]  
+6. border            : sets border for image.
+7. hspace        : It sets horizontal space between text and image
+8. vspace            : It sets verical space
+9. align            : It wraps text around image. It allows only left and right.
+
+Syntax:
+ <img src="public/images/realme.jpg"  alt="realme-c 50"   title="40% OFF"  width="300" height="400" border="2" align="left" hspace="20" vspace="20">
+
+FAQ: What is difference between "src" & "href" ?
+Ans:  "href"  is a setter  &  "src" is a getter.
+       
+       In computer programming setter and getter are known as accessors.
+      setter is used to asign a value into reference.
+      getter is used to return value defined in a reference.
+
+FAQ: How to wrap text around image?
+Ans : By using "align" attribute
+
+FAQ: Which image is XML format?
+Ans : SVG
+
+FAQ: Which image format is binary?
+Ans:  BMP
+
+Image Attributes
+1. src
+2. alt
+3. title
+4. width
+5. height
+6. border
+7. align
+8. hspace
+9. vspace
+
+Advanced Attributes
+
+10. crossorign        :  It configures CORS [cross origin resource sharing] for image.
+                   If any image is rendered from remote server, then it requires
+                   CORS configuration.
+
+Syntax:
+    <img  src="..from remote location"  crossorign="allow-anonymous | use-credentials">
+
+
+11. decoding        : It defines how image have to load along with other contents in
+                  page. It have values "sync, async & auto".
+
+Syntax:
+    <img src="some path"  decoding="sync | async | auto">
+
+12.  importance    : It sets priority for image, which can be low, medium, high & auto.
+
+Syntax:
+    <img src="some path"  importance="low | medium | high | auto">
+
+13. srcset        : It defines a collection of images to display at specific embedded
+                 position.
+
+Syntax:
+    <img srcset="[collection of images]">
+
+FAQ's: How to design fluid-images?
+Ans: You can configure fluid image by defining the size in "%".
+
+        <img  width="100">            Static
+        <img width="100%">        Fluid
+-->

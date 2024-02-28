@@ -1,0 +1,43 @@
+<!--
+Progress:-
+- It is used to show status of any task  performed in page.
+- Status includes the time taken to complete the task, such as installing, downloading, copying etc.
+
+Syntax:
+    <progress min="1" max="100"  value="30"> </progress>
+
+- You have to control progress using JavaScript.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress</title>
+    <style>
+        meter {
+          width: 200px;
+        }
+      </style>
+      <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">  
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>Preparing for Download</dt>
+            <dd>
+                <progress></progress>
+            </dd>
+            <dt>60% Completed</dt>
+            <dd>
+                <progress min="1" max="100" value="100"></progress>
+             </dd>
+             <dt>Download Complete</dt>
+             <dd>
+                <progress min="1" max="100" value="100"></progress>
+             </dd>
+        </dl>
+    </form>
+    
+</body>
+</html>

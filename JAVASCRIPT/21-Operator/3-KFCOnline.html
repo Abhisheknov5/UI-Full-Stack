@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC Online</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+    <header>
+        <img src="../public/images/KFC.jpg" width="100%" height="200">
+    </header>
+    <section>
+        <div class="accordion" id="kfc">
+            <!-- Customer Details -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button data-bs-target="#customer" data-bs-toggle="collapse" class="btn btn-dangerw-100 ">Customer Details</button>
+                </div>
+                <div class="accordion-collapse collapse" id="customer" data-bs-parent="#kfc">
+                    <div class="accordion-body bg-danger text-white p-2 mt-1">
+                        <dl>
+                            <dt>Customer Name</dt>
+                            <dd><input type="text" class="form-control" id="txtName"></dd>
+                            <dt>Mobile</dt>
+                            <dd><input type="text" class="form-control" id="txtMobile"></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!-- Meal Details-->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="btn btn-danger w-100">Select Your Meal</button>
+                </div>
+                <div class="accordion-collapse collapse" id="meal">
+                    <div class="accordion-body">
+                        <div class="row text-center">
+                            <div class="col">
+                                <img src="../pu">
+                                <div class="h3">
+                                   <input type="radio" class="form-check-input" id="optBurger" value="OMG Burger" name="Meal"> <label class="form-check-label"> &#8377; 120/- </label>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <img src="">
+                                <div class="h3">
+                                    <input type="radio" class="form-check-input" id="OMG Roller" value="OMG Burger" name="Meal"> <label class="form-check-label"> &#8377; 100/- </label>
+                                 </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>

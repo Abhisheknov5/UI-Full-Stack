@@ -1,0 +1,54 @@
+<!--
+Buttons:-
+- A button is used to confirm user action.
+- HTML provides 2 types of buttons
+    1. Generic Buttons
+    2. Non Generic Buttons
+
+- Generic buttons have pre-defined functionality, HTML generic buttons are
+    a) Submit
+    b) Reset
+
+    <input type="submit"  value="Register">        HTML 4 Generic [Submit]
+    <input type="reset"    value="Cancel">            HTML 4 Generic [Reset]
+
+    <button type="submit> Text | Image | Icon </button>     HTML 5 Generic [Submit]
+    <button type="reset"> Text | Image | Icon </button>      HTML 5 Generic [Reset]
+
+ Note: Generic buttons can fireup any functionality only when they are defined in
+       <form> container.
+
+       If "type" is not defined for HTML 5 buttons, then the default type is "submit".
+
+- Non Generic button will not have any pre-defined functionality.
+
+      <input type="button" value="Print">        HTML 4
+      <button type="button>                    HTML 5
+        Image | Text | Icon
+      </button>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <form>
+        User Name:
+        <input type="text" name="UserName">
+        <button type="submit"> <img src="../public/images/Amazon1.jpg" width="20" height="20">Submit</button>
+        <button type="reset">Cancel</button>
+        <input type="button" value="Print">
+        <button type="button">
+            <span class="bi bi-printer"></span>Print
+        </button>
+    </form>
+</body>
+</html>
+

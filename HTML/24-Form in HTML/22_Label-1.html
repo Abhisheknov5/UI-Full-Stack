@@ -1,0 +1,42 @@
+<!--
+Label :-
+- It is used to set captions and titles for elements in Form.
+- You can bind label with any field in form by using "for" attribute.
+
+Syntax:
+    <div>
+        <label for="UserName"> User Name </label>
+        <div>
+        <input type="text" name="UserName">
+        </div>
+    </div>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label-1</title>
+    <style>
+        meter {
+            width: 200px;
+        }
+    </style>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css>">
+</head>
+<body>
+    <form>
+        <fieldset>
+          <legend>Your Comments</legend>
+          <textarea cols="40" rows="5"></textarea>
+          <br><br>
+          <textarea disabled cols="40" rows="4">Our Terms of Service</textarea>
+          <br><br>
+          <input type="checkbox"> <label>I Accept</label>
+          <br><br>
+          <button>Post Comment</button>
+        </fieldset>
+    </form>
+</body>
+</html>
+

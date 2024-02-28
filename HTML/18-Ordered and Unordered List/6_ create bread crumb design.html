@@ -1,0 +1,47 @@
+<!--
+6. How to create bread crumb design?
+A. By using the css classes
+       
+        ::before
+        ::after
+        :first-child
+        :last-child
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> create bread crumb design</title>
+    <style>
+        ol {
+            list-style: none;
+            display: flex;
+        }
+        li::after {
+            content: ">>";
+            margin-right: 10px;
+        
+        }
+        li:last-child::after {
+            content: "";
+        }
+        .active {
+            color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ol>
+            <li>Home</li>
+            <li>Electronic</li>
+            <li class="active">Mobiles</li>
+            <li>Realme</li>
+            <li>C55</li>
+        </ol>
+    </nav>
+    
+</body>
+</html>

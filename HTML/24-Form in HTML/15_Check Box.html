@@ -1,0 +1,43 @@
+<!--
+Check Box:-
+- It is similar to radio button, but enables the user to check and uncheck any option dynamically.
+
+Syntax:
+ <input type="checkbox"  name="course"  value="WebUI" checked> <label for="course"> Web UI </label>
+
+FAQ: How to design a check box list?
+Ans:  HTML doesn't provide any checkbox list element.
+     You have to design using CSS overflow attributes.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check BOx</title>
+    <style>
+        ol {
+            list-style: none;
+            border: 1px solid gray;
+            padding: 5px;
+            width: 120px;
+            height: 40px;
+            overflow: auto;
+        }
+        h3 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h3>Courses</h3>
+        <ol>
+            <li><input type="checkbox" name="course" value="java"><label for="Java">Java</label</li>
+            <li><input type="checkbox" name="course" value=".NET"><label for=".NET">.NET</label</li>
+            <li><input type="checkbox" name="course" value="FullStack"><label for="FullStack">FullStack</label</li>
+        </ol>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

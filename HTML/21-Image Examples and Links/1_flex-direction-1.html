@@ -1,0 +1,68 @@
+<!--
+CSS Flex:
+- Flex is a display style, which supports 2 directions
+
+        flex-direction: row            [side by side]
+        flex-direction: column        [stack - column-reverse]
+        flex-direction: row-reverse
+        flex-direction: column-reverse
+
+- Align Items can keep content in container  top, center, bottom when flex direction is row.
+            {
+              flex-direction: row;
+              display:flex;
+              align-items: baseline | center | end;
+            }
+
+            baseline    = top
+            end = bottom
+
+- Align items can keep content in container left, center & right when flex direction is column.
+            {
+             display:flex;
+             flex-direction:column;
+             align:items: baseline | center | end;
+            }
+
+            baseline = left
+            end = right
+
+Note: It align-items attributes is not defined in flex style then the element width and height will fit the container width & height.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Direction</title>
+    <style>
+        nav {
+            border: 10px solid black;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+            align-items: center;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="../public/images/Women-Fashion.jpg">
+        </div>
+        <div>
+            <img src="../public/images/Mens-fashion.jpg">
+        </div>
+        <div>
+            <img src="../public/images/kids-fashion.jpg">
+        </div>
+    </nav>
+    
+</body>
+</html>

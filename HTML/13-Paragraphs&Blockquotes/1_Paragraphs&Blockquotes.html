@@ -1,0 +1,129 @@
+<!--
+Note:
+- Don't use headings to highlight any word or sentence in paragraph.
+- Don't use too many headings in a page, this may spam your page.
+
+                    Paragraphs & Blockquotes
+                    ------------------------------------
+- Paragraph is defined with <p> element.
+- Blockquote is defined with <blockquote> element.
+- Blockquote is used in SEO to summarize to topic defined in page.
+- It have left and right padding by default.
+
+Syntax:
+    <blockquote align="justify">  some text </blockquote>
+    <p align="left | center | right | justify">
+        ... your text...
+    </p>
+
+FAQ's:
+1. How to set first line indent?
+A. By using CSS attribute  "text-indent"
+
+Syntax:
+    blockquote, p {
+       text-indent: 100px;
+    }
+
+2. How to set left and right indent?
+A. By using CSS padding attribute.
+
+Syntax:
+    p {
+       padding-left: 250px;
+       padding-right: 250px;
+    }
+
+3. How to set a Drop Cap?
+A. By using css "float" and by selecting first letter with CSS "::first-letter" class.
+
+Syntax:
+    p::first-letter {
+   
+        font-size    : 50px;
+        font-weight: bold;
+        font-family: Algerian;
+        float: left;
+        padding-right: 5px;
+   
+    }
+4. How to set spacing between lines, words and chars?
+A. By using following CSS attributes
+
+        line-height
+        letter-spacing
+        word-spacing
+Syntax:
+    p {
+       line-height : 40px;
+       word-spacing: 20px;
+       letter-spacing: 5px;
+    }
+
+5. How to hide overflowing content in paragraph?
+A. You have to use following CSS attributes with combination
+
+       white-space
+       text-overflow
+       overflow
+
+Syntax:
+    p {
+        border: 1px solid gray;
+            width:300px;
+        padding:10px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow: ellipsis;
+    }
+6. How to adjust the additional space defined in paragraph when justify alignment is applied?
+A. By using "word-break".
+
+Syntax:
+    p {
+       word-break: break-all;
+    }
+
+
+                       Text Formatting Elements
+                       -----------------------------------
+
+    Font                    : <font>  It sets color, size and family.
+
+    Font Style            : <b> <strong> <i> <em>
+
+    Font Effects            : <u> <ins> <del> <strike> <sup> <sub>
+
+
+Font:
+ - The <font> element can configure following attributes
+
+        a) size        : from 1 to 7 level
+        b) color        : text color
+        c) face        : family name
+
+FAQ: What are web safe fonts?
+Ans:  These are the set of fonts available to all devices.
+      If developer is use a rare type of font, it will transform into web safe font.
+      The web safe fonts are:
+        a) sans-serif
+        b) serif
+        c) monospace
+
+Note: Don't use <font> element in modern web design. Better use CSS attribute.
+     
+Font Styles:
+
+        <b>            Bold            Design
+        <strong>        Bold            Review
+        <i>            Italics        Design
+        <em>        Italics        Review
+Text Formatting in HTML
+<font>
+<b> <strong>
+<i> <em>
+<strike> <del>
+<u> <ins>
+<sup>
+<sub>
+-->

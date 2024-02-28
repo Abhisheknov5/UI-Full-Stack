@@ -1,0 +1,95 @@
+<!--
+Semantics and Elements
+<header>
+<footer>
+<section>
+<main>
+<nav>
+<aside>
+<article>
+<div>
+<span>
+<dialog>
+<figure>
+<figcaption>
+
+Dialog :-
+- It is used to configure a pop-up in page.
+- Dialog is default hidden, you can display using "open" attribute.
+
+Syntax:
+    <dialog open>
+    ...your content...
+    </dialog>
+
+                            Figure & Figcaption
+
+- Figure is a container used to display images in page to make them SEO friendly.
+- Figcaption sets a caption for your image, web crawlers use figcaption to find image.
+
+Syntax:
+    <figure>
+
+        ...your image...
+
+        <figcaption> Fig: realme </figcaption>
+
+    </figure>
+
+Body Semantics and Entities:-
+- Developers use various editors for designing HTML page.
+- Browser transforms the content defined in editor and presents in workspace.
+- Hence developer have to use various semantics and entities to present exactly as expected.
+
+1. Line Break            <br>
+2. Blank Space        &nbsp;
+
+FAQ: What is difference between <br> & <br /> ?
+Ans:  There is no <br /> in HTML.
+      It is just developers way of configuring void elements to supress the warnings
+      given by editor.
+
+     <br />    self ending element
+
+
+3. Preformatted        <pre>  It can display the block exactly as defined in editor.
+4. Code Block            <code>
+
+5. Variables            <var>
+
+6. Sample Text        <samp>
+
+7. Large Text            <big>
+
+8. Small Text            <small>
+9. Address Block            <address> It keeps the contact details SEO friendly.
+Syntax:
+ <address>
+    ... your contact details
+ </address>
+
+10. Headings                <hn>  n refers to level number 1 to 6.
+FAQ's:
+1. Why you need a heading element?
+A. To keep the titles in page SEO friendly.
+
+Syntax:
+    <h1> Title - 1 </h1>
+    <h2> Title - 2 </h2>
+    .....
+    .....
+    <h6> Title - 3 </h6>
+
+2. How to remove pre-defined format given for HTML heading?
+Ans: By using CSS inheritance value "unset".
+
+        h1 {
+           all:unset;
+        }
+
+        h1 {
+          font-weight:unset;
+          display:unset;
+          font-size:unset;
+        }
+-->

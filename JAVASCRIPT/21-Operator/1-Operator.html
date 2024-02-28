@@ -1,0 +1,71 @@
+<!--
+Operators :-
+- In computer programming operator is a special type of object that evalutes a value.
+- It stores the data in operands and configures the functionaly using a literal.
+- Operators are classified into various types based on number of operands they can handle
+        a) Unary            => one operand    x++,  --y
+        b) Binary            => two operands    x+y,  x*y
+        c) Ternary        => three operands   ()?true:false
+
+- Operators are classified into various types based on the value they return.
+
+        1. Arithematic operators  [number]
+        2. Comparision operators [boolean]
+        3. Assignment operators
+        4. Logical operators
+        5. Bitwise operators
+        6. Special operators  etc..
+
+Arithematic :
+    +
+    -
+    *
+    /
+    %
+    **
+    ++
+    --
+    [Math]
+
+Comparision:
+    >
+    >=    
+    <
+    <=
+    ==
+    ===
+    !=
+    !==
+
+Assignment:
+    +=            add and assign
+    -=
+    *=
+    /=
+    %=
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function AddClick(){
+            var folder = document.getElementById("txtName").value;
+            document.querySelector("p").innerHTML += folder + "<br>";
+            document.getElementById("txtName").value="";
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Add Folder</legend>
+        <input type="text" id="textName"><button onclick="AddClick()">Add</button>
+    </fieldset>
+    <p></p>
+</body>
+</html>

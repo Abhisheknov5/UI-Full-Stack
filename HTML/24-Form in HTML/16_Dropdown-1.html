@@ -1,0 +1,65 @@
+<!--
+Dropdown:-
+- It allows user to select any one option from a group of choices.
+- It can drop a list and allow to select item from list.
+- It is designed by using following elements
+
+    <select>                It configures dropdown
+    <optgroup>            It configures a category in dropdown with label
+    <option>                It configures an item in dropdown
+
+Syntax:
+    <select>
+        <optgroup label="categoryName">
+             <option> Item 1 </option>        
+             <option> Item 2 </option>
+        </optgroup>
+    </select>
+
+- Every option comprises following attributes
+
+    a) value            : It defines the value to submit
+    b) selected        : It selects the option automatically on page load.
+    c) disabled        : It will not allow to select the option.
+
+    <option  value="delhi"  selected>
+    <option  value="delhi"  disabled>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Down-1</title>
+</head>
+<body>
+    <form>
+        <h2>Select Airport</h2>
+        <select name="Airport">
+            <option>Select Airport</option>
+            <option value="RGI">Rajiv Gandhi International [RGI-Hyd]</option>
+            <option value="GOI">Panji[Goa]</option>
+        </select>
+        <h2>Select Your City</h2>
+        <select name="City">
+            <option>Select Your City</option>
+            <option>Delhi</option>
+            <option>Hyderbaad</option>
+            <option>Mumbai</option>
+        </select>
+        <h2>Select Product</h2>
+        <select name="Product">
+            <option>Select a Product</option>
+            <optgroup label="Electronics">
+                <option>Kids</option>
+                <option selected>Women</option>
+                <option>Men</option>
+            </optgroup>
+        </select>
+        <br><br>
+        <button>Submit</button>
+    
+    </form>
+    
+</body>
+</html>

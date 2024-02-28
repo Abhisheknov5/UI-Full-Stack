@@ -1,0 +1,101 @@
+<!--
+ Bootstrap Forms:-
+
+- Bootstrap provides a set of pre-defined classes for form elements.
+- You can download and install bootstrap CSS to create interactive forms faster.
+
+    >npm install bootstrap --save
+
+- Bootstrap CSS is present in node_modules, which you have to link to webpage.
+
+Syntax:
+ <head>
+   <link rel="stylesheet"  href="node_modules/bootstrap/dist/css/bootstrap.css">
+ </head>
+
+Bootstrap Box Model Classes:
+1. Containers
+
+    .container            short hand [smart watch]
+    .container-sm            mobile
+    .container-md            tab
+    .container-lg            desktop
+    .container-xl            laptop
+    .container-xxl            laptop wide screen
+    .container-fluid        responsive
+
+    <div class="container"> </div>
+    <div class="container-fluid"> </div>
+
+2. Border Classes
+    .border
+    .border-{size}            1 to 3
+    .border-{contextual}     primary, secondary, danger, warning, success, info, dark..
+   
+3. Margin Classes
+    .m-{size}                1 to 4  [all directions]
+    .ms-{ }                left
+    .me-{ }                right
+    .mt-{ }                top
+    .mb-{ }                bottom
+
+4. Padding Class
+    .p-{ }                    1 to 4 all directions
+    .ps-{ }
+    .pe-{ }
+    .pt-{ }
+    .pb- { }
+
+      <form  class="mt-4 mb-4  ms-4  p-4  border  border-3  border-primary">
+
+      </form>
+
+5.  Border Radius
+    .rounded
+    .rounded-{ }     1 to 3
+    .rounded-circle
+    .rounded-pill
+
+    <img src="public/images/fashion.jpg"  width="200" height="200" class="rounded rounded-circle">
+
+6. Width & Height
+    .w-{ }    25, 50, 100
+    .h-{ }        0, 50, 100
+
+7. Background Color & Text Color
+    .bg-{contextual}
+    .text-{contextual}
+
+    <form class="bg-danger text-white border border-3 border-dark">
+
+    </form>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+</head>
+<body class="container-fluid">
+    <form class="border bg-danger text-white border-3 border-dark m-4 ps-4 pt-4 pb-4 rounded w-50">
+        <img src="../public/images/Amazon1.jpg" width="200" height="200" class="rounded rounded-circle">
+        <h2><span class="bi bi-person-fill">Register User</span></h2>
+        <div class="mb-4">
+            <label class="mb-2">User Name</label>
+            <div>
+                <input type="text">
+            </div>
+        </div>
+        <div class="mb-4">
+            <label class="mb-2">Password</label>
+            <div>
+                <input type="password">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
