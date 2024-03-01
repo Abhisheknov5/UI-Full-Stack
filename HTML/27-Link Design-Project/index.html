@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Shopping</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="shortcut icon" href="public/images/Favicons/icons8-shopping-bag-32.png">
+        <style>
+            header {
+                display: flex;
+                align-items: center;
+                padding-left: 280px;
+                background-image: url(public/images/coverShopping2.jpg);
+                height: 200px;
+            
+
+            }
+            nav {
+                background-color: darkgrey;
+                padding-top: 50px;
+                height: 500px;
+            }
+            .brand-title {
+                font-size: 100px;
+                font-family: Arial;
+                color: black;
+            }
+            section {
+                display: grid;
+                grid-template-columns: 2fr 10fr;
+            }
+            details {
+                color: darkcyan;
+                cursor: grab;
+                align-items: center;
+                font-size: 50px;
+                
+            }
+            .navigation-bar {
+                color: blue;
+                cursor: grab;
+                height: 200px;
+                font-size: 40px;
+                text-align: center;
+                font-family: Arial;
+            }
+            summary:hover {
+                color: brown;
+                
+            }
+            .kids:hover {
+                color: red;
+                
+            }
+            .men:hover {
+                color: red;
+
+            }
+            .women:hover {
+                color: red;
+
+            }
+            .mobiles:hover {
+                color: red;
+            }
+            .home:hover {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="brand-title">Shopping</div>
+            <div>.com</div>
+        </header>
+        <section>
+            <nav>
+                <details>
+                    <summary class="home"><a target="framebody" href="Home.html">Home</a></summary>
+                    <div class="home"><a target="framebody" href="Kids.html">Kids</a></div>
+                    <div class="home"><a target="framebody" href="Mens.html">Mens</a></div>
+                    <div class="home"><a target="framebody" href="Womens.html">Womens</a></div>
+                    <div class="home"><a target="framebody" href="Mobiles.html">Mobiles</a></div>
+                </details>
+                <div class="navigation-bar">
+                    <div class="kids"><a target="framebody" href="Kids.html">Kids</a></div>
+                    <div class="men"><a target="framebody" href="Mens.html">Mens</a></div>
+                    <div class="women"><a target="framebody" href="Womens.html">Womens</a></div>
+                    <div class="mobiles"><a target="framebody" href="Mobiles.html">Mobiles</a></div>
+                </div>
+            </nav>
+            <main>
+                <iframe name="framebody" width="100%" height="800" src="Home.html"></iframe>
+            </main>
+        </section>
+        <footer></footer>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!--
+ Looping Control
+- Looping is the process of executing a set of statement repeatedly based on given condition.
+- Loops are used to create recursion jobs.
+- Loops are created by using
+    a) for
+    b) while
+    c) do while
+
+The "for" loop:
+-------------------
+- It is a looping control statement used when developer is sure about the number of iterations and iteration counter is fixed and will not change dynamically.
+- It comprises of
+    a) Initialization
+    b) Condition
+    c) Counter
+
+- Initialization defines where to start.
+- Condition specifies when to stop.
+- Counter defines how to move. [previous or next or step]
+
+Syntax:
+        for(initialization; condition; counter)
+        {
+        }
+
+-->
+<script>
+    var names = [];
+    for(var i=0;i<4;i++){
+        names[i] = prompt(`Enter Name ${i+1}`);
+        document.write(`Name ${i+1}=${names[i]}<br>`)
+    }
+
+</script>
+
+<br><br>
+<script>
+    var categories = ["All","Electronics","Footwear","Fashion"];
+    for(var i=0;i<categories.length;i++){
+        document.write(categories[i]+"<br>");
+    }
+</script>
+
+<br><br>
+<script>
+    var names = [];
+    for(var i=0;i<4;i++){
+        names[i] = prompt("Enter Name ${i+1}");
+        document.write(`name${i+1} = ${names[i]}<br>`)
+    }
+</script>

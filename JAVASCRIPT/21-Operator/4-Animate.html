@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        var position = 0;
+        function MoveRight(){
+            position += 50;
+            document.querySelector("img").style.marginLeft = position + "px";
+        }
+        function MoveLeft(){
+            position -= 50;
+            document.querySelector("img").style.marginLeft = position + "px";
+        }
+    </script>
+
+</head>
+<body>
+    <button onclick="MoveLeft()" class="bi bi-chevron-left "> </button>
+    <button onclick="MoveRight()" class="bi bi-chevron-right"> </button>
+    <br><br>
+    <img src="../public/images/Amazon1.jpg" width="200" height="300">
+</body>
+</html>

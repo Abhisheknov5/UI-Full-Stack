@@ -1,0 +1,42 @@
+<!--
+Iterator Statements :-
+- Iterator is a software design pattern, which is used to access elements from a collection in sequential order.
+- It doesn't require initialization, condition and counter.
+- Iterator uses a function generator, which allows to read and return a collection.
+- Generator is a function that comprises of
+        a) next()        => for counter
+        b) done        => for condition
+        c) value        => for reading values from collection
+- JavaScript explicit iterators are
+
+        for..in        => reads and returns all properties
+        for..of        => reads and returns all values
+
+Syntax:
+    for (var property in collection)
+    {
+    }
+   
+    for (var value of collection)
+    {
+    }
+-->
+<script>
+    var categories = ["All","Electronics","Footwear","Fashion"];
+    for(var item of categories)
+    {
+        document.write(item +"<br>");
+    }
+</script>
+
+<br><br>
+
+<script>
+    function* ReadElements(){
+        yield "All";
+        yield "Electronics";
+        yield "Footwear";
+    }
+    var elements = ReadElements();
+    console.log(elements.next());
+</script>

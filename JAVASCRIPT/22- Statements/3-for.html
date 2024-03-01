@@ -1,0 +1,50 @@
+<!--
+Looping Controls
+    - for
+
+Note: A "for" loop must configure memory for initialization, condition and counter. However the values can be defined outside the memory scope.
+
+    for( ;   ;)        => valid loop declaration
+    {
+    }
+
+    for(  i<=10; i++)    => invalid loop declaration
+    {
+    }
+-->
+<script>
+    var i = 1;
+    for(;i<=10;i++)
+    {
+        document.write(i+"<br>");
+    }
+</script>
+
+<!--
+- You can define the counter with any step value. [to skip counter]
+
+    for(i=1; i<=10; i=i+2)
+    for(i=10; i>1; i=i-5)
+
+- You can skip specific counter by using the jump statement "continue".
+
+    for(var i=1; i<=10; i++)
+    {
+        if(i===5)
+        {
+           continue;
+        }
+           document.write(i + "<br>");
+    }
+-->
+<br><br>
+<script>
+    for(var i=1;i<=10;i++)
+    {
+        if(i===5)
+        {
+            continue;
+        }
+        document.write(i + "<br>");
+    }
+</script>

@@ -1,0 +1,20 @@
+<!--
+Program :    Print the total count of given character in a string.
+
+           var str = "Welcome to JavaScript";
+           var char = prompt("Enter Character");
+
+            char = "e"        =>  2
+            char = "W"        => 1
+-->
+<script>
+    var str = "Welcome to JavaScript";
+    var char = prompt("Enter Character");
+    var count = 0;
+    for(var i=0;i<str.length;i++){
+        if(str[i]==char){
+            count++;
+        }
+    }
+    document.write(`${char} occured${count} times`);
+</script>

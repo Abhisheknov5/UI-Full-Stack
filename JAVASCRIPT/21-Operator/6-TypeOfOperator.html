@@ -1,0 +1,25 @@
+<!--
+Special Operators
+
+1. Ternary Operator   ?:
+
+
+2. typeof        : It returns the data type of value stored in a reference.
+
+Syntax:
+        var  price = 45000.44;
+   
+        typeof  price      => number
+-->
+<script>
+    var Product = {
+        Name : "Tv",
+        Price: 45000.44,
+        Stock: true
+    }
+    for(var property in Product){
+        document.write(`${property} [${typeof Product[property]}] <br>`)
+    }
+</script>
+
+<br><br>

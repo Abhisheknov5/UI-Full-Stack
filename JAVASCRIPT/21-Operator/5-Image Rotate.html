@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        var position = 0;
+        function Move(){
+            position+=5;
+            document.querySelector("img").style.marginLeft = position + "px";
+        }
+        var angle = 0;
+        function Rotate(){
+            angle+=5;
+            document.querySelector("img").style.rotate = angle + "deg";
+        }
+        var timer;
+        function PlayClick(){
+           timer = setInterval(Move,100);
+        }
+        function PauseClick(){
+            clearInterval(timer);
+        }
+        function RotateClick(){
+            setInterval(Rotate,100);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="PlayClick()" class="bi bi-play">  </button>
+    <button onclick="PauseClick()" class="bi bi-pause">  </button>
+    <button onclick="RotateClick()" class="bi bi-arrow-clockwise"></button>
+    <br><br>
+    <img src="../public/images/Amazon2.jpg"  width="200" height="300">
+</body>
+</html>

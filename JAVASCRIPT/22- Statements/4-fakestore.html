@@ -1,0 +1,41 @@
+<script>
+    fetch("http://fakestoreapi.com/products")
+    .then(function(res){
+        return res.json();
+    })
+    .then(function(products){
+        for(var i=0;i<products.length;i++)
+        {
+            if(products[i].category==="jewelery" || products[i].category==="electronics"){
+                continue;
+            }
+            document.write(`${products[i].title} - <b>${products[i].category}</b><br>`)
+        }
+    })
+</script>
+
+<!--
+    })
+</script>
+
+- You can terminate the for loop at specific counter using "return or break".
+
+    for(var i=1; i<=10; i++)
+    {
+       if(i===5)
+       {
+         break;
+       }
+       document.write(i + "<br>");
+    }
+
+- You can configure a nested loop.
+
+    for(var i=1; i<=5; i++)
+    {
+         for(var j=1; j<3; j++)
+         {
+         }
+    }
+-->
+

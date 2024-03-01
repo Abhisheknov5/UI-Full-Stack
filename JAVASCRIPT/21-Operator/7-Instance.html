@@ -1,0 +1,22 @@
+<!--
+3. instanceof:- It returns true if the given object is derived from specified class.
+
+Syntax:
+         obj  instanceof   className;    => true / false
+-->
+<script>
+    class Employee
+    {
+
+    }
+    var Products = new Array();
+    var emp = new Employee();
+
+    document.write(`
+      Emp is derived from Array ? ${emp instanceof Array}<br>
+      Emp is derived from Employee ? ${emp instanceof Employee}
+    `);
+</script>
+
+
+
