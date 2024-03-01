@@ -19,7 +19,7 @@
         c) throw            : throws exception explicitly
         d) finally            : executes always
 
-Syntax:
+Syntax:-
     try
     {
        statements to execute;
@@ -35,3 +35,26 @@ Syntax:
 
 Note: "throw" exception while executing statements, that is in "try" block.
 -->
+
+<script>
+  try 
+  {
+    var a = parseInt(prompt("Enter Number-1"));
+    var b = parseInt(prompt("Enter Number-2"));
+    if(b==0) {
+      throw "Divide By Zero Error: Can not Divide by Zero";
+    }
+    if(b>a){
+      throw "Error: Can not Divide a Larger Number";
+    }
+    var c = a / b;
+    document.write(`Division=${c}`);
+  }
+  catch(error)
+  {
+    document.write(error + "<br>");
+  }
+  finally {
+    document.write("Program End");
+  }
+</script>
