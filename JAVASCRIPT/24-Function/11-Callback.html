@@ -1,0 +1,40 @@
+<!--
+Function Callback & Promise
+
+CallBack:
+- It is a technique of configuring functions, which execute automatically according to the state and situation.
+- Callback is a "Synchronous Technique", which blocks all other tasks while executing the specified.
+- Callbacks are slow in process and use a blocking technique.
+
+Syntax:
+    function  Name(callback1, callback2)
+    {
+           if(condition) {
+          callback1(response);
+           }
+           else {
+          callback2(response);
+        }
+    }
+-->
+<script>
+    function Login(userid, password, success, failure)
+    {
+        if(userid==="john" && password==="john@11")
+        {
+            success('Login Success..');
+        } else {
+            failure('Invalid User Id / Password');
+        }
+    }
+    Login(
+        prompt("Enter UserId"),
+        prompt("Enter Password"),
+        function(response){
+            document.write(response);
+        },
+        function(error){
+            document.write(error);
+        }
+    )
+</script>

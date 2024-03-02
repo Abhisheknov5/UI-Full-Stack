@@ -1,0 +1,133 @@
+<!--
+
+Function Parameters:-
+- A function can be parameter less or parameterized.
+- Parameters are required to modify a function.
+
+Syntax:
+    function Name(param)
+    {
+
+    }
+    Name(value);
+
+- The parameter defined in declaration is known as "Formal Parameter".
+- The parameter passed in the signature while calling function is known as "Acutal Parameter".
+
+              FormalParameter = ActualParameter;
+            [reference]        = [value]
+
+- Formal parameter is just like a variable name in memory.
+- You can store any type of value in a function parameter.
+        a) Primitive
+        b) Non Primitive
+        c) Function
+        d) Date
+        e) Regular Expression etc..
+-->
+<script>
+    function PrintNumbers(howMany)
+    {
+        for(var i=1; i<=howMany; i++)
+        {
+            document.write(i + "<br>");
+        }
+    }
+    PrintNumbers(10);
+</script>
+
+<br><br>
+
+<script>
+    function Print(cities)
+    {
+        cities.map(function(city){
+            document.write(city + "<br>");
+        })
+    }
+    Print(["Delhi","Hyderabaad"]);
+</script>
+
+<br><br>
+
+<script>
+    function Print(product)
+    {
+        for(var property in product){
+            document.write(`${property} : ${product[property]}<br>`)
+        }
+    }
+    Print(({Name:"Tv", Price:55000.33, Stock:true}));
+</script>
+
+<br><br>
+<script>
+    function Print(success)
+    {
+        success(); 
+    }
+    Print(function(){document.write("Login Success")});
+</script>
+
+<br><br>
+
+<script>
+    function Print(Mfd)
+    {
+       document.write(`Manufactured : ${Mfd.toDateString()}`)
+    }
+    Print(new Date("2023-12-10"));
+</script>
+
+<br><br>
+
+<script>
+    function Print(Mfd)
+    {
+        document.write(`Manufactured : ${Mfd.toDateString()}`)
+    }
+    var date = new Date("2023-12-15");
+    Print(date);
+</script>
+<br><br>
+
+<!--
+- Every parameter that you defined in function declaration is mandatory to implement.
+  [ Every parameter is required ]
+
+- If value is not passed into parameter, then it returns "undefined".
+- You have to explicity configure the functionality if value is undefined.
+-->
+
+<script>
+    function Print(Mfd)
+    {
+        if(Mfd)
+        {
+            document.write(`Manufactured: ${Mfd.toDateString()}`)
+        } else {
+            document.write("Date Required");
+        }
+    }
+    var date = new Date("2023-12-15");
+    Print();
+</script>
+<br><br>
+
+<!--
+- A function can have multiple parameters.
+- Every parameter is required and have order dependency.
+-->
+<script>
+    function Details(id,name,price,stock){
+        document.write(`
+            id=${id}<br>
+            Name=${name}<br>
+            Price=${(price)?price:"N/A"}<br>
+            Stock=${stock}
+        `);
+    }
+    Details(1,"Samsung TV",undefined,true);
+</script>
+
+

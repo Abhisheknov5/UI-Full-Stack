@@ -1,0 +1,18 @@
+<!--
+Function Closure:-
+
+- Closure is a technique configured for every function.
+- A function allows the members accessbile to its inner function, which is the nature of a closure.
+- You can implement various techniques to access the inner function results in outer function, which is restricted by default.
+-->
+<script>
+    function Outer(){
+        var a = 10;
+        function Inner(b)
+        {
+            return a + b;
+        }
+        document.write("Addition=" + Inner(50));
+    }
+    Outer();
+</script>

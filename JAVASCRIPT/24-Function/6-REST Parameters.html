@@ -1,0 +1,50 @@
+<!--
+REST Parameters:-
+[ ES 5+ ]
+
+- A single rest parameter can allow multiple arguments.
+- A rest parameter is defined by using "...paramName".
+- Rest parameter is array type.
+
+Syntax:
+        function Name(...args)
+        {
+        }
+
+        Name(value1, value2, value3, ...);
+-->
+<script>
+    function Details(...args){
+        var [id, name, price, stock] = args;
+        document.write(`
+            Id = ${id} <br>
+            Name = ${name} <br>
+            Price = ${(price)?price:"N/A"} <br>
+            Stock = ${stock}
+        `)
+    }
+    Details(101, "Nike Causuals", 5000.44, true);
+</script>
+
+<!--
+- Every function can have only one rest parameter.
+- You can define other parameters along with rest parameter.
+- But the rest parameter must be the last parameter in formal list.
+
+FAQ: Why a rest parameter must be last?
+Ans : It uses an implicit iterator that reads upto end, hence there can't be a value after the last occurance.
+-->
+
+<script>
+    function Details(title,...args){
+        var [id, name, price, stock] = args;
+        document.write(`
+            <h2>${title}</h2>
+            Id = ${id} <br>
+            Name = ${name} <br>
+            Price = ${(price)?price:"N/A"} <br>
+            Stock = ${stock}
+        `)
+    }
+    Details("Product Details",101, "Nike Causuals", 5000.44, true);
+</script>

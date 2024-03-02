@@ -1,0 +1,42 @@
+<!--
+Spread Operator:-
+- ES5+ version introduced the spread operator syntax for various collections, which allows to configure one argument that can spread into multiple parameters.
+
+Syntax:
+    function Name(a, b, c, d)
+    {
+    }
+    var val = [10, 20, 30, 40];
+    Name(...val);
+-->
+
+<script>
+    function Details(id,name,price,stock){
+        document.write(`
+            Id = ${id}<br>
+            Name = ${name}<br>
+            Price = ${(price)?price:"N/A"}<br>
+            Stock = ${stock}
+        `);
+    }
+    var values = [101, "Nike Casuals", 5000.44,true];
+    Details(...values);
+</script>
+
+<br><br>
+
+<script>
+    var one = ["A","B","C"];
+    var two = "D";
+    var result = [...one,two]
+    console.log(result);
+</script>
+
+<br><br>
+
+<script>
+    var one = ["A","B","C","D"];
+    var two = ["E","F","G","H"];
+    var result = [...one,...two];
+    console.log(result);
+</script>

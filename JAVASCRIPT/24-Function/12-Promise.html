@@ -1,0 +1,51 @@
+<!--
+Promise:-
+- A promise is same as a real life promise that you make to ensure any action.
+- It have 3 phases
+    a) pending
+    b) fulfilled
+    c) rejected
+- JavaScript provides a "Promise()" constructor, which is used to create a promise for performing specified task.
+- It uses "Asynchronous technique", which is an unblocking technique.
+
+Syntax:
+    var  name = new Promise(function(resolve, reject){
+       
+         if(condition)
+        {
+           resove(params);
+        }
+        else {
+           reject(params);
+        }
+    })
+
+- A promise executes the give function and returns
+   
+        then()        => on success
+        catch()        => on failure
+        finally()        => always
+
+    PromiseName.then(function(){}).catch(function(){}).finally(function(){})
+-->
+<script>
+    var Login = new Promise(function(resolve, reject){
+        var userid = prompt("Enter User Id");
+        var password = prompt("Enter Password");
+        if(userid==="john" && password==="john@11"){
+            resolve("Login Success");
+        } else {
+            reject("Invalid User Id / Password");
+        }
+    })
+    Login
+    .then(function(response){
+        document.write(response);
+    })
+    .catch(function(reason){
+        document.write(reason);
+    })
+    .finally(function(){
+        document.write("<p>Program End</p>");
+    })
+</script>

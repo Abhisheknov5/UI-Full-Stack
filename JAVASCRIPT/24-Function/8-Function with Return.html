@@ -1,0 +1,121 @@
+<!--
+Function with Return :-
+- Every function is "void" by default.
+- It will not return the memory allocated.
+- Void disposes the memory allocated for function.
+- Hence any action and result of a function is not accessible outside the function.
+- You can configure a function to return its memory, so that we store values and access from any another location.
+
+Syntax:
+        function Name()
+        {
+           return  any;
+        }
+-->
+<script>
+    var c;
+    function Addition(a, b)
+    {
+        c = a + b;
+    }
+    Addition(40, 50);
+    function Print(){
+        document.write("Addition=" + c);
+    }
+    Print();
+</script>
+
+<br><br>
+
+<script>
+    function Addition(a, b)
+    {
+        return a + b;
+    }
+    function Print(){
+        document.write("Addition="+ Addition(10,20));
+    }
+    Print();
+</script>
+<!--
+FAQ: Can we use "return" in a void function?
+Ans: Yes.
+
+FAQ: What is the role of "return" is a void function?
+Ans: It is used to add "stub", which configures un-reachable code.
+-->
+
+<br><br>
+
+<script>
+    function Print(){
+        document.write("Statement-1<br>");
+        document.write("Statement-2<br>");
+        document.write("Statement-3<br>");
+        return;
+        document.write("Statement-4<br>");
+        document.write("Statement-5<br>");
+    }
+    Print();
+</script>
+<br><br>
+
+<!--
+- A function return can be any type
+    a) Primitive
+    b) Non Primitive
+    c) Function
+-->
+<script>
+    function GetCategories()
+    {
+        return ["All", "Electronics", "Footwear"];
+    }
+    GetCategories().map(function(category){
+        document.write(category + "<br>");
+    })
+</script>
+<br><br>
+
+<script>
+    function Print(){
+        return function(){
+            document.write("Print Function");
+        }
+    }
+    Print()();
+</script>
+<br><br>
+
+<!--
+FAQ: Can a function have multiple "return" keywords?
+Ans : Yes. It is used for conditional rendering.
+-->
+<script>
+    function Print(password)
+    {
+        if(password==="admin"){
+            return "Login Success.."
+        }
+        else {
+            return "Invalid Password";
+        }
+    }
+    document.write(Print(prompt("Enter Password")));
+</script>
+<br><br>
+
+<script>
+    function Calculate(operator, a, b){
+        if(operator==="+"){
+            return a + b;
+        } else if(operator==="-"){
+            return a - b;
+        } else {
+            return "Please choose + or - only";
+        }
+    }
+
+    document.write(Calculate(prompt("Enter Operator","+,-"),parseInt(prompt("Enter A")),parseInt(prompt("Enter B"))));
+
+</script>

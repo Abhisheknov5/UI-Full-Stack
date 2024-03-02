@@ -1,0 +1,55 @@
+<!--
+JavaScript Functions:- 
+
+- Function is used to "refactor" the code.
+- Refactor is the process of extracting a set of lines and storing under one reference. So that you can reuse the lines. [code snippet]
+- A function can be configured in 2 ways
+
+        1. Function Declaration
+        2. Function Expression
+
+Function Declaration:
+
+    function  Name()
+    {
+    }
+
+Function Expression:
+
+    var Name = function(){
+
+    }
+
+- A function declaration configure memory to handle specific functionality always.
+- A function expression configures memory that changes the functionality according to state and situation.
+
+-->
+<script>
+    //Function Declaration
+    function Hello(){
+        document.write("Hello ! JavaScript<br>");
+    }
+
+    //Function Expression
+    var welcome = function(){
+        document.write("Welcome to JavaScript");
+    }
+    Hello();
+    welcome();
+</script>
+
+<br><br>
+
+<script>
+    var password = prompt("Enter Password");
+    var result;
+    if(password=="admin"){
+        result = function(){
+            doocument.write("Verified successfully..");
+        } 
+    } else {
+        result = function(){
+            document.write("Invalid password");
+        }
+    }
+</script>

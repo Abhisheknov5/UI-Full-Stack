@@ -1,0 +1,485 @@
+<!--
+JavaScript Functions:- 
+
+- Function is used to "refactor" the code.
+- Refactor is the process of extracting a set of lines and storing under one reference. So that you can reuse the lines. [code snippet]
+- A function can be configured in 2 ways
+
+        1. Function Declaration
+        2. Function Expression
+
+Function Declaration:
+
+    function  Name()
+    {
+    }
+
+Function Expression:
+
+    var Name = function(){
+
+    }
+
+- A function declaration configure memory to handle specific functionality always.
+- A function expression configures memory that changes the functionality according to state and situation.
+
+
+<script>
+    //Function Declaration
+    function Hello(){
+        document.write("Hello ! JavaScript<br>");
+    }
+
+    //Function Expression
+    var welcome = function(){
+        document.write("Welcome to JavaScript");
+    }
+    Hello();
+    welcome();
+</script>
+-->
+<!--
+ Configuring Declaration:-
+
+- A function is configured using "function" keyword.
+- It have 3 phases
+
+        a) Declaration
+        b) Signature
+        c) Definition
+
+    function  Print()
+    {
+
+    }
+
+    function Print()        => Declaration
+    Print()                => Signature
+    { }                    => Definition
+
+-->
+
+<!--
+Anonymous Function:-
+
+- A function without name is known as "Anonymous Function".
+- Anonymous functions are used mostly in callbacks.
+- Callback is a mechanism where function executes automatically according to the state and situation.
+- Anonymous function is enclosed in "( )".
+- It is invoked using "IIFE" pattern. [Immediately Invoked Function Expression]
+
+Syntax:
+        ( function() {
+
+           }
+        )();
+
+Syntax:
+        let  hello = function() {
+
+        }
+        hello();
+
+
+<script>
+    (function Hello()
+    {
+        document.write("Hello ! JavaScript");
+    })();
+</script>
+-->
+
+<!--
+
+Function Parameters:-
+- A function can be parameter less or parameterized.
+- Parameters are required to modify a function.
+
+Syntax:
+    function Name(param)
+    {
+
+    }
+    Name(value);
+
+- The parameter defined in declaration is known as "Formal Parameter".
+- The parameter passed in the signature while calling function is known as "Acutal Parameter".
+
+              FormalParameter = ActualParameter;
+            [reference]        = [value]
+
+- Formal parameter is just like a variable name in memory.
+- You can store any type of value in a function parameter.
+        a) Primitive
+        b) Non Primitive
+        c) Function
+        d) Date
+        e) Regular Expression etc..
+
+<script>
+    function PrintNumbers(howMany)
+    {
+        for(var i=1; i<=howMany; i++)
+        {
+            document.write(i + "<br>");
+        }
+    }
+    PrintNumbers(10);
+</script>
+
+<br><br>
+
+<script>
+    function Print(cities)
+    {
+        cities.map(function(city){
+            document.write(city + "<br>");
+        })
+    }
+    Print(["Delhi","Hyderabaad"]);
+</script>
+
+<br><br>
+
+<script>
+    function Print(product)
+    {
+        for(var property in product){
+            document.write(`${property} : ${product[property]}<br>`)
+        }
+    }
+    Print(({Name:"Tv", Price:55000.33, Stock:true}));
+</script>
+
+<br><br>
+<script>
+    function Print(success)
+    {
+        success(); 
+    }
+    Print(function(){document.write("Login Success")});
+</script>
+
+<br><br>
+
+<script>
+    function Print(Mfd)
+    {
+       document.write(`Manufactured : ${Mfd.toDateString()}`)
+    }
+    Print(new Date("2023-12-10"));
+</script>
+
+<br><br>
+
+<script>
+    function Print(Mfd)
+    {
+        document.write(`Manufactured : ${Mfd.toDateString()}`)
+    }
+    var date = new Date("2023-12-15");
+    Print(date);
+</script>
+<br><br>
+
+
+- Every parameter that you defined in function declaration is mandatory to implement.
+  [ Every parameter is required ]
+
+- If value is not passed into parameter, then it returns "undefined".
+- You have to explicity configure the functionality if value is undefined.
+
+
+<script>
+    function Print(Mfd)
+    {
+        if(Mfd)
+        {
+            document.write(`Manufactured: ${Mfd.toDateString()}`)
+        } else {
+            document.write("Date Required");
+        }
+    }
+    var date = new Date("2023-12-15");
+    Print();
+</script>
+<br><br>
+
+
+- A function can have multiple parameters.
+- Every parameter is required and have order dependency.
+
+<script>
+    function Details(id,name,price,stock){
+        document.write(`
+            id=${id}<br>
+            Name=${name}<br>
+            Price=${(price)?price:"N/A"}<br>
+            Stock=${stock}
+        `);
+    }
+    Details(1,"Samsung TV",undefined,true);
+</script>
+
+-->
+
+<!--
+REST Parameters:-
+[ ES 5+ ]
+
+- A single rest parameter can allow multiple arguments.
+- A rest parameter is defined by using "...paramName".
+- Rest parameter is array type.
+
+Syntax:
+        function Name(...args)
+        {
+        }
+
+        Name(value1, value2, value3, ...);
+
+<script>
+    function Details(...args){
+        var [id, name, price, stock] = args;
+        document.write(`
+            Id = ${id} <br>
+            Name = ${name} <br>
+            Price = ${(price)?price:"N/A"} <br>
+            Stock = ${stock}
+        `)
+    }
+    Details(101, "Nike Causuals", 5000.44, true);
+</script>
+
+- Every function can have only one rest parameter.
+- You can define other parameters along with rest parameter.
+- But the rest parameter must be the last parameter in formal list.
+
+FAQ: Why a rest parameter must be last?
+Ans : It uses an implicit iterator that reads upto end, hence there can't be a value after the last occurance.
+
+
+<script>
+    function Details(title,...args){
+        var [id, name, price, stock] = args;
+        document.write(`
+            <h2>${title}</h2>
+            Id = ${id} <br>
+            Name = ${name} <br>
+            Price = ${(price)?price:"N/A"} <br>
+            Stock = ${stock}
+        `)
+    }
+    Details("Product Details",101, "Nike Causuals", 5000.44, true);
+</script>
+
+-->
+
+<!--
+
+Spread Operator:-
+- ES5+ version introduced the spread operator syntax for various collections, which allows to configure one argument that can spread into multiple parameters.
+
+Syntax:
+    function Name(a, b, c, d)
+    {
+    }
+    var val = [10, 20, 30, 40];
+    Name(...val);
+
+
+<script>
+    function Details(id,name,price,stock){
+        document.write(`
+            Id = ${id}<br>
+            Name = ${name}<br>
+            Price = ${(price)?price:"N/A"}<br>
+            Stock = ${stock}
+        `);
+    }
+    var values = [101, "Nike Casuals", 5000.44,true];
+    Details(...values);
+</script>
+
+<br><br>
+
+<script>
+    var one = ["A","B","C"];
+    var two = "D";
+    var result = [...one,two]
+    console.log(result);
+</script>
+
+<br><br>
+
+<script>
+    var one = ["A","B","C","D"];
+    var two = ["E","F","G","H"];
+    var result = [...one,...two];
+    console.log(result);
+</script>
+-->
+
+<!--
+Function with Return :-
+- Every function is "void" by default.
+- It will not return the memory allocated.
+- Void disposes the memory allocated for function.
+- Hence any action and result of a function is not accessible outside the function.
+- You can configure a function to return its memory, so that we store values and access from any another location.
+
+Syntax:
+        function Name()
+        {
+           return  any;
+        }
+
+<script>
+    var c;
+    function Addition(a, b)
+    {
+        c = a + b;
+    }
+    Addition(40, 50);
+    function Print(){
+        document.write("Addition=" + c);
+    }
+    Print();
+</script>
+
+<br><br>
+
+<script>
+    function Addition(a, b)
+    {
+        return a + b;
+    }
+    function Print(){
+        document.write("Addition="+ Addition(10,20));
+    }
+    Print();
+</script>
+
+FAQ: Can we use "return" in a void function?
+Ans: Yes.
+
+FAQ: What is the role of "return" is a void function?
+Ans: It is used to add "stub", which configures un-reachable code.
+
+
+<br><br>
+
+<script>
+    function Print(){
+        document.write("Statement-1<br>");
+        document.write("Statement-2<br>");
+        document.write("Statement-3<br>");
+        return;
+        document.write("Statement-4<br>");
+        document.write("Statement-5<br>");
+    }
+    Print();
+</script>
+<br><br>
+
+- A function return can be any type
+    a) Primitive
+    b) Non Primitive
+    c) Function
+
+<script>
+    function GetCategories()
+    {
+        return ["All", "Electronics", "Footwear"];
+    }
+    GetCategories().map(function(category){
+        document.write(category + "<br>");
+    })
+</script>
+<br><br>
+
+<script>
+    function Print(){
+        return function(){
+            document.write("Print Function");
+        }
+    }
+    Print()();
+</script>
+<br><br>
+
+FAQ: Can a function have multiple "return" keywords?
+Ans : Yes. It is used for conditional rendering.
+
+<script>
+    function Print(password)
+    {
+        if(password==="admin"){
+            return "Login Success.."
+        }
+        else {
+            return "Invalid Password";
+        }
+    }
+    document.write(Print(prompt("Enter Password")));
+</script>
+<br><br>
+
+<script>
+    function Calculate(operator, a, b){
+        if(operator==="+"){
+            return a + b;
+        } else if(operator==="-"){
+            return a - b;
+        } else {
+            return "Please choose + or - only";
+        }
+    }
+
+    document.write(Calculate(prompt("Enter Operator","+,-"),parseInt(prompt("Enter A")),parseInt(prompt("Enter B"))));
+
+</script>
+-->
+
+<!--
+Function Closure:-
+
+- Closure is a technique configured for every function.
+- A function allows the members accessbile to its inner function, which is the nature of a closure.
+- You can implement various techniques to access the inner function results in outer function, which is restricted by default.
+
+<script>
+    function Outer(){
+        var a = 10;
+        function Inner(b)
+        {
+            return a + b;
+        }
+        document.write("Addition=" + Inner(50));
+    }
+    Outer();
+</script>
+-->
+
+<!--
+   Function Recursion 
+
+<script>
+    function Factorial(n)
+    {
+        if(n==0){
+            return 1;
+        } else {
+            return n * Factorial(n-1);
+        }
+    }
+    document.write(`Factorial of 5 is ${Factorial(5)}`);
+</script>
+-->
+
+
+
+
+
+
+
