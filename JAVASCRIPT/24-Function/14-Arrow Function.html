@@ -1,0 +1,41 @@
+<!--
+Arrow Function:-
+
+- It is a short hand technique for writing a function expression.
+- You can minify the function code snippet using arrow technique.
+
+Syntax: Traditional Expression
+
+        var  hello = function() {
+            return "Hello ! JS";
+        }
+
+Syntax: Short Hand
+
+        var hello = () => "Hello ! JS";
+
+        ()        function
+        =>        return and definition
+        => { }    definition with multiple statements
+
+-->
+<script>
+        var hello = () => "Hello Js";
+        document.write(hello() + "<br>");
+
+        var addition = (a,b) => a+b;
+        document.write(`Addition=${addition(30,40)} <br>`);
+
+        var welcome = userName => `Hello ! ${userName}`;
+        document.write(welcome("John"));
+</script>
+
+<script>
+        fetch("http://fakestoreapi.com/products/categories")
+         .then(response => response.json())
+         .then(categories => {
+                categories.map(category =>{
+                        document.write(category + "<br>");
+                })
+         })
+</script>

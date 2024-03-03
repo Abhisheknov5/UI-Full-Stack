@@ -23,5 +23,15 @@ Syntax:
         ref.next().done
 -->
 <script>
-    var table = document.createElement
+    function* collection()
+    {
+        yield "Hello !";
+        yield ["Delhi", "Hyd"];
+        yield {Rate: 3.5, count: 4500}
+    }
+    var list = collection();
+    console.log(list.next().value);
+    console.log(list.next().value);
+    console.log(list.next().value);
+    console.log(list.next());
 </script>
