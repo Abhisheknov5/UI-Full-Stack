@@ -1,0 +1,58 @@
+<!--
+  Accessors
+                            ---------------
+- Accessors are used to provide a fine grained control over property.
+- Accessors are used to handle read and write operations on a property.
+- They are 2 types
+
+        a) get()        Getter
+        b) set()        Setter
+
+- Getter is used to read and return a value defined in property.
+- Setter is used to write a value into property.
+
+Syntax:
+       get  aliasName()
+       {
+          return value;
+       }
+
+      set aliasName(newValue)
+      {
+        Property = newValue;
+      }
+
+-->
+
+<script>
+    var userName = prompt("Enter User Name"); // Prompt the user to enter their name
+    var role = prompt("Enter Your Role","admin | customer | manager"); // Prompt the user to enter their role with a default value
+     class Product // Define a class named Product
+     {
+        _productName;  // Declare a private variable _productName
+
+        // Define a getter method for the ProductName property
+        get ProductName(){
+            return this._productName;
+
+        }
+        // Define a setter method for the ProductName property
+        set ProductName(newName)
+        {
+            if(role==="admin"){ // Check if the role is admin
+                this._productName = newName;  // Set the _productName variable to the new name
+            } else {
+                 // Display a message if the role is not authorized
+                document.write(`Hello ! ${userName} Your role ${role} is not authorized to change product name`);
+            }
+        }
+     }
+     // Create a new instance of the Product class
+     let tv = new Product();
+     tv.ProductName = prompt("Enter Product Name"); // Prompt the user to enter a product name and set it as the ProductName property of the tv object
+     // Check if the ProductName property is set and display it
+     if(tv.ProductName){
+        document.write(`Product Name : ${tv.ProductName}`);
+     }
+     
+</script>

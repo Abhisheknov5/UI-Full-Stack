@@ -75,7 +75,7 @@ Syntax:
 
 - A property returns "undefined" if value is not defined.
 - It is same like a variable in JavaScript, it is implicitly typed.
-
+- Property is mutable, it can change the structure according to the situation.
 -->
 
 <script>
@@ -87,4 +87,13 @@ Syntax:
         Cities = ["Delhi", "Hyderabaad"];
         Rating = {Rate:4.2, Count:200};
     }
+    let tv = new Product();
+    tv.Price = prompt("Enter New Price");
+    document.write(`
+        Name : ${tv.Name} <br>
+        Price : ${tv.Price} <br>
+        Stock : ${tv.Stock} <br>
+        Cities : ${tv.Cities.toString()} <br>
+        Rating : ${tv.Rating.Rate} [${tv.Rating.Count}];   
+    `);
 </script>

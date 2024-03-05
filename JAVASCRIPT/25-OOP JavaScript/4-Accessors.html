@@ -1,0 +1,38 @@
+<!--
+Note: If a property is defined only with getter then it is configured as "readonly" property, which will not allow to store any data.
+
+- You can use accessors to configure easy access of any class member from a multi level hierarchy.
+-->
+<script>
+    // Define a class named Product
+    class Product
+    {
+        // Default name for the product
+        Name = "Samsung TV";
+
+        // Ratings for different months
+        Rating = {
+            December : {
+                VendorRating: {Rate: 4.3},
+                CustomerRating: {Rate: 4.2}
+            }
+        }
+        // Getter method to retrieve the customer rating for December
+        get CustomerRating(){
+            return this.Rating.December.CustomerRating.Rate;
+        }
+        // Setter method to update the customer rating for December
+        set CustomerRating(newRating){
+            this.Rating.December.CustomerRating.Rate = newRating;
+        }
+    }
+    // Create a new instance of the Product class
+    let tv = new Product();
+
+    // Prompt the user to enter a new customer rating for December
+    tv.CustomerRating = prompt("Enter New customer rating for December");
+
+    // Display the updated customer rating for December
+    document.write(`Customer Rating : ${tv.CustomerRating}`);
+
+</script>

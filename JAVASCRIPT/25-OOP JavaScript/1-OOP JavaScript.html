@@ -81,4 +81,89 @@ Modules
         c) UMD  (Universal Module Distribution)
         d) AMD (Asynchronous Module Distribution)
         e) ES Module etc..
+- If you are using module system with javascript in browser, then the default module system is "ES Module".
+- You have to define the script type as "module" in order to use module system in browser.
+
+        <script  type="module">
+   
+        </script>
+
+- Every JavaScript file ".js" is considered as a module.
+- Typically module comprises of variables, functions and classes.
+- Every variable, function or class defined in module is not accessible outside module.
+- Hence you have to mark it as "export". The members that are required to access from another module need to be marked as "export".
+
+Syntax:
+      export function  Home()
+      {
+      }
+
+- Every class can have one default export. [only one export can be defined as default]
+- "default" defines that the function will use "eager" loading technique, which means the function will load by default into memory, even if it is not in use.
+- The function, which is not marked as default will use "Lazy loading". It loads into memory only when it is in use.
+- In order to use any function from a module, you have to import into HTML page.
+
+Syntax:
+       import   { functionName }  from  "moduleName.js";
+       import   defaultFuncionName   from "moduleName.js";
+
+- It is mandatory to import all default members before non-default
+
+Syntax:
+       import   { functionName }, defaultName  from  "moduleName.js";   //invalid
+
+       import  defaultName, { functionName}  from  "moduleName.js";     // valid
+
+       import   { function1, function2, ... }   from  "moduleName.js";
+
+       import  *  as  refName  from  "moduleName.js";
+
+Ex:
+1. Add a new folder into project by name  "library".
+
+2. Add a new file into library by name
+
+        "MathModule.js"
+
+
+var title = "Math Functions";
+
+export default function Addition(x, y){
+    return x + y;
+}
+
+export  function PrintTitle(){
+    return title;
+}
+
+3. Add HTML page to access and use module
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module">
+
+        import  Addition, { PrintTitle } from "../library/MathModule.js";
+
+        document.querySelector("p").innerHTML = `<h2>${PrintTitle()}</h2>Addition=${Addition(40,20)}`;
+
+    </script>
+</head>
+<body>
+    <p></p>
+</body>
+</html>
+
+FAQ's:
+1. Where to change the Module System?
+A. In configuration file, generated with bundlers and lint tools.
+       
+        Lint        =>  eslint, tslint, pmd, sonar etc..
+        Bundler    => webpack, parceljs, vitejs
+
+2. Where to change the JavaScript version for project?
+A. In configuration files
 -->
