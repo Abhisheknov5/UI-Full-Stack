@@ -28,46 +28,63 @@ Syntax:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Constructor Example</title>
     <script>
+        // Define a class named Database
         class Database
         {
+            // Constructor that takes dbName as parameter and writes a message indicating connection to the specified database
             constructor(dbName){
                 document.write(`Connected to ${dbName} Database<br>`);
             }
+             // Method to insert a record, returns a string indicating record insertion
             Insert(){
                 return "Record Inserted<br>";
             }
+              // Method to update a record, returns a string indicating record update
             Update(){
                 return "Record Updated<br>";
             }
+             // Method to delete a record, returns a string indicating record deletion
             Delete(){
                 return "Record Deleted<br>"
             }
         }
+        // Function to handle insert button click event
         function InsertClick(){
+              // Create a new instance of Database class with selected database type
             let obj = new Database(document.querySelector("select").value);
+             // Write the result of the Insert method to the document
             document.write(obj.Insert());
             
         }
+        // Function to handle update button click event
         function UpdateClick(){
             let obj = new Database(document.querySelector("select").value);
             document.write(obj.Update());
         }
+        // Function to handle delete button click event
         function DeleteClick(){
+             // Create a new instance of Database class with selected database type
             let obj = new Database(document.querySelector("select").value);
+            // Write the result of the Insert method to the document
             document.write(obj.Delete());
         }
     </script>
 </head>
 <body>
+    <!-- Select element to choose the database type -->
     <select>
         <option>Select Database</option>
         <option>MySql</option>
         <option>MongoDB</option>
         <option>Oracle</option>
     </select>
+
+     <!-- Buttons to trigger insert, update, delete operations -->
     <button onclick="InsertClick()">Insert</button>
     <button onclick="UpdateClick()">Update</button>
     <button onclick="DeleteClick()">Delete</button>
+
+    <!-- Paragraph element to display the result of the operation -->
     <p></p>
 </body>
 </html>
