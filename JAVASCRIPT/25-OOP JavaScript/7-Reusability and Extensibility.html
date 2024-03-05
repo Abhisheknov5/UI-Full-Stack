@@ -32,19 +32,25 @@ Aggregration:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banking System</title>
     <script>
+        // Define HDFC_Version1 class
         class HDFC_Version1
         {
-            Personal = "Personal Banking Services<br>";
-            NRI = "NRI Services<br>";
+            Personal = "Personal Banking Services<br>"; // Personal banking services
+            NRI = "NRI Services<br>"; // NRI services
+
+            // Method to print personal and NRI services
             Print(){
                 document.write(`${this.Personal}<br>${this.NRI}`);
             }
         }
+        // Define HDFC_Version2 class
         class HDFC_Version2
         {
-            CreditCard = "Credit Card Login - Payment<br>";
+            CreditCard = "Credit Card Login - Payment<br>";  // Credit card services
+            
+            // Method to print personal, NRI, and credit card services
             Print(){
-                let obj = new HDFC_Version1();
+                let obj = new HDFC_Version1(); // Create an instance of HDFC_Version1
                 obj.Print();
                 document.write(`${this.CreditCard}<br>`);
             }
