@@ -1,0 +1,57 @@
+<!--
+Reusability & Extensibility
+                    ------------------------------------
+- Reusability allows to access members of existing class in a new class.
+- Extensibility allows to extend the functionality of existing class without making changes in the class.
+- You can implement reusability & extensibility using 2 techniques
+
+        a) Aggregation
+        b) Inheritance
+Example:-
+
+Bank App Version-1  ----------------------         Client
+-Personal Banking     Backward Compatibility        Bank Application
+-NRI Banking          Side by side Execution         
+
+BAnk App Version-2
+-Credit Cards
+
+
+Aggregration:
+- It is the process of accessing members of one class in another without configuring any relationship between classes.
+- It is reffered as "Object-to-Object" communication.
+- It often called as "Has-A-Relation".
+- It is possible by configuring an object for existing class in new class.
+- It avoids data hiding and overriding.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <script>
+        class HDFC_Version1
+        {
+            Personal = "Personal Banking Services";
+            NRI = "NRI Services<br>";
+            Print(){
+                document.write(`${this.Personal}<br>${this.NRI}`);
+            }
+        }
+        class HDFC_Version2
+        {
+            CreditCard = "Credit Card Login - Payment<br>";
+            Print(){
+                let obj = new HDFC_Version1();
+                obj.Print();
+                document.write(`${this.CreditCard}<br>`);
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
