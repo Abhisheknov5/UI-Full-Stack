@@ -27,3 +27,29 @@ FAQ: Why function is not allowed as class member?
 Ans : It is immutable.
 
 -->
+<script>
+    class Product // Define a class named Product
+    {
+        Name = "Samsung Tv"; // Default name for the product
+        Price = 45000.33; // Default price for the product
+        Qty = 0; // Default quantity for the product
+
+        // Method to calculate the total price of the product
+        Total(){
+            return this.Qty * this.Price;
+        }
+         // Method to print the product details
+        Print(){
+            // Print the name, price, quantity, and total price of the product
+            document.write(`Name=${this.Name}<br>Price=${this.Price}<br>Qty=${this.Qty}<br>Total=${this.Total()}`);
+        }
+    }
+    // Create a new instance of the Product class
+    let obj = new Product();
+
+    // Prompt the user to enter the quantity of the product
+    obj.Qty = parseInt(prompt("Enter Product Quantity"));
+
+    // Print the product details
+    obj.Print();
+</script>
