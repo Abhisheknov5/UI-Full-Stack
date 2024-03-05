@@ -1,28 +1,28 @@
 <!--
-Reusability & Extensibility
-                    ------------------------------------
-- Reusability allows to access members of existing class in a new class.
-- Extensibility allows to extend the functionality of existing class without making changes in the class.
-- You can implement reusability & extensibility using 2 techniques
+Inheritance:
+- It is the process of allowing access to members from one class through another class.
+- It configures relationship between classes.
+- JavaScript uses "extends" as keyword for extending existing class.
 
-        a) Aggregation
-        b) Inheritance
-Example:-
+Syntax:
+    class  A
+    {
+    }
+    class B extends A
+    {
+    }
 
-Bank App Version-1  ----------------------         Client
--Personal Banking     Backward Compatibility        Bank Application
--NRI Banking          Side by side Execution         
+- You can access members of exisitng class in new class without an object.
+- The existing class members are accessible using "super" keyword.
 
-BAnk App Version-2
--Credit Cards
+    class A                    => A is super class (base class)
+    {
+    }
+    class B extends A            => B is derived class
+    {
+    }
 
-
-Aggregration:
-- It is the process of accessing members of one class in another without configuring any relationship between classes.
-- It is reffered as "Object-to-Object" communication.
-- It often called as "Has-A-Relation".
-- It is possible by configuring an object for existing class in new class.
-- It avoids data hiding and overriding.
+- It may lead to data hiding and overriding when you configure relation between classes.
 -->
 
 <!DOCTYPE html>
@@ -43,24 +43,23 @@ Aggregration:
                 document.write(`${this.Personal}<br>${this.NRI}`);
             }
         }
-        // Define HDFC_Version2 class
-        class HDFC_Version2
+        // Define HDFC_Version2 class that extends HDFC_Version1
+        class HDFC_Version2 extends HDFC_Version1
         {
             CreditCard = "Credit Card Login - Payment<br>";  // Credit card services
             
             // Method to print personal, NRI, and credit card services
             Print(){
-                let obj = new HDFC_Version1(); // Create an instance of HDFC_Version1
-                obj.Print(); // Call the Print method of HDFC_Version1
+                super.Print();
                 document.write(`${this.CreditCard}<br>`); // Print credit card services
             }
         }
-        class HDFC_Version3
+        // Define HDFC_Version3 class that extends HDFC_Version2
+        class HDFC_Version3 extends HDFC_Version2
         {
             Loans = "Personal, Bike, Car Loans<br>";
             Print(){
-                let obj = new HDFC_Version2();
-                obj.Print();
+                super.Print();
                 document.write(`${this.Loans}<br>`);
             }
         }
