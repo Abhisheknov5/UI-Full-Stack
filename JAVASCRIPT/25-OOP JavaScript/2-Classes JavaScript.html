@@ -1,0 +1,90 @@
+<!--
+JavaScript Classes
+
+- In computer programming class is reffered as "Program Template".
+- A template comprises of data and logic, which you can customize and implement according to your requirements.
+- A class have the behaviour of "Entity" when it maps to business requirements.
+- A class have the behaviour of "Model" when it maps to data requirements.
+- A class acts as "Blue Print" for all its instances. [Objects]
+
+Class Configuration:
+- You can configure class using 2 methods
+
+        a) Declaration
+        b) Expression
+
+Syntax: Declaration
+
+    class   Name
+    {
+    }
+
+Syntax: Expression
+
+    let   Name =  class {
+    }
+
+Class Members:
+- A class allows only following members
+
+    1. Property
+    2. Accessor
+    3. Method
+    4. Constructor
+
+FAQ's:
+1. Can we have a variable in class?
+A. Yes. But it can't be class member.
+
+2. Why we can't have variable as class member?
+A. Variables are immutable, can't change the configuration according to state and situation. But class is a template, which means every member must allow customization.
+     Class can have only mutable members, that allow customization. Hence variable can't be a class member.
+
+                   
+                               Property
+                               -------------
+- A property is used to store data.
+- A property can store any type of data
+    a) Primitive
+    b) Non Primitive
+    c) Date
+    d) Map
+    e) Regular Expression
+
+Syntax:
+    class Name
+    {
+      Property = value;
+    }
+
+- Properties are mutable types, they can change the behaviour according to state and situation.
+
+- Properties are accessed within class by using "this" keyword.
+- Properties are accessed outside class by using instance (object) of class.
+
+Syntax:
+        let  obj = new ClassName();
+        obj.Property
+
+- ClassName()  refers to a constructor, which is default in a class.
+- Constructor allows to create an object for class. So that you can access the class members using object of class. [instance of class]
+- You can read or write data into a property directly.
+
+        obj.Property = value;        => write
+        obj.Property;                => read
+
+- A property returns "undefined" if value is not defined.
+- It is same like a variable in JavaScript, it is implicitly typed.
+
+-->
+
+<script>
+    class Product
+    {
+        Name = "Samsung TV";
+        Price = 45000.44;
+        Stock = true;
+        Cities = ["Delhi", "Hyderabaad"];
+        Rating = {Rate:4.2, Count:200};
+    }
+</script>
