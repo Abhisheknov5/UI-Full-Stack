@@ -34,7 +34,7 @@ Aggregration:
     <script>
         class HDFC_Version1
         {
-            Personal = "Personal Banking Services";
+            Personal = "Personal Banking Services<br>";
             NRI = "NRI Services<br>";
             Print(){
                 document.write(`${this.Personal}<br>${this.NRI}`);
@@ -49,9 +49,50 @@ Aggregration:
                 document.write(`${this.CreditCard}<br>`);
             }
         }
+        class HDFC_Version3
+        {
+            Loans = "Personal, Bike, Car Loans<br>";
+            Print(){
+                let obj = new HDFC_Version2();
+                obj.Print();
+                document.write(`${this.Loans}<br>`);
+            }
+        }
+        function InstallClick(){
+            var ver = document.querySelector("select").value;
+            switch(ver)
+            {
+                case "ver1":
+                    document.write("<h2>HDFC 2022 - Version-1 nstalled</h2>");
+                    let obj1 = new HDFC_Version1();
+                    obj1.Print();
+                    break;
+                case "ver2":
+                    document.write("<h2>HDFC 2023 - Version-2 nstalled</h2>");
+                    let obj2 = new HDFC_Version2();
+                    obj2.Print();
+                    break;
+                case "ver3":
+                    document.write("<h2>HDFC 2023 Dec - Version-3 nstalled</h2>");
+                    let obj3 = new HDFC_Version3();
+                    obj3.Print();
+                    document.write("Please select a version");
+                    break;
+            }
+        }
     </script>
 </head>
 <body>
+    <fieldset>
+        <legend>Install HDFC Bank App</legend>
+        <select>
+            <option value="-1">Select Version</option>
+            <option value="ver1">HDFC 2022[Personal, NRI]</option>
+            <option value="ver2">HDFC 2023 [Credit Cards]</option>
+            <option value="ver3">HDFC 2023 Dec [Loans]</option>
+        </select>
+        <button onclick="InstallClick()">Install</button>
+    </fieldset>
     
 </body>
 </html>
