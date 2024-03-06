@@ -1,0 +1,36 @@
+<!--
+Types of Inheritance:-
+
+   a) Single Inheritance
+   b) Multi Level Inheritance
+
+- Any inheritance implementation must follow a basic rule:
+ 
+  "A super class constructor must be called first then followed by dervied class constructor"
+
+- In JavaScript inheritance rule is not implemented implicitly. You have to manually implement by calling the super class constructor in derived class.
+
+- You can call super constructor in derived by using "super()".
+-->
+
+<script>
+    // Define a class named SuperClass
+    class SuperClass
+    {
+        // Constructor of SuperClass
+        constructor(){
+            document.write("Super Class constructor<br>");
+        }
+    }
+    // Define a class named DerivedClass that extends SuperClass
+    class DerivedClass extends SuperClass
+    {
+         // Constructor of DerivedClass
+        constructor(){
+            super(); // Call the constructor of the superclass (SuperClass)
+            document.write("Derived Class constructor");
+        }
+    }
+    // Create an instance of DerivedClass, which will invoke its constructor
+    let obj = new DerivedClass();
+</script>

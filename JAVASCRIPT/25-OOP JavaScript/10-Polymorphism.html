@@ -1,0 +1,74 @@
+<!--
+Polymorphism :-
+- Poly means "Many".
+- Morphos means "Forms".
+- Polymorphism allows to configure a component with multiple behaviours.
+- One component in multiple forms.
+- Technically polymorphism is a single base class object using the memory of multiple derived classes.
+-->
+
+<script>
+    // Base class Employee
+    class Employee
+    {
+        // Base class Employee
+        FirstName;
+        LastName;
+        Designation;
+        // Method to print employee details
+        Print(){
+            document.write(`${this.FirstName} ${this.LastName} - ${this.Designation}<br>`);
+        }
+    }
+    // Derived class Developer extending Employee
+    class Developer extends Employee
+    {
+         // Default values for a developer
+        FirstName = "Abhishek";
+        LastName = "Kumar";
+        Designation = "Developer";
+        Role = "Developer Role: Build, Debug, Test";
+
+         // Override the Print method to include role
+        Print(){
+            super.Print(); // Call base class Print method
+            document.write(`${this.Role}`);  // Print developer-specific role
+        }
+    }
+    // Derived class Admin extending Employee
+    class Admin extends Employee
+    {
+        // Default values for an admin
+        FirstName = "Akash";
+        LastName = "Kumar";
+        Designation = "Admin";
+        Role = "Admin Role: Authorization";
+
+        // Override the Print method to include role
+        Print(){
+            super.Print();
+            document.write(`${this.Role}`);
+        }
+    }
+    // Derived class Manager extending Employee
+    class Manager extends Employee
+    {
+        FirstName = "Rakesh";
+        LastName = "Kumar";
+        Designation = "Manager";
+        Role = "Manager Role: Approvals";
+        Print(){
+            super.Print();
+            document.write(`${this.Role}`);
+        }
+    }
+    // Create an array containing instances of Developer, Admin, and Manager
+    let employees = new Array(new Developer(),new Admin(),new Manager());
+    var designation = prompt("Enter Designation"); // Prompt the user to enter a designation
+    for(var employee of employees)  // Iterate over each employee
+    {
+        if(employee.Designation===designation){  // Check if the employee's designation matches the user input
+            employee.Print();     // If matched, call the Print method of the employee to display their details
+        }
+    }
+</script>
