@@ -1,17 +1,23 @@
-<script>
-    class SuperClass
-    {
-        constructor(){
-            document.write("Super Class Constructor<br>");
-        }
-    }
-    class DerivedClass extends SuperClass
-    {
-        constructor(){
-            super();
-            document.write("Derived Class Constructor");
-        }
-    }
-    let obj = new DerivedClass();
-
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      function InsertClick(obj, e){
+          document.write(`
+              Button Id : ${obj.id}  <br>
+              Button Value: ${obj.value} <br>
+              Button Class : ${obj.className} <br>
+              X Position : ${(e.clientX>55)?"Clicked out side button":e.clientX} <br>
+              Ctrl Key  : ${e.ctrlKey}
+          `);
+      }
+    </script>
+</head>
+<body>
+   
+    <button id="btnInsert" value="Insert" class="btn btn-primary" onclick="InsertClick(this, event)">Insert</button>
+</body>
+</html>

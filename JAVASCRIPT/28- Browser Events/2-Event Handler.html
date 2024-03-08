@@ -1,0 +1,26 @@
+<!--
+
+Event Handler:
+- Event configures the trigger and handler points the action on trigger.
+- Event handler is a  complete function pointer (delegate) to execute any action.
+
+            onclick                    => Event
+            onclick="InsertClick()"        => Event Handler
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function InsertClick(){
+            document.write("Record Inserted");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="InsertClick()">Insert</button> 
+    
+</body>
+</html>

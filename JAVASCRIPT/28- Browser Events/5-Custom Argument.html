@@ -1,0 +1,41 @@
+<!--
+- You can pass custom arguments into event, which can be any JS data type
+         a) Primitive
+    b) Non Primitive
+
+- It supports both rest and spread approach for handling values.
+
+Syntax:
+     <button click="InsertClick(10, [ ], { }, '  ')">
+
+     function InsertClick(id, cities, rating, title)
+    {
+    }
+
+    function InsertClick(...details)
+    {
+    }
+
+- You can pass custom args along with default args.
+
+    <button onclick="InsertClick(101, this.id)">
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Argument</title>
+    <script>
+        function InsertClick(...details){
+            var [id, cities, rating] = details;
+            document.write(`Id=${id}<br>Cities=${cities.toString()}<br>Rating=${rating.Rate}`);
+
+        }
+        
+    </script>
+</head>
+<body>
+    <button  class="btn btn-primary" onclick="InsertClick(10, ['Delhi', 'Hyd'], {Rate: 4.5})">Insert</button> 
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!--
+Event Listener:
+- You can configure event for element without handler.
+- Handler is static.
+- You can define dynamic events using event listener.
+
+Syntax:
+    element.addEventListener("eventName", ()=> {
+
+    })
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+    <script type="module">
+            document.querySelector("button").addEventListener("click", ()=>{
+                document.write("Record Insereted");
+            })
+    
+    </script>
+</head>
+<body>
+    <button>Insert</button>
+</body>
+</html>
+

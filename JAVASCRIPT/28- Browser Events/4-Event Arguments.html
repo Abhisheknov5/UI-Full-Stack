@@ -1,0 +1,61 @@
+<!--
+Event Arguments:
+- Event can be defined with
+        a) Default Arguments
+        b) Custom Arguments
+- The default arguments are
+        a) this
+        b) event
+
+- "this" sends information about current element to function.
+        id, name, class, width, height, value etc..
+
+- "event" sends information about current event to function.
+        clientX, clientY, shiftKey, ctrlKey, altKey, which, keyCode etc..
+       
+Syntax:
+
+    <button onclick="InsertClick(this, event)">
+
+    function InsertClick(obj, e)
+    {
+        obj.id
+        e.clientX
+    }
+
+- You can send specific details
+
+    <button onclick="InsertClick(this.id)">
+
+    function InsertClick(id)
+    {
+    }
+
+- You can define multiple parameters
+
+    <button onclick="InsertClick(this.id, this.className)">
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Arguments</title>
+    <script>
+        function InsertClick(obj, e){
+            document.write(`
+                Button Id : ${obj.id} <br>
+                Button Value : ${obj.value} <br>
+                Button Class : ${obj.className} <br>
+                X Position : ${(e.clientX>55)?"Clicked out side button":e.clientX} <br>
+                Ctrl Key  : ${e.ctrlKey}  
+            `);
+
+        }
+    </script>
+</head>
+<body>
+    <button id="btnInsert" value="Insert" class="btn btn-primary" onclick="InsertClick(this, event)">Insert</button>
+</body>
+</html>
