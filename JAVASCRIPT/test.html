@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-      function InsertClick(obj, e){
-          document.write(`
-              Button Id : ${obj.id}  <br>
-              Button Value: ${obj.value} <br>
-              Button Class : ${obj.className} <br>
-              X Position : ${(e.clientX>55)?"Clicked out side button":e.clientX} <br>
-              Ctrl Key  : ${e.ctrlKey}
-          `);
-      }
+    <script type="module">
+        document.querySelector("button").addEventListener("click", function(e){
+                document.write(`
+                    X Position : ${e.clientX} <br>
+                    Ctrl Key : ${e.ctrlKey} <br>
+                    Button Id : ${e.target.id}
+                `);
+        })
     </script>
 </head>
 <body>
    
-    <button id="btnInsert" value="Insert" class="btn btn-primary" onclick="InsertClick(this, event)">Insert</button>
+    <button id="btnInsert">Insert</button>
 </body>
 </html>
