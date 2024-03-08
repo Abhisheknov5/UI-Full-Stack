@@ -1,0 +1,60 @@
+<!--
+                        Keyboard Events
+- onkeyup
+- onkeydown
+- onkeypress
+
+Note: keyup and down are good for defining actions when key is released over any character. [ if you are using chars ]
+      keypress is good when you are configuring for char code.
+
+Ex:
+users.json
+[
+    {
+        "UserId": "john_nit"
+    },
+    {
+        "UserId": "david"
+    },
+    {
+        "UserId": "john"
+    }
+]
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Keyboard Events</title>
+    <script>
+        function VerifyUser(){
+            var userid = document.getElementById("txtId").value;
+            var lblError = document.getElementById("lblError");
+
+            fetch("../data/users.json")
+            .then(response => response.json())
+            .then(users => {
+                for(var user of users){
+                if(user.UserId===userid){
+                    lblError.innerHTML = "User Id Taken - Try Another".fontcolor('red');
+                    break;
+                } else  {
+                    lblError.innerHTML = "User Id Available".fontcolor('green');
+                }
+            }
+            })
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>
+            Verify User
+        </legend>
+        <input type="text" onkeyup="VerifyUser()" placeholder="User Id" id="txtId">
+        <div id="lblError"></div>
+    </fieldset>
+</body>
+</html>

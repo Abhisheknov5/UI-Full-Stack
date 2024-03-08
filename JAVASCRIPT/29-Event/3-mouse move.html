@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse move</title>
+    <script>
+        function GetPosition(e){
+            if((e.clientX>230 && e.clientX<303) && (e.clientY>362 && e.clientY<429)){
+                document.querySelector("h1").innerHTML = "30% OFF on Bags";
+            } else {
+                document.querySelector("h1").innerHTML = ""; 
+            }
+        }
+    </script>
+</head>
+<body>
+    <img onmousemove="GetPosition(event)" src="../public/images/Women-Fashion.jpg" width="400" height="500" >
+    <h1></h1>
+</body>
+</html>

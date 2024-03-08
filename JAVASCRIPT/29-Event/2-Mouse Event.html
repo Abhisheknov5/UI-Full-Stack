@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+    <style>
+        #container {
+            display: flex;
+        }
+        #red {
+            background-color: red;
+            width: 200px;
+            height: 100px;
+        }
+        #green {
+            background-color: green;
+            width: 200px;
+            height: 100px;
+        }
+        #blue {
+            background-color: blue;
+            width: 200px;
+            height: 100px;
+        }
+        
+    </style>
+    <script>
+        function GetColor(colorName){
+            document.querySelector("h1").style.color = colorName;
+        }
+        function ReserColor(){
+            document.querySelector("h1").style.color = 'black';
+        }
+        function ChangeImage(){
+            document.querySelector("img").src="../public/images/Amazon2.jpg";
+        }
+
+        function ResetImage(){
+            document.querySelector("img").src="../public/images/Amazon1.jpg";
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="red" onmouseover="GetColor(this.id)" onmouseout="ReserColor()"></div>
+        <div id="green" onmouseover="GetColor(this.id)" onmouseout="ReserColor()"></div>
+        <div id="blue" onmouseover="GetColor(this.id)" onmouseout="ReserColor()"></div>
+    </div>
+    <h1>Sample Text</h1>
+    <img src="../public/images/Amazon1.jpg" onmousedown="ChangeImage()" onmouseup="ResetImage()" height="200" width="300">
+    <p>Hold down mouse button to view lanches</p>
+</body>
+</html>

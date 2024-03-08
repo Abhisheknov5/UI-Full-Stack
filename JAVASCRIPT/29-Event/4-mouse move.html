@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Move</title>
+    <script>
+        function GetPosition(e){
+            var pic = document.querySelector("img");
+            pic.style.position = "fixed";
+            pic.style.top = e.clientY + "px";
+            pic.style.left = e.clientX + "px";
+
+        }
+    </script>
+</head>
+<body onmousemove="GetPosition(event)">
+    <div style="height: 1000px">
+        move mouse Pointer to text
+
+    </div>
+    <img src="../public/images/India.jpg" width="50" height="50">
+    
+</body>
+</html>
