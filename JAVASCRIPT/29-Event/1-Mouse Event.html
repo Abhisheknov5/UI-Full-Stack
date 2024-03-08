@@ -1,0 +1,88 @@
+<!--
+- All JavaScript events are "Browser Events" configured by  "window" object.
+  [BOM object]
+- The events of browser can be configure to various elements in DOM.
+- The events are categorized into various groups:
+
+        1.  Mouse Events
+        2.  Keyboard Events
+        3.  Button Events
+        4.  Clipboard Events
+        5.  Timer Events
+        6.  Touch Events
+        7.  Form Events
+        8.  Element State Events etc..
+-->
+
+<!--
+Mouse Events :-
+- onmouseover
+- onmouseout
+- onmousedown
+- onmouseup
+- onmousemove
+
+pics.json
+
+[
+    "../public/images/m1.png",
+    "../public/images/m2.png",
+    "../public/images/m3.png",
+    "../public/images/m4.png"
+]
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+     <!-- Styling for the document -->
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+        }
+    </style>
+    <!-- JavaScript for dynamic behavior -->
+    <script>
+        // Function to load images from JSON and create elements
+        function LoadImages(){
+            // Fetch JSON data
+            fetch("../data/pic.json")
+            .then(Response => Response.json())
+            .then(pics => {
+                // Map over each image URL
+                pics.map(pic=>{
+                    // Create a div element
+                    var div = document.createElement("div");  
+                    // Set innerHTML of div to contain an img tag with onmouseover event
+                    div.innerHTML = `<img onmouseover="ShowImage(this.src)" src=${pic} width="100%" height="100">`;
+                    div.style.marginBottom = "20px";
+                    // Append the div to the navigation
+                    document.querySelector("nav").appendChild(div);
+                })
+            })
+        }
+        // Function to show image preview
+        function ShowImage(imgPath){
+            document.getElementById("imgPreview").src = imgPath;
+        }
+        // Function to load images when body loads
+        function bodyload(){
+
+            LoadImages();
+
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <nav>
+
+    </nav>
+    <main>
+        <img id="imgPreview" width="400" height="500">
+    </main>
+    
+</body>
+</html>
