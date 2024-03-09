@@ -1,0 +1,35 @@
+<!--
+FAQ: How to stop the event propagation from child to parent?
+Ans: By using  event method "stopPropagation()".
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+    <style>
+        .container {
+            width: 200px;
+            border: 1px solid black;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        function containClick(){
+            alert("container clicked");
+        }
+        function SubmitClick(e){
+            alert("Submit clicked");
+            e.stopPropagation();
+        }
+    </script>
+</head>
+<body>
+    <div class="container" onclick="containClick()">
+        <h2>container</h2>
+        <button onclick="SubmitClick(event)">Submit</button>
+    </div>
+</body>
+</html>

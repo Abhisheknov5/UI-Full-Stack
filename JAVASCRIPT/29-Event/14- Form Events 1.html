@@ -1,0 +1,30 @@
+<!--
+Form Events :-
+- onsubmit
+- onreset
+
+* Form events are defined for <form> element and they can execute only on generic button trigger. [ submit or reset ]
+
+Syntax:
+    <form  onsubmit="f1()"  onreset="f2()">
+
+    </form>
+
+Note: Make sure that the form element is configured with generic buttons.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+</head>
+<body>
+    <form onreset="alert('Form will reset')" onsubmit="alert('Form will submit')">
+        User Name :
+        <input type="text" name="UserName">
+        <button>Submit</button>
+        <button type="reset">Cancel</button>
+    </form>
+</body>
+</html>

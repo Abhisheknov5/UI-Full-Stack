@@ -1,0 +1,34 @@
+<!--
+FAQ: How to stop the default functionality defined for generic elements?
+Ans:  By using "event" method called "preventDefault()"
+
+Syntax:
+   
+    function FormSubmit(e)
+    {
+      e.preventDefault();
+    }
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+    <script>
+        function FormSubmit(e){
+            alert("Form is submitted to Server");
+            e.preventDefault();
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="FormSubmit(event)">
+        User Name :
+        <input type="text" name="UserName">
+        <button>Submit</button>
+        <button type="reset">Cancel</button>
+    </form>
+</body>
+</html>

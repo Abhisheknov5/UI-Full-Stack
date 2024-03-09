@@ -8,9 +8,9 @@ var courses = document.getElementByName("Course");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>State Events</title>
+    <title>OnChange</title>
     <script>
-        function SubmitClick(){
+        function CourseChange(){
             var courses = document.getElementsByName("Course");
             var selectedCourses = "";
             var fee = 0;
@@ -29,11 +29,10 @@ var courses = document.getElementByName("Course");
     <fieldset>
         <legend>Select Courses</legend>
         <ol>
-            <li><input type="checkbox" id="3000" value="Java" name="Course" >Java</li>
-            <li><input type="checkbox" id="5000" value=".NET" name="Course">.NET</li>
-            <li><input type="checkbox" id="10000" value="UI Full Stack" name="Course">UI Fullstack</li>
+            <li><input onchange="CourseChange()" type="checkbox" id="3000" value="Java" name="Course" >Java</li>
+            <li><input onchange="CourseChange()" type="checkbox" id="5000" value=".NET" name="Course">.NET</li>
+            <li><input onchange="CourseChange()" type="checkbox" id="10000" value="UI Full Stack" name="Course">UI Fullstack</li>
         </ol>
-        <button onclick="SubmitClick()">Submit</button>
     </fieldset>
     <p></p>
 </body>

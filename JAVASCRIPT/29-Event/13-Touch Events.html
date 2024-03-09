@@ -1,0 +1,28 @@
+<!--
+Touch Events:-
+- ontouchstart
+- ontouchend
+- ontouchmove
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touch Events</title>
+    <script>
+        function GetDetails(msg) {
+            console.log("Touched the image");
+            document.querySelector("p").innerHTML = msg;
+        }
+    </script>
+</head>
+<body>
+    <img ontouchstart="GetDetails('50% OFF on smart watches')" src="../public/images/Amazon1.jpg" width="100" height="100">
+    <img ontouchstart="GetDetails('Kickstart Deals - 20% OFF')" src="../public/images/Amazon2.jpg" width="100" height="100">
+    <img ontouchstart="GetDetails('Play - Win Games on Flipkart')" src="../public/images/Amazon3.jpg" width="100" height="100">
+    <p></p>
+
+</body>
+</html>

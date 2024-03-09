@@ -1,0 +1,36 @@
+<!--
+FAQ: How to submit a form using non-generic elements?
+A:  By calling the form submit() method.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+    <script>
+        function FormSubmit(e){
+            alert("Form is submitted to server");
+            e.preventDefault();
+        }
+        function CityChange(){
+            frmRegister.submit();
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="FormSubmit(event)" name="frmRegister">
+        User Name :
+        <input type="text" name="UserName">
+        City :
+        <select name="City" onchange="CityChange()">
+            <option>Select City</option>
+            <option>Delhi</option>
+            <option>Hyderabad</option>
+        </select>
+    </form>
+
+    
+</body>
+</html>
