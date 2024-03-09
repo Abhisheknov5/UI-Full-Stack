@@ -1,0 +1,32 @@
+<!--
+ Clipboard Events :-
+                        -----------------------
+oncut :- removes selection and keeps on clipboard
+oncopy :- copies the selection to cliboard
+onpaste :- inserts clipboard contents
+
+Syntax: 
+    <input type="text"  onpaste="return false">
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Clipboard Events </title>
+    <script>
+       function CopyNumber(){
+        document.getElementById("msg").innerHTML = "Account Number Copied";
+       }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Your Account Number</dt>
+        <dt><input type="text" oncopy="CopyNumber()"></dt>
+        <dd id="msg"></dd>
+        <dt>Conform Account Number</dt>
+        <dd><input type="text" onpaste="return false" placeholder="You can not Paste"></dd>
+    </dl>
+</body>
+</html>
