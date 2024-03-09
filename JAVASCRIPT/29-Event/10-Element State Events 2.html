@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Events</title>
+    <style>
+        .invalid-style {
+            border: 1px soild red;
+            box-shadow: 2px 2px 2px red;
+        }
+        .valid-style {
+            border: 1px solid green;
+            box-shadow: 2px 2px 2px green;
+        }
+    </style>
+    <script>
+        function VerifyName(){
+            var username = document.getElementById("txtName").value;
+            var tip = document.getElementById("tip");
+            if(username=="")
+            {
+                tip.innerHTML = "Name Required".fontcolor("red");
+                document.getElementById("txtName").className = "invalid-style";
+            } else {
+                tip.innerHTML = " ";
+                document.getElementById("txtName").className = "valid-style";
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Your Name</dt>
+        <dd><input type="text" onblur="VerifyName()" id="txtName" placeholder="Name in Block Letters"></dd>
+        <dd id="tip"></dd>
+    </dl>
+</body>
+</html>
