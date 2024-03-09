@@ -1,0 +1,33 @@
+<!--
+Element State Events :-
+
+onblur :-   Element lost focus
+onfocus :-  Element get focus
+onchange :- Element state/value change
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element State Events</title>
+    <script>
+        function ChangeCase(){
+            var userName = document.getElementById("txtName").value;
+            document.getElementById("txtName").value = userName.toUpperCase();
+            document.getElementById("tip").innerHTML = "";
+        }
+        function ShowTip(){
+            document.getElementById("tip").innerHTML = "Name in Block Letters Only";
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Your Name</dt>
+        <dd><input type="text" onblur="ChangeCase()" onfocus="ShowTip()" id="txtName" placeholder="Name in Block Letters"></dd>
+        <dd id="tip"></dd>
+    </dl>
+</body>
+</html>
