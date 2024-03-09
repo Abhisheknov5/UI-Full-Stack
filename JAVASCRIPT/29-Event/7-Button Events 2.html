@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Button Events</title>
+    <script>
+        function openImage(){
+            window.open("../public/images/kids-fashion.jpg","kids","width=300 height=500");
+        }
+        document.oncontextmenu = function(){
+            alert("You can not right click");
+            return false;
+        }
+        document.onselectstart = function(){
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <img src="../public/images/kids-fashion.jpg" ondblclick="openImage()" width="200" height="200">
+    <p>Double click to view large</p>
+    <h1>Right Click disabled in page.</h1>
+</body>
+</html>

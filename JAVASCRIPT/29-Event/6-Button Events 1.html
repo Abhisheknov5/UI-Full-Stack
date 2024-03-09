@@ -1,0 +1,41 @@
+<!--
+ Button Events :-
+
+- onclick                [single click of left button]
+- ondblclick            [double click of left button]
+- oncontextmenu        [single click of right button]
+- onselectstart            [left button click and drag over text]
+
+Note: You can disable any event by returning a boolean false.
+
+       <body  oncontextmenu="return false">
+
+                    (or)
+
+       document.oncontextmenu = function(){
+        // actions..
+        return false;
+       }
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Button Events</title>
+    <script>
+        function openImage(){
+            window.open("../public/images/kids-fashion.jpg","kids","width=300 height=500");
+        }
+        document.oncontextmenu = function(){
+            alert("You can not right click");
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <img src="../public/images/kids-fashion.jpg" ondblclick="openImage()" width="200" height="200">
+    <p>Double click to view large</p>
+    <p>Right Click disabled in page.</p>
+</body>
+</html>
