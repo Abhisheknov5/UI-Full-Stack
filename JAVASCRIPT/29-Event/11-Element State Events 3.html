@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Events</title>
+    <style>
+
+    </style>
+    <script>
+        function StockChange(){
+           var stockCheckbox = document.getElementById("optStock");
+           if(stockCheckbox.checked){
+            lblStock.innerHTML = "Available";
+           } else {
+            lblStock.innerHTML = "Out of Stock";
+           }
+
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Stock</dt>
+        <dd>
+            <input type="checkbox" onchange="StockChange()" id="optStock"> <label id="lblStock"> Out of Stock  </label>
+        </dd>
+    </dl>
+</body>
+</html>

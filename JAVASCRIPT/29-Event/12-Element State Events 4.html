@@ -1,0 +1,40 @@
+<!--
+function => Read all checkbox and identify which on checked and store their names.
+name = "Course"
+var courses = document.getElementByName("Course");
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Events</title>
+    <script>
+        function SubmitClick(){
+            var courses = document.getElementsByName("Course");
+            var selectedCourses = "";
+            var fee = 0;
+            for(var course of courses)
+            {
+                if(course.checked) {
+                    selectedCourses += course.value + "<br>";
+                    fee += parseInt(course.id);
+                }
+            }
+            document.querySelector("p").innerHTML = selectedCourses + "<br> Fee Amount=" + fee;
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Select Courses</legend>
+        <ol>
+            <li><input type="checkbox" id="3000" value="Java" name="Course" >Java</li>
+            <li><input type="checkbox" id="5000" value=".NET" name="Course">.NET</li>
+            <li><input type="checkbox" id="10000" value="UI Full Stack" name="Course">UI Fullstack</li>
+        </ol>
+        <button onclick="SubmitClick()">Submit</button>
+    </fieldset>
+    <p></p>
+</body>
+</html>
