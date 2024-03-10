@@ -14,7 +14,7 @@
 Syntax:
         if(location.protocol=="http:")
         {
-        from server;
+        from server; 
         }
         if(location.protocol=="file:")
        {
@@ -22,5 +22,17 @@ Syntax:
        }
 -->
 <script>
-    
+    if(location.protocol=="http:"){
+        document.write("You are accessing our page from server");
+    } else {
+        document.write("You are using a file system - some features may not work properly");
+    }
+</script>
+
+<!--
+FAQ: How to navigate from one page to another dynamically?
+Ans: By using "location.href" which can set a new path.
+-->
+<script>
+    document.write(location.href);
 </script>

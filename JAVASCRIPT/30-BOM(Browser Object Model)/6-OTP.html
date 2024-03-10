@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <script>
+        function SubmitClick(){
+            var otp = document.getElementById("textOtp").value;
+            if(otp==="3456") {
+                location.href = "../6-Data Type-JavaScript Language/14-EMI-Calculator.html";
+            } else {
+                location.href = "./7-error.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Your OTP</dt>
+        <dd><input type="text" size="5" id="textOtp"></dd>
+    </dl>
+    <button onclick="SubmitClick()">Submit</button>
+</body>
+</html>
