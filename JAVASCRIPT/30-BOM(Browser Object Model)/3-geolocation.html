@@ -1,0 +1,8 @@
+<script>
+    navigator.geolocation.getCurrentPosition((postion) => {
+        document.write(`
+            lat : ${postion.coords.latitude} <br>
+            lon : ${postion.coords.longitude}
+        `);
+    })
+</script>

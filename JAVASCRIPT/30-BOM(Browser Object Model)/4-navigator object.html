@@ -1,0 +1,23 @@
+<!--
+FAQ: How to check the status of cookies in browser using JS?
+Ans:  navigator.cookieEnabled
+
+FAQ: How to know the client geo location?
+Ans:  navigator.geolocation.currentPosition()  => latitude, longitude
+
+FAQ: How to check for plugins in browser?
+Ans:  navigator.plugins[]
+
+FAQ: How to check the status of JavaScript in browser?
+Ans:  <noscript>
+-->
+<script>
+    for(var item of navigator.plugins){
+        document.write(item.name + "<br>");
+    }
+    if(navigator.plugins['Chrome PDF Viewer'] === undefined){
+        document.write("Please Install PDF Plugin to View PDF");
+    } else {
+        document.write("PDF Plugin Available");
+    }
+</script>
