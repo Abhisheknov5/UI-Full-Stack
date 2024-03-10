@@ -1,0 +1,21 @@
+JavaScript  Ajax :-
+
+- Asynchronous JavaScript And XML
+- Ajax is used to handle partial post backs.
+- It allows to submit a specific portion of page without reloading the complete page.
+- New details can be added to page without refreshing the page.
+- JavaScript uses "XMLHttpRequest" object to make Ajax calls.
+
+Syntax:
+        var  http  = new XMLHttpRequest();
+
+        http.open()        It configures a request with method, url & async [boolean]
+        http.send()        It sends the request
+        http.onReadyStateChange    It executes function on success.
+        http.readyState    It defines status of Ajax request
+                            1 = Initial State    
+                            2 = Processed Successfully
+                            3 = Request complete
+                            4 = Response Ready
+        http.reponseText    It returns response in plain text format
+        http.responseXML    It returns response in XML format

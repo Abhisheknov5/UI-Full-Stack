@@ -21,3 +21,48 @@ Syntax:
         http.reponseText    It returns response in plain text format
         http.responseXML    It returns response in XML format
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Define a function to be called when the body is loaded
+        function bodyload(){
+            // Create a new Date object to get the current date and time
+            var now = new Date();
+            document.querySelector("p").innerHTML = `Page Last Required on ${now.toLocaleString()}`
+        }
+        // Define a function to be called when a button is clicked
+        function GetClick(){
+            // Create a new XMLHttpRequest object
+            var http = new XMLHttpRequest();
+            // Open a GET request to fetch data from a server file
+            http.open("get", "../data/1-help.txt", true);
+            // Send the HTTP request
+            http.send();
+            // Define a callback function to handle the HTTP response
+            http.onreadystatechange = function(){
+                // Check if the request is complete
+                if(http.readyState==4){
+                    // Set the inner HTML of a preformatted text element to display the fetched data
+                    document.querySelector("pre").innerHTML = http.responseText;
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <p></p>
+    <button onclick="GetClick()">Get Help</button>
+    <div>
+        <pre>
+
+        </pre>
+
+    </div>
+    
+</body>
+</html>
