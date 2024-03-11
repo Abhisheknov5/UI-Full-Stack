@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var data = [
+            {Title: "JavaSCript", Description: "It is a language for DOM manipulation"},
+            {Title: "CSS", Description: "It configures styles for making DOM interactive"},
+            {Title: "HTML", Description: "It is a markup language used for presentation"}
+        ]
+        function bodyload(){
+            var searchString = location.search.substring(location.search.indexOf("=")+1);
+            var result = data.find(topic=> topic.Title===searchString);
+            document.querySelector("p").innerHTML = `<h5>${searchString}</h5> ${result.Description}`;
+
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <h2>Result</h2>
+    <p></p>
+</body>
+</html>
