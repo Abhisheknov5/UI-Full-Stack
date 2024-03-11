@@ -1,3 +1,6 @@
+/*
+EX: SPA Approach [Single Page Application] - JavaScript Ajax
+*/
 function LoadPage(page){
     var http = new XMLHttpRequest();
     http.open("get",page, true);
