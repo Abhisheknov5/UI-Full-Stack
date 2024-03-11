@@ -1,0 +1,87 @@
+<!--
+Multimedia in HTML
+- Multimedia refers to audio, video and animations.
+- HTML provides various elements for handling multimedia.
+
+1. Marquee
+- It is used for scrolling and sliding content in page.
+
+Syntax:
+    <marquee>
+        ... your content ....
+    </marquee>
+
+Attributes:
+    scrollamount            : It sets marquee scrolling speed from 1 to 100.
+    direction                : It sets scrolling direction left, right, up & down.
+    behavior                : It sets behavior as alternative, which changes from
+                          scrolling to sliding. You can set behavior only when
+                          direction is not defined.
+    loop                    : It specifies the number of times to display on page load.
+    bgcolor                : It sets background color for marquee area.
+    width & height            : It set marquee width and height
+
+Syntax:
+    <marquee scrollamount="15" direction="right">
+    <marquee behavior="alternate">
+    <marquee loop="4" bgcolor="yellow" width="50%">
+
+Note: You can pause and resume animation for marquee by using JavaScript events and functions.
+            onmouseover, onmouseout    => events
+            stop(), start()                => method
+            this                        => refers to current element
+
+Syntax:
+    <marquee  onmouseover="this.stop()"  onmouseout="this.start()">
+    </marquee>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <marquee scrollamount="15" onmouseover="this.stop()" onmouseout="this.start()" width="50%" direction="left">
+            <img src="../public/images/Amazon1.jpg" width="100" height="100">
+            <img src="../public/images/Amazon2.jpg" width="100" height="100">
+            <img src="../public/images/Amazon3.jpg" width="100" height="100">
+            <img src="../public/images/Amazon4.jpg" width="100" height="100">
+            <img src="../public/images/bag-collection.jpg" width="100" height="100">
+            <img src="../public/images/bracklets.jpg" width="100" height="100">
+        </marquee>
+        <marquee scrollamount="15" onmouseover="this.stop()" onmouseout="this.start()" width="50%" direction="right">
+            <img src="../public/images/Amazon1.jpg" width="100" height="100">
+            <img src="../public/images/Amazon2.jpg" width="100" height="100">
+            <img src="../public/images/Amazon3.jpg" width="100" height="100">
+            <img src="../public/images/Amazon4.jpg" width="100" height="100">
+            <img src="../public/images/bag-collection.jpg" width="100" height="100">
+            <img src="../public/images/bracklets.jpg" width="100" height="100">
+        </marquee>
+    </section>
+</body>
+</html>
+
+<!--
+2. Audio & Video Elements
+
+ - HTML support videos of type
+    .mp4, .avi, .mov, .mkv, .ogg etc..
+
+- HTML support audio files of type
+    .mp3, .midi, .wav etc..
+
+- HTML provides the elements
+    <audio>
+    <video>
+    <embed>     [obsolete]
+
+Syntax:
+    <video  src="path"  poster="thumbnail.jpg"  controls> </video>
+    <audio  src="path"  poster=""  controls> </audio>
+
+Ex:
+<video src="public/videos/class.mkv" poster="public/images/work.png" controls width="400" height="300"></video>
+-->
