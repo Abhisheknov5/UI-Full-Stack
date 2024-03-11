@@ -1,0 +1,60 @@
+<!--
+CSS Colors :-
+
+- CSS colors can be defined using various methods and techniques
+
+    1. Color Name
+    2. Shade Name
+    3. Hexa Decimal
+    4. RGB()
+    5. RGBA()
+    6. HSL()
+    7. HSLA()
+    8. Gradient
+
+Syntax: hsl() & hsla()
+
+    hue            => value range from 0 to 360deg
+                      0 to 120  => red
+                      120 to 240 => green
+                       240 to 360 => blue
+    saturation    => values range from 0 to 100%
+                      0% complete solid gray
+                      100%  zero gray
+
+    lightness        => values range from 0 to 100%
+                      0% is dark
+                      100% is more light
+
+    alpha        => value range 0 to 1, it sets transparent
+
+    hsl(20deg, 70%, 50%);
+    hsla(20deg, 50%, 50%, 0.7);
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units 2</title>
+    <style>
+        .parent-container {
+            border: 1px solid red;
+            width:500px;
+            height:300px;
+            padding: 20px;
+        }
+        .child-container {
+            border: 1px solid blue;
+            width:50%;
+            height:50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent-container">
+        <div class="child-container">
+        </div>
+    </div>
+</body>
+</html>

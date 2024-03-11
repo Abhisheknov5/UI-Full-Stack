@@ -1,0 +1,32 @@
+<!--
+    CDN
+                      (Content Delivery Network)
+
+- It is a technique used in web development to access resources from remote server.
+- The style sheets are kept in Sandbox or Golden server, which you can access directly with a CDN link and use in development or production.
+
+Ex: You can access bootstrap and bootstrap-icons CDN from their official website
+
+        https://cdn.jsdelivr.net/npm/.../bootstrap.css
+
+
+FAQ: If styles are defined to any element using all 3 techniques, which set of effects will apply to element?
+Ans:  If same attributes are defined then it uses the priority
+        1st     Inline
+        2nd    Embedded
+        3rd    External File
+     If different set of attributes are defined then all will apply.
+
+
+FAQ: How CSS will select elements to apply effects?
+Ans : If you are using embedded or external styles, then the styles are defined using a "CSS Selector".
+      If you are using inline styles, then the styles are defined for current element.
+
+
+Syntax:
+        selector
+        {
+         attribute:value;
+        }
+
+-->

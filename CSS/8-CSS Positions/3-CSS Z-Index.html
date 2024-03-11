@@ -1,0 +1,67 @@
+<!--
+  CSS Z-Index :-
+- It controls the orientation of element.
+- It includes positon of element
+    sent back
+    sent backward
+    bring front
+    bring forward
+
+- Bottom index starts with "0"
+
+Syntax:
+     element1 {
+        z-index: 0;
+     }
+     element2 {
+        z-index: 1;
+    }
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+   <style>
+      .ad1 {
+         background-image: url("../public/images/a1.jpg");
+         background-size: cover;
+         z-index: 2;
+      }
+      .ad2 {
+         background-image: url("../public/images/a2.jpg");
+         background-size: cover;
+         margin-left: 100px;
+         margin-top: 100px;
+         z-index: 1;
+      }
+      .ad3 {
+         background-image: url("../public/images/a3.jpg");
+         background-size: cover;
+         margin-left: 250px;
+         margin-top: 150px;
+         z-index: 0;
+      }
+      div {
+         border-radius: 20px;
+         box-shadow: 5px 5px 2px gray;
+         position: absolute;
+         width: 250px;
+         height: 250px;
+      }
+   </style>
+</head>
+<body>
+    <div class="ad1">
+       
+    </div>
+    <div class="ad2">
+       
+    </div>
+    <div class="ad3">
+       
+    </div>
+</body>
+</html>

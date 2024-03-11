@@ -1,0 +1,83 @@
+<!--
+CSS Selectors
+1. Primary Selectors
+    a) type    
+    b) id
+    c) class
+
+2. Dynamic Pseudo Classes
+
+- Dynamic allows to change according to state and situation.
+- Pseudo refers to false representation of element.
+- Class is a program template that comprises of data and logic, which you can implement and customize according to requirements.
+
+
+    :hover            actions when mouse is over the element
+    :active            actions when user hold down mouse button on element
+    :link                It defines the normal state of a hyperlink
+    :visited            It defines the visited state of hyperlink
+    :target            It defines effects for element when it is target of any hyperlink.
+
+    :     => It is inheritance operator
+    .    => Member Invoking operator
+    ::    => Inheritance and implement rules
+
+3. Element State pseudo classes
+
+    :focus            when element gets focus
+    :checked            when checkbox or radio buttons are selected
+    :read-only        when readonly attribute is defined
+    :disabled            when disabled attribute is defined
+
+4. Validation State pseudo classes
+
+    :required            when defined with required attribute
+    :optional            when required is not defined
+    :valid            when any validation errors doesn't occur
+                     [minlength, maxlength, pattern, required]
+    :invalid            when any validation error occurs.
+
+5. Structural Pseudo classes
+
+    :first-child                    first occurance of element
+    :last-child                    last occurance of element
+    :nth-child                    specific occurance of element [even, odd, level num.]
+    :nth-of-type()                every occurance from top
+    :nth-last-of-type()            every occurance from bottom
+
+Syntax:
+    li:nth-child(4)             => 4th child
+    li:nth-child(even)        => even occurance
+    li:nth-child(odd)        => odd occurance
+    li:nth-of-type(3n)        => every 3rd element from top starting with 3
+    li:nth-of-type(3n+1)        => every 3rd element from top starting with 1
+    li:nth-last-of-type(3n+1)    => every 3rd from bottom starting with bottom 1.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Structural Pseudo classes</title>
+    <style>
+        li:nth-last-of-type(4n+2) {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+        <li>Item-4</li>
+        <li>Item-5</li>
+        <li>Item-6</li>
+        <li>Item-7</li>
+        <li>Item-8</li>
+        <li>Item-9</li>
+        <li>Item-10</li>
+    </ol>
+    
+</body>
+</html>

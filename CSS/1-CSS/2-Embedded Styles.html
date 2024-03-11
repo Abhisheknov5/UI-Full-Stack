@@ -1,0 +1,92 @@
+<!--
+ Embedded Styles :-
+
+- Styles are defined for elements using a <style> container.
+- You can embed the style container in <head> or <body>.
+- You can reuse the styles for various elements in page.
+- However they are slow in rendering when compared to inline styles.
+- You can't reuse across pages.
+
+Syntax:
+    <head>
+        <style>
+           selector
+           {
+            attribute: value;
+            attribute: value;
+           }
+        </style>
+    </head>
+
+FAQ's:
+1. Where to embed the <style> container? Head or Body?
+A. You can embed in both <head> and <body> sections.
+     Styles in <head> are intended to load into memory and accessed later when ever required.
+     Styles in <body> are intended to load at the time of loading page.
+
+2. If we define same attribute for element in both head and body which set of effects will apply?
+A.
+    If different attributes are configured in head and body then all will apply.
+    If same attributes are defined then the recent is applied.
+
+
+Note: Styles can be defined outside HTML scope, so that they can render faster.
+      Howevery it is not a recommended practice for development.
+
+3. What is MIME type defined for styles?
+A.  MIME is "Multiple Purpose Internet Mail Extention".
+     It is the type defined for content.
+     Browser can understand content type only by using MIME type.
+     Styles MIME is "text/css".
+
+Syntax:
+    <style type="text/css">
+
+    </style>
+
+4.  Is it neccessary to define MIME type for <link> element, while linking stylesheet?
+A.  No. Link already have "rel" attribute, which refers to MIME.
+
+    <link rel="stylesheet" href="node_module/bootstrap/dist/css/bootstrap.css">
+
+
+5. What is style media type?
+A. It defines content for various media devices, which includes
+      - screen
+      - print
+      - speech
+      - all
+
+   Syntax:
+     <style type="text/css"  media="print | screen | speech">
+    </style>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Media Type</title>
+    <style type="text/css" media="screen">
+        .gift {
+            padding: 50px;
+            border: 4px double red;
+            background-color: lightgoldenrodyellow;
+            text-align: center;
+            width:50%;
+        }
+        img {
+           border-radius: 100px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="gift">
+        <img src="../public/images/Amazon1.jpg" width="100" height="100">
+        <h1>Gift Card</h1>
+        <p>50% OFF - Code: AMZ4670FY</p>
+        <button onclick="window.print()">Print</button>
+    </div>
+    
+</body>
+</html>

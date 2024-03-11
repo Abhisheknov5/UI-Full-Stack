@@ -1,0 +1,58 @@
+<!--
+CSS Units:-
+
+- Units are used to configure the dimensions of element.
+- CSS units are classified into 2 types
+
+        a) Absolute Units
+        b) Relative Units
+
+- Absolute units are configured as individual for any element, which are not effected by the parent or child hierarchy.
+
+        px        pixels
+        pt        points
+        pc        picas
+        in        inch
+        cm        centimeter
+        mm        millimeter
+        qm        quarter meter
+       
+- Relative units change the dimensions of element according to its parent.
+
+        em        element size
+        rem        root element size
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .container {
+         font-size: 80px;
+      }
+      p {
+         font-size: 0.5em;
+      }
+      blockquote {
+         font-size: 1.5rem;
+      }
+     
+   </style>
+</head>
+<body>
+   Normal Body Text
+   <div class="container">
+      CSS Units
+      <p>Absolute and Relative Units</p>
+      <blockquote>Relative units change according to parent.</blockquote>
+   </div>
+</body>
+</html>
+
+<!--
+Note: Relative units are defined not for containers, they are for elements in container.
+      A container relative unit is defined in "%".
+-->

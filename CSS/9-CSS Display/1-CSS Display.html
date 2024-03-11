@@ -1,0 +1,114 @@
+<!--
+CSS Display:-
+
+- None:- It hides the element and removes the allocated space on page.
+
+
+FAQ: What is difference between display:none  &  visibility:hidden ?
+Ans:  display:none will remove the allocated space for element.
+          visibility:hidden keeps the allocated space for element.
+
+- Block            : It will display the element in new line.
+
+- Inline-block        : It will display in same line but assigns a block style, so that
+                  you can change the dimensions and orientation.
+
+- Inline            : It is defined for elements to keep in same line.
+
+FAQ: What is difference between flex and inline?
+Ans:  Flex is defined for container that contains elements.
+     Inline is defined for elements with in the container.
+
+Syntax:
+    ul {                    => invalid
+       display:inline;
+    }
+
+    li {                    => valid
+       display:inline;
+    }
+
+    li {                    => valid only for items inside <li>
+      display:flex;
+    }
+   
+    ul {                    => valid of <li> inside <ul>
+      display:flex;
+    }
+Ex:
+  <nav>
+      <div> </div>
+      <div> </div>
+ </nav>
+
+ div {
+    display:inline;
+  }
+  nav {
+    display:flex;
+  }
+
+- Inline keeps elements in same line, but can't control the orientation, wrapping and alignments.
+- Flex can control the orientation, wrapping and alignments using following attributes
+
+        flex-direction            : row, row-reverse, column, column-reverse
+        flex-wrap                : wrap, no-wrap
+        justify-content            : space-between, space-around, space-evenly
+        align-items            : baseline, center, end
+
+- If flex direction is row then align-items
+        baseline    : top
+        center    : center
+        end        : bottom
+- If flex direction is column then align-items
+        baseline     : left
+        center    : center
+        end        : right
+
+
+Note: The horizontal and vertical alignments in flex box are controlled by using
+      "align-items".
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid black;
+            margin: 5px;
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            border:2px solid red;
+            padding: 5px;
+            justify-content: space-around;
+            width: 300px;
+            align-items:center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </nav>
+</body>
+</html>

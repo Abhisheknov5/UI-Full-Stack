@@ -1,0 +1,33 @@
+<!--
+Attribute Conditions:
+
+        [attribute=value]            exact match
+        [attribute^=value]            starts with
+        [attribute$=value]            ends with
+        [attribute|=value]            start with and separated with "-" delimeter
+        [attribute~=value]            any individual occurance [space]
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p[class|="Effects"]{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <p class="Effects">Para-1</p>
+    <p class="ParaEffects">Para-2</p>
+    <p class="EffectsPara">Para-3</p>
+    <p class="Para Effects">Para-4</p>
+    <p class="Effects Para">Para-5</p>
+    <p class="Para-Effects">Para-6</p>
+    <p class="Effects-Para">Para-7</p>
+    <p class="Para Effects Text">Para-8</p>
+</body>
+</html>

@@ -1,0 +1,10 @@
+ .gift {
+            padding: 50px;
+            border:4px double red;
+            background-color: lightgoldenrodyellow;
+            text-align: center;
+            width: 50%;
+        }
+        img {
+            border-radius: 100px;
+        }

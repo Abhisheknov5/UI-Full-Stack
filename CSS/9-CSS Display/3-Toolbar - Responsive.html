@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        nav {
+            background-color: black;
+            color:white;
+            padding: 10px;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        button {
+            font-size: 20px;
+            color:white;
+            background-color: black;
+            border:none;
+        }
+        @media screen and (orientation:landscape) {
+            nav {
+                display: flex;
+                justify-content: space-between;
+            }
+            span {
+                margin-right: 20px;
+            }
+            button {
+                display: none;
+            }
+        }
+        @media screen and (orientation:portrait)
+        {
+            .nav-items, .shortcut-items {
+                display: none;
+            }
+            button {
+                display: inline;
+            }
+            nav {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>Shopper.</div>
+        <div class="nav-items">
+            <span>Home</span>
+            <span>Pages</span>
+            <span>Blog</span>
+            <span>Shop</span>
+            <span>Docs</span>
+        </div>
+        <div class="shortcut-items">
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+           
+        </div>
+        <button class="bi bi-justify"></button>
+    </nav>
+</body>
+</html>

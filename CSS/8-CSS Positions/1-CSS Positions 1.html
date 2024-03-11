@@ -1,0 +1,60 @@
+<!--
+  CSS Positions
+                            --------------------
+1. Static
+2. Absolute
+3. Fixed
+4. Sticky
+5. Relative
+
+Static:
+- It is the default position of element in page.
+- It will not allow to change the position dynamically.
+- It is according to normal flow of document.
+- It is not effected with left, right, top or bottom placements.
+ 
+Absolute:
+- It removes element from normal flow of document.
+- It allows to change the position using left, right, top and bottom attributes.
+- It is placed with regard to the content in page.
+- It will move along with the content in page.
+
+Fixed:
+- It removes element from normal flow of document.
+- It is similar to absolute, but keeps content with regard to page.
+- It locks scrolling of content, which is defined with fixed position.
+
+
+Sticky:
+- It keeps element according to normal flow of document.
+- It will not remove from its place.
+- It allows to scroll upto specific position and lock after reaching the target position.
+
+Relative:
+- It is the position defined for parent element to keep the child element with regard to parent context.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+   <style>
+      #count {
+         position:absolute;
+         top: -10px;
+         right: -10px;
+      }
+      button {
+         position: relative;
+      }
+   </style>
+</head>
+<body class="container-fluid">
+   <button class="btn btn-primary mt-4">
+      <span class="bi bi-bell-fill"></span> Notifications <span id="count" class="badge bg-danger text-white rounded-circle">3</span>
+   </button>
+</body>
+</html>
