@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+            var lblUser = document.getElementById("lblUser");
+            lblUser.innerHTML = document.cookie.substring(document.cookie.indexOf("=")+1);
+        }
+        function SignoutClick(){
+            location.href="2-login.html";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <h2>Welcome -  <span id="lblUser"></span>  <a href="javascript:SignoutClick()">Signout</a> </h2>
+</body>
+</html>
