@@ -1,0 +1,16 @@
+<script>
+    var UserId = Symbol();
+
+    var UserDetails = {
+        [UserId] : "john_nit",
+        UserName : "john",
+        Email : "john@gmail.com",
+        Mobile: "123456789"
+    }
+    for(var property in UserDetails)
+    {
+        document.write(`${property} : ${UserDetails[property]}<br>`);
+    }
+    document.write(`Update User with Id ${UserDetails[UserId]}`);
+</script>
+
