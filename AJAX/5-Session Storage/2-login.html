@@ -10,7 +10,7 @@
             var password = document.getElementById("txtPwd").value;
 
             if(password==="admin"){
-                localStorage.setItem("uid",userId); 
+                sessionStorage.setItem("uid",userId); 
                 location.href = "3-welcome.html";
             } else {
                 alert("Invalid Password");
