@@ -1,0 +1,48 @@
+<!--
+jQuery Events:-
+ 
+- jquery can use all JavaScript events
+- jquery will not have event handler, it uses event listener.
+- Event listener can be directly attached to element.
+
+Syntax:
+  <button id="btnInsert"> Insert </button>
+
+   $("#btnInsert").click((e)=>{
+   
+   })
+
+- jQuery event argument can configure only  "event" reference which can access both event and object related details. Here there is no "this" keyword.
+
+    e.clientX
+    e.clientY
+    e.keyCode
+    e.which  etc...
+
+    e.target.id
+    e.target.name
+    e.target.value
+    e.target.className etc..
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Events</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("button").click((e)=>{
+                document.write(`X=${e.clientX}<br>Button value=${e.target.value}`)
+            })
+
+        })
+    </script>
+
+</head>
+<body>
+    <button id="btnInsert" value="Insert">Insert</button>
+</body>
+</html>
