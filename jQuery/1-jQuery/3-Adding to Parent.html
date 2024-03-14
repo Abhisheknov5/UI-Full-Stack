@@ -1,0 +1,43 @@
+<!--
+Creating Element and Adding to Parent:
+
+- jQuery can create elements using "markup" with data binding expression "${ }"
+- It can add element into parent by using "appendTo()".
+
+Syntax:
+        $(`<li> ${value} </li>`).appendTo("ol")
+
+        $("ol").append(`<li> ${value} </li>`)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Element and Adding to Parent</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script>
+        $(function(){
+            var categories = ["All", "Electronics", "Fashion", "Footwear"];
+            categories.map(category => {
+                 $(`<li>${category}</li>`).appendTo("ol");
+                 $(`<option value=${category}> ${category} </option>`).appendTo("select");
+                 /*
+                   /// Javascript
+                   var li = document.createElement("li");
+                   li.innerHTML = category;
+                   document.querySelector("ol").appendChild(li);
+                 */
+            })
+        })
+  </script>
+</head>
+<body>
+    <select></select>
+    <ol>
+
+    </ol>
+    
+</body>
+</html>

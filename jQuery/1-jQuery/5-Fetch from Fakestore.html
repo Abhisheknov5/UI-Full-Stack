@@ -1,0 +1,46 @@
+<!--
+    Fetch from Fakestore
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch from Fakestore</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function LoadProducts(){
+            fetch("http://fakestoreapi.com/products")
+            .then(response => response.json())
+            .then(products => {
+                products.map(product => {
+                    $(`<tr>
+                        <td>${product.title}</td>
+                        <td>${product.price}</td>
+                        <td> <img width="200" height="200" src=${product.image}> </td>     
+                        </tr>`).appendTo("tbody");
+                })
+            })
+
+        }
+
+        $(function(){
+            LoadProducts();
+        })
+    </script>
+</head>
+<body>
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th width="200">Title</th>
+                <th>Price</th>
+                <th>Preview</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>
