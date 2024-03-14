@@ -1,0 +1,84 @@
+<!--
+jQuery :-
+
+- jQuery is a JavaScript library for handling client side interactions and presenting interactive UI.
+- A library provides pre-defined functions that reduce the complexity and compatibility issues. It also allows to build interactive UI faster.
+- John Resig introduced jQuery library in early 2006.
+- jQuery library was developed to achive the concept called "Write-less Do-More".
+
+Install jQuery for Project:
+
+    > npm  install  jquery  --save
+
+    <script  src="../node_modules/jquery/dist/jquery.js"> </script>
+
+Features of jQuery:
+- It uses less memory
+- It is light weight
+- It is faster
+- It is cross platform
+- It provides simplified techniques to manipulate DOM
+    a) Add elements
+    b) Removing elements
+    c) Adding styles to elements
+    d) Updating data into elements
+
+Using jQuery in Page:
+- jQuery library is kept in "jquery.js".
+- It comprises of an "anonymous function", where all jquery methods are stored.
+- In order to use jquery you have to call the jQuery anonymous function using "$".
+
+ <head>
+   <script src="../node_modules/jquery/dist/jquery.js"> </script>
+   <script>
+     $(function(){
+        // jquery logic - all jquery function can run in this scope.
+     })
+   </script>
+</head>
+                (or)
+
+    $(document).ready(function(){
+
+    })
+                (or)
+     $(()=>{
+
+    })
+   
+Refering HTML elements in jQuery:
+- jQuery uses all CSS selectors to refer HTML elements.
+- It doesn't require any DOM methods.
+
+Syntax:
+        <h1> </h1>
+        <p id="para"> </p>
+        <div class="btn"> </div>
+
+        $("h1").text()
+        $("#para").text()
+        $(".btn").text()
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("h1").text("JQuery");
+            $("#caption").text("Write less, do more");
+            $(".definition").text("JavaScript library for building UI");
+        })
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <p id="caption"></p>
+    <div class="definition"></div>
+    
+</body>
+</html>
