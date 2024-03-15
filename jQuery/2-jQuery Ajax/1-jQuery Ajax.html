@@ -1,0 +1,62 @@
+<!--
+jQuery Ajax :-
+
+- JavaScript handles Ajax using
+    a) XMLHttpRequest
+    b) fetch()
+- They don't return data in the native format.
+- You have to explicitly convert the data.
+    a) json()
+    b) JSON.parse()
+- Data is returned in binary format, which requires conversions.
+- They are poor in error handling.
+- Data can be blocked by firewalls, as it is returned in binary format.
+- Hence CORS issues. [Cross Origin Resource Sharing]
+
+Features of jQuery Ajax:
+- It provides implicit methods to handle various requests like get, post, put, delete.
+- It returns data in native format.
+- Parsing data is not required.
+- It have built-in error object that can track all errors.
+- Handles CORS issues.
+- It provides complete life cycle methods, which can track the request at various phases.
+
+jQuery Ajax Methods:
+       
+        $.ajax()
+        $.getJSON()
+        ajaxStart()
+        ajaxStop()
+        ajaxComplete()
+        ajaxSuccess()
+        ajaxError()
+
+JQuery "$.ajax()"  :
+- It is an ajax request method for any type of data.
+- It uses various ajax options like
+
+    a) method    : It defines request method GET, POST, PUT, DELETE, PATCH
+                    GET        = Fetching
+                    POST    = Submitting
+                    PUT        = Updating
+                    PATCH    = Partial Update
+                    DELETE    = Removing
+
+    b) url        : It refers to the resource path
+
+    c) success    : It is a callback function that returns data on success.
+
+    d) error        : it is a callback function that returns error object, when request fails.
+
+                        statusText
+                        status
+                        headers
+                        etc..
+Syntax:
+        $.ajax({
+            method:"get",
+            url : "path",
+            success : function() { },
+            error: function(){ }
+        })
+-->

@@ -1,0 +1,38 @@
+<!--
+jQuery Animations :-
+
+hide()
+show()
+toggle()
+fade()
+fadeToggle()
+slide()
+slideToggle()
+etc..
+
+Syntax:
+         $("img").hide(interval)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Animations</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("button").click(()=>{
+                $("img").slideToggle(3000);
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>Toogle</button>
+    <div>
+        <img src="../public/images/Amazon1.jpg" width="300" height="400">
+    </div>
+    
+</body>
+</html>
