@@ -1,0 +1,91 @@
+<!--
+Note: You can't configure events for any HTML element which is defined as child element or added dynamically into page. jQuery required "on()" method of document object to access element from any level of hierarchy and configure event.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakestore</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function LoadCategories(){
+            $.ajax({
+                method: "get",
+                url: "http://fakestoreapi.com/products/categories",
+                success: (categories)=>{
+                    categories.unshift("all");
+                    categories.map(category=>{
+                        $(`<option value=${category}> ${category.toUpperCase()} </option>`).appendTo("#lstCategories");
+                    })
+                }
+            })
+            var cartItems = [];
+            $(document).on("click","#btnAdd", (e)=>{
+                alert(e.target.value);
+            })
+        }
+
+        function LoadProducts(url){
+            $("main").html("");
+            $.ajax({
+                method: "get",
+                url: url,
+                success: (products)=>{
+                    products.map(product=>{
+                        $(`
+                            <div class="card p-2 m-2" style="width:200px">
+                                <img src=${product.image} class="card-img-top" height="130">
+
+                                <div class="card-header" style="height:150px">
+                                    <p>${product.title}</p>
+                                    </div>
+                                <div class="card-footer">
+                                    <button value=${product.id} id="btnAdd" class="bi bi-cart4 btn btn-primary w-100">Add to Cart</button>
+                                    </div>
+                                </div
+                        `).appendTo("main");
+                    })
+                }
+
+            })
+        }
+
+        $(function(){
+            LoadCategories();
+            LoadProducts("http://fakestoreapi.com/products");
+            $("#lstCategories").change(()=>{
+                var categoryName = $("#lstCategories").val();
+                if(categoryName=="all") {
+                    LoadProducts("http://fakestoreapi.com/products");
+                } else {
+                    LoadProducts(`http://fakestoreapi.com/products/category/${categoryName}`);
+                }
+            })
+        })
+    </script>
+</head>
+<body class="container-fluid">
+    <header class="bg-dark text-white p-2 text-center">
+        <h2>Shopper.</h2>
+    </header>
+    <section class="row">
+        <nav class="col-2">
+            <label class="form-label fw-bold">Select Category</label>
+            <div>
+                <select class="form-select" id="lstCategories">
+
+                </select>
+            </div>
+        </nav>
+        <main class="col-10 d-flex flex-wrap overflow-auto" style="height: 400px;">
+
+        </main>
+
+    </section>
+    
+</body>
+</html>

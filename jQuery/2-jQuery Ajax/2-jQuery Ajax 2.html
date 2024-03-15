@@ -15,7 +15,7 @@
                         $("#container").html(data);
                     },
                     error: (errorMsg) => {
-                        alert(errorMsg.statusText);
+                        alert(`${errorMsg.status} : ${errorMsg.statusText}`);
                     }
 
                 })

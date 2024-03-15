@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Cycle</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("button").click(()=>{
+                $.ajax({
+                    method: "get",
+                    url: "../data/help.txt",
+                    success: (data)=> {
+                        $("#container").html(data);
+                    }
+                })
+            })
+        })
+        .ajaxStart(()=>{
+            alert('Request Started');
+        })
+        .ajaxComplete(()=>{
+            alert('Requested Completed');
+        })
+        .ajaxSuccess(()=>{
+            alert('Request Processed successfully');
+        })
+        .ajaxStop(()=>{
+            alert('Response Processed successfully..');
+        })
+        .ajaxError(()=>{
+            alert('Something went Wrong');
+        })
+    </script>
+ </head>
+ <body>
+    <button>Get Data</button>
+    <p>
+        <pre id="container">
+
+        </pre>
+    </p>
+    
+ </body>
+ </html>
