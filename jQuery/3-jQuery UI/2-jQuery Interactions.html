@@ -12,8 +12,24 @@ jQuery Interactions:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery Interactions</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script>
+        $(function(){
+            $("img").resizable();
+            $("ol").sortable();
+        })
+    </script>
 </head>
 <body>
-    
+    <img src="../public/images/Mens-fashion.jpg" width="200" height="200">
+    <ol>
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>CSS</li>
+        <li>Bootstrap</li>
+
+    </ol>
 </body>
 </html>

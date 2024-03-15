@@ -1,0 +1,44 @@
+<!--
+jQuery Widgets:
+- accordion
+- datepicker
+- dialog
+  etc..
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Widgets</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script>
+        $(function(){
+            $("#faq").accordion();
+            $("#ads").dialog();
+            $("#dob").datepicker();
+        })
+    </script>
+</head>
+<body>
+    <input type="text" id="dob" placeholder="Date of Birth">
+    <div title="jquery" id="ads">
+        <p>Welcome to JQuery</p>
+    </div>
+    <div id="faq">
+        <h1>What is Netflix</h1>
+        <div>
+            <p>something about Netflix</p>
+        </div>
+        <h1>How much does Netflix cost?</h1>
+        <div>
+            <p>199/- per month</p>
+        </div>
+         
+    </div>
+    
+</body>
+</html>
