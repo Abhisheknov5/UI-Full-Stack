@@ -1,0 +1,28 @@
+$bgcolor: rgb(136, 137, 227);
+$shadow: 2px 2px 2px gray;
+$border: 1px soild red;
+
+.alert {
+    background-color: $bgcolor;
+    padding: 20px;
+    border: 1px solid rgb(0, 34, 255);
+    border: $border;
+    border-radius: 10px;
+    box-shadow: $shadow;
+    $color: darkred;
+  }
+  .alert h1 {
+    color: darkred;
+  }
+  .alert p {
+    font-family: Arial;
+    color: red;
+  }
+  .alert a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+ 
+  

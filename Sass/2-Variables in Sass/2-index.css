@@ -1,16 +1,21 @@
 .alert {
-  background-color: rgb(241, 170, 170);
+  background-color: rgb(136, 137, 227);
   padding: 20px;
   border: 1px solid rgb(0, 34, 255);
+  border: 1px soild red;
   border-radius: 10px;
+  box-shadow: 2px 2px 2px gray;
 }
+
 .alert h1 {
   color: darkred;
 }
+
 .alert p {
   font-family: Arial;
   color: red;
 }
+
 .alert a {
   color: red;
   text-decoration: none;

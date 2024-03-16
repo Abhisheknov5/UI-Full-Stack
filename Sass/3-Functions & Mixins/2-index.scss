@@ -1,0 +1,22 @@
+$theme : green;
+
+@mixin ApplyTheme($bgcolor, $border, $color)
+{
+    .alert {
+        background-color: $bgcolor;
+        border:$border;
+        color: $color;
+        border-radius: 20px;
+        padding: 10px;
+        font-family: Arial;
+    }
+}
+
+@if($theme==red) {
+    @include ApplyTheme(rgb(250, 190, 190), 1px solid red , darkred);
+}
+@else if($theme==green) {
+    @include ApplyTheme(rgb(186, 248, 188), 1px solid green , darkgreen);
+} @else {
+    @include ApplyTheme(lightgray, 1px solid black , black);
+}
