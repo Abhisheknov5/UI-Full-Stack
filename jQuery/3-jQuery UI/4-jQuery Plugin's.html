@@ -1,0 +1,41 @@
+<!--
+jQuery Plugin's:-
+- Plugin is a code snippet that adds new functionality to existing UI.
+- It is just like an extention for your application.
+
+Barcode:
+1. Install
+> npm  i  jquery-ean13 --save
+
+2. Import
+    <script src="../node_modules/jquery-ean/dist/jquery-ean13.min.js">
+
+3. Insert a canvas element
+
+    <canvas  id="code" width="150" height="20">
+
+4. Link code [12 digits]
+   
+      $("#code").EAN13("998811234521");
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Plugin's</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../node_modules/jquery-ean13/dist/jquery-ean13.min.js"></script>
+    <script>
+        $(function(){
+            $("#code").EAN13("991100030222");
+        })
+    </script>
+</head>
+<body>
+    <img src="../public/images/Mens-fashion.jpg" width="200" height="200">
+    <br>
+    <canvas id="code" width="150" height="40"></canvas>
+    
+</body>
+</html>
