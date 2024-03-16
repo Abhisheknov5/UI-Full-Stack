@@ -1,0 +1,18 @@
+.alert {
+    background-color: rgb(235, 185, 185);
+    padding: 20px;
+    border: 1px solid red;
+    border-radius: 10px;
+    h1 {
+        color: darkred;
+    }
+    p {
+        font-family: Arial;
+        color: red;
+    }
+    a {
+        color: red;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}

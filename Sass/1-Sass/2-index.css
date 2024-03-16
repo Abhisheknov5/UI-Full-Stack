@@ -1,0 +1,20 @@
+.alert {
+  background-color: rgb(235, 185, 185);
+  padding: 20px;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+.alert h1 {
+  color: darkred;
+}
+.alert p {
+  font-family: Arial;
+  color: red;
+}
+.alert a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=2-index.css.map */
