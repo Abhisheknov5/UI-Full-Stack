@@ -1,0 +1,61 @@
+<!--
+jQuery Grids:-
+- Grid is a component frequently used in web applications to manage data.
+- It allows CRUD operations.
+   
+        C     -  Create
+        R    -  Read
+        U    -  Update
+        D    -  Delete
+
+- jQuery provides various 3rd party grids with actions like pagination, filtering, sorting, searching etc..
+
+        > npm   install  jsgrid --save
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Grids</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsgrid@1.5.3/dist/jsgrid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsgrid@1.5.3/dist/jsgrid-theme.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsgrid@1.5.3/dist/jsgrid.min.js"></script>
+    <script>
+        $(function(){
+
+            $("#grid").jsGrid({
+                width: "100%",
+                height: "300px",
+           
+                filtering: true,
+                editing: true,
+                sorting: true,
+                paging: true,
+           
+                data: [
+                    {Name:"TV", Category:"Electronics", Price: 45000.43, Stock:true},
+                    {Name:"Nike Casuals", Category:"Footwear", Price: 5000.43, Stock:true},
+                    {Name:"Mobile", Category:"Electronics", Price: 15000.43, Stock:false}
+           
+                 ],
+           
+                fields: [
+                    { name: "Name", type: "text", width: 150 },
+                    { name: "Price", type: "number", width: 50 },
+                    { name: "Category", type: "text", width: 200 },
+                    { name: "Stock", type: "checkbox", title: "In Stock", sorting: false },
+                    { type: "control" }
+                ]
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <div id="grid">
+
+    </div>
+</body>
+</html>

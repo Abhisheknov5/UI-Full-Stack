@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../node_modules/jquery.cookie/jquery.cookie.js"></script>
+    <script>
+         $(function(){
+               if($.cookie("userid")===undefined) {
+                   location.href = "4-login.html";
+               } else {
+                    $("#UserId").html($.cookie("userid"));
+               }
+
+               $("#btnSignout").click(()=>{
+                     $.removeCookie("userid");
+                     location.href = "4-login.html";
+               })
+         })
+    </script>
+</head>
+<body>
+    <h2>Video Tutorial Home  -  <span id="UserId"></span> <button id="btnSignout">Signout</button> </h2>
+    <iframe src="https://www.youtube.com/embed/tm7kVn8abSg&quot; width="600" height="400"></iframe>
+    <iframe src="https://www.youtube.com/embed/kiAK3FcwUYA&quot; width="600" height="400"></iframe>
+</body>
+</html>

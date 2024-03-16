@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../node_modules/jquery.cookie/jquery.cookie.js"></script>
+    <script>
+        $(function(){
+              $("button").click(function(){
+                    $.ajax({
+                       method: "get",
+                       url:"../data/users.json",
+                       success: (users)=> {
+                           var user = users.find(item => item.UserId===$("#UserId").val());
+                           if(user.Password===$("#Password").val()){
+                               $.cookie("userid", user.UserId);
+                               location.href = "5-video-home.html";
+                           } else {
+                               alert("Invalid Credentials");
+                           }
+                       }
+                    })
+              })
+        })
+   </script>
+</head>
+<body>
+    <h2>User Login</h2>
+    <dl>
+        <dt>User Id</dt>
+        <dd><input type="text" id="UserId"></dd>
+        <dt>Password</dt>
+        <dd><input type="password" id="Password"></dd>
+    </dl>
+    <button>Login</button>
+</body>
+</html>
