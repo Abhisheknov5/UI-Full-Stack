@@ -1,0 +1,11 @@
+@import "variables";
+
+@mixin SetAlertTheme()
+{
+  .alert {
+    border: $border;
+    background-color: $bgcolor;
+    font-family: $font;
+    padding: $padding;
+  }
+}
