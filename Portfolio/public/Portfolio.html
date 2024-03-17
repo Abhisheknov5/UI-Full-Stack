@@ -1,0 +1,87 @@
+<!--
+  Online Portfolio
+- You can deploy your project on various cloud environments
+    AWS
+    Azure
+    Firebase
+    Git hub pages etc..
+   
+
+Ex: Portfolio on Firebase
+
+1. Create a project
+        "web-developer-portfolio"
+
+2. Setup the file system in VS code
+
+        >npm init -y
+
+3. Add public folder
+
+        index.html
+
+ - Copy all CDN links for bootstrap and icons
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI / UX Designer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"&gt;
+    <style>
+        body {
+            background-image: url("developer.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+
+        </div>
+        <div class="col-6 text-white">
+           <div style="margin-top:200px;">
+            <h1 class="mt-4">Your Name</h1>
+            <p>UI / UX Fullstack Developer</p>
+            <a href="#" class="btn btn-warning"> Projects</a>
+            <a href="resume.pdf" class="btn btn-light">Resume</a>
+           </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+4. Install firebase tools for your PC
+
+    >npm  i  firebase-tools -g
+
+
+5. Login into firebase cloud with your google account
+
+    https://firebase.google.com/
+ 
+6. Go to "console" of firebase and "create project"
+
+
+7. Open your project terminal in VS Code
+
+        > firebase login
+        > firebase init
+
+    ? hosting  => configure files for firebase
+    ? existing project  => select your firebase project  "uiux-developer-portfolio"
+    ? folder (public) : public
+    ? No for overwriting index
+    ? No with Git
+    ? overwrite index ? no
+
+        > firebase deploy
+
+        https://uiux-developer-portfolio.web.app
+-->
