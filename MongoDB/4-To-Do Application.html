@@ -1,0 +1,87 @@
+<!--
+CRUD Operations on MongoDB
+
+                           To-Do Application
+- User can register a new account.
+- User can login into account.
+- User can add appointments
+- User can view, edit and delete appointments.
+- Appointments are saved in database, so that they are displayed when user login.
+- Every user have his own individual appointments.
+
+Database Collections - Conceptual:
+
+    - Users                : It comprises of all users details
+    - Appointments        : It comprises of all appointments
+
+Database Collection  - Physical Model:
+
+    - Users
+        UserId         : string
+        UserName    : string
+        Password    : string
+        Email        : string
+        Mobile        : string
+
+    - Appointments
+        Id            : number
+        Title            : string
+        Date            : date-time
+        Description    : string
+        UserId        : string
+
+
+Database Collection - Logical Model
+
+    - Users
+        UserId [PK]        
+        UserName    
+        Password    
+        Email        
+        Mobile        
+    - Appointments
+        Id [PK]            
+        Title            
+        Date            
+        Description    
+        UserId [FK]
+   
+Database Collection - Entity Model
+
+                            Visio - Microsoft for ER diagrams
+
+Create Database Collections on MongoDB
+
+Appointments:
+ {
+  "Id": 1,
+  "Title": "Firend Birthday",
+  "Date": {
+    "$date": "2024-03-11T16:45:23.640Z"
+   },
+  "Description": "Something about appointment",
+  "UserId": "sam_nit"
+}
+
+Users:
+  {
+    "UserId": "sam_nit",
+    "UserName": "samson",
+    "Password": "sam@123",
+    "Email": "sams@gmail.com",
+    "Mobile": "+919184457882"
+  }
+   
+                         Server Side Scripting
+
+- Server side scripting is a technique where scripts are employed on server in order to generate a response customized to every client request.
+
+- There are various server side scripting technologies
+
+        a) CGI
+        b) JSP
+        c) PHP
+        d) Node JS    
+        e) ASP
+        etc..
+-->

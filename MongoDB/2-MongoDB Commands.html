@@ -1,0 +1,101 @@
+<!--
+MongoDB Commands :-
+
+  Collection Options
+
+> db.createCollection("name", { options })
+
+    option                    description
+    -----------------------------------------------------------------
+    autoIndexId    [boolean]        If set to true then it generates a primary key "_id"
+                            for every document, which is used as unique                                     reference.
+
+    max            [number]        It defines the maximum number of documents
+                            allowed in a collection.
+
+    capped        [boolean]        If set to true, then it requires max attribute to define.
+
+                            A capped collection will not allow new document after
+                            reaching the max limit.
+                           
+                            If set to false, then it replaces the old document with
+                            new, when it reaches the max limit.
+
+    size            [number]        It defines memory allocated for collection.
+                            Memory size is defined in bytes.
+
+                                8 bits        = 1 byte
+                                1024 bytes    = 1 kb
+                                1024 kb        = 1 mb
+                                1024 mb        = 1 gb
+                                1024 gb        = 1 tb
+
+Syntax:
+ 
+ >db.createCollection("name", { autoIndexId:true, max:15, capped:true, size:2097152})
+ >db.createCollection("name")
+
+        autoIndexId    :true
+        max            :N/A - Varies
+        capped        :true
+        size            :N/A - Varies    => 1024 x 1024 = 1 mb * 2 = 2mb
+
+               
+                        Inserting Documents
+
+- A collection comprises of a set of documents.
+- Every document is JSON type.
+- MongoDB supports all JavaScript data types
+    a) Primitive
+    b) Non-Primitive
+
+Note: MongoDB uses BSON type which is Binary of JSON. All data types are considered as BSON type.
+
+- MongoDB collection can insert document by using the methods
+
+            a) insertOne()
+            b) insertMany()
+
+
+Syntax:
+    > db.collectionName.insertOne({ })
+    > db.collectionName.insertMany([ { }, { },.. ])
+
+Ex:
+> db.categories.insertOne({CategoryId:1, CategoryName:'Electronics'})
+
+> db.categories.insertMany([{CategoryId:2, CategoryName: "Fashion"}, {CategoryId:3, CategoryName:"Jewelery"}])
+
+Note: You can import data from JSON or CSV files from mongodb GUI
+
+                      Reading & Querying Documents
+
+- You can read and query documents using "find()" method and query operators.
+
+Syntax:
+    > db.collectionName.find({query})
+   
+Ex:
+    >db.mobiles.find({})        => reads and returns all documents
+    >db.mobiles.find()
+
+    { fieldName: value }        => exact match [=== equal ]
+
+    > db.categories.find({CategoryId:3})        => id === 3
+    > db.products.find({category:"jewelery"})
+
+
+    Query Operators:
+
+        $gt                >
+        $gte                >=
+        $lt                <
+        $lte                <=
+        $ne                !=
+        $or                OR   ||
+        $and            AND &&
+
+    > db.products.find({ price: {$gt:600}  })
+   
+    > db.products.find({ $and:[{category:"jewelery"}, {price:{$gt:600}}] })
+-->

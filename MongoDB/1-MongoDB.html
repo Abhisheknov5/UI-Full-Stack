@@ -1,0 +1,75 @@
+<!--
+  MongoDB :-
+
+- MongoDB is an open source, cross platform, document based database.
+- It is an "non-sql" database.
+- It uses JavaScript types and methods for various interactions.
+- It supports schema less data.
+- It is good for "ORM" [Object Relational Mapping]. => Mongoose
+- It supports data replication.
+- It can dynamically manage the load.
+- Data is always available.
+- It support ad-hoc querying. [Queries can be built dynamically]
+- It supports O-Data.
+- It is not good for handling relational data.
+- It is not good for analytics.
+
+Setup MongoDB:
+1. Download and Install MongoDB Community Server
+
+    https://www.mongodb.com/try/download/community
+
+
+2. While installing make sure that you selected "MongoDB Compass" tool
+    It is a GUI tool used to manage database.
+
+3. Start MongoDB server
+
+    programs => services.msc => start MongoDB Server
+    run => services.msc => start MongoDB Server
+
+4. Open MongoDB Compass [Client Tool]
+
+    connect using :    mongodb://127.0.0.1:27017
+
+5. MongoDB can managed using commands or GUI [Graphical User Interface] tool
+
+6. If developer have to design communication between application and database, then it can done only using commands.
+
+7. MongoDB Compass provides "MongoDB Shell" which is a terminal for CLI . [Command Line Interface]
+
+MongoDB Terminology:
+
+  Oracle, Mysql...                    MongoDB
+  --------------------------------------------------------------------
+      Database                        Database
+
+    Table                        Collection
+
+    Records                        Documents
+
+    Fields                        Fields
+
+    Joins                        Embedded Documents
+
+
+Creating a new Database: [MongoSh]
+
+        > use  databaseName
+
+ - If database name is a new name, then it creates the database.
+ - If it is an existing name, then it changes into the database.
+
+View existing databases:
+
+        > show dbs
+ 
+ - It can't display a database if it is empty.
+ - To display database in list, you must have atleast one collection [table]
+
+Adding a new collection:
+
+        > db.createCollection("name", { options })
+        > db.createCollection("name")
+        > show collections                [to view all collections in database]
+-->
