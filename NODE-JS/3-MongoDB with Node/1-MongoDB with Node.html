@@ -1,0 +1,52 @@
+<!--
+MongoDB Database Drives with Node
+
+- A driver is like middleware that handle communication between the application and database.
+- Server Side "Node" application can communicate with "MongoDB" database using the mongodb drivers.
+       
+            > npm  i  mongodb  --save
+
+- MongoDB driver provides "MongoClient"  class with a set of properties and methods that handle communication with mongodb database.
+
+             var  mongoClient = require("mongodb").MongoClient;
+
+- The latest mongo library provides various "Promises" for handling interactions.
+   [ earlier versions use callbacks ]
+
+Syntax: Old versions
+
+        mongoClient.connect("url", function(err, clientObject){
+            if(!err) {
+                ...connect...
+            } else {
+                ..log error..
+            }
+        })
+       
+Syntax: New
+
+        mongoClient.connect("url").then(()=>{}).catch(()=>{}).finally(()=>{ })
+
+- Mongodb Client uses "connect()" method to connect with database. It requires a connection string.
+
+    mongoClient.connect(connectionString).then().catch().finally()
+   
+    connectionString :  mongodb://127.0.0.1:27017
+
+
+- If connection is success "then()" function returns a clientObject that can communicate with databases in server.
+
+Syntax:
+    mongoClient.connect("mongodb://127.0.0.1:27017").then(clientObject => {
+        var database = clientObject.db("databaseName")
+        })
+
+    database => It is an object that can access and manipulate collections.
+
+Syntax:
+    database.collection("name").find()
+                              .insertOne()
+                              .updateOne()
+                              .deleteOne()
+                              etc..
+-->

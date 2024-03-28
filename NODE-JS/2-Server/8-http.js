@@ -1,22 +1,3 @@
-/*
-Note: The default response from server is always a string.
-      You have to parse the data into string.
-      [ JSON.stringfy(data) ]
-
-
-- Http object provides "writeHead()" which defines the status codes and the content type to deliver.
-- It is used to configure a response header.
-- A response header comprises of various details about the response sent to client
-        a) Status Code
-        b) Content Type
-        c) Request Method
-        d) Request URL
-        e) Remote Address
-        etc..
-
-Syntax:
-    response.writeHead(statusCode, { 'content-type': 'text/html' } )
-*/
 const http = require("http");
 
 http.createServer((request, response)=>{
