@@ -1,0 +1,126 @@
+<!--
+API with Express JS :-
+Distributed Computing
+- What is distributed architecture?
+- Various distributed technologies.
+- Web Service
+- Web Service Specification
+    a) SOAP
+    b) REST
+    c) JSON
+- Express JS Middleware
+
+FAQ: What is issue with Web Service?
+Ans:
+    - It supports only Http protocol
+    - It uses SOAP to communicate
+    - It is good only for device that can handle XML.
+    - It depends on WSDL, UDDI like interfaces.
+
+FAQ: What is API?
+Ans:
+    - It is Application Programming Interface
+    - It can configure a business layer in any backend language
+    - It uses REST & JSON.
+    - It can work on various protocols.
+    - It is secured and cross platform.
+    - It can reach various devices.
+
+Creating API using Node & Express JS:
+
+1. Install Express JS in your project
+
+    > npm  i  express --save
+
+2. Create a server side app using express and node
+
+    var express = require("express");
+
+    var app = express();
+
+3. The server side app must be configured with Routes
+    - Routing is a technique used to configure SEO and user friendly URL's.
+    - User friendly URL's allow to query any content from application with simple
+      query request.
+    - SEO friendly URL's allow the search engines to idently the content that user is
+      browsing and give the suitable suggestions.
+    - Modern web applications are using routing both
+        a) Server Side
+        b) Client Side
+    - Server side routing is used for API's.
+    - Client side routing is used for client side navigation.
+    - API uses routing for managing the request and response.
+    - Route requests include
+
+            GET            - to fetch data
+            POST        - to submit data
+            PUT            - to modify data
+            PATCH        - to modify partial data
+            DELETE        - to remove data
+
+     - Routes are configured by using following methods
+
+            app.get('path', function(request, response){
+
+            })
+            app.post()
+            app.put()
+            app.patch()
+            app.delete()
+
+    - Route paths are defined by using meta characters and reference names.
+
+            /        It refers to default path to render when user is not requesting
+                    specific.
+
+            **        It refers to path to render when requested resource is not
+                    available [not-found]
+
+    - Every route path have 2 objects
+           
+            a) Request
+            b) Response
+
+4. Server app configures a route table, which is a virtual table to manage requests.
+    You have to start server in order to manage request & response.
+
+        app.listen(portNumber);
+
+5. Start the server
+
+        >node app.js
+
+Route Paths:
+   
+        /        default
+        *        not found
+        c*        custom route using meta chars
+                [you can use any regular expression types]
+        c??        starts with "c" and max can be 3 chars.
+        c*t        starts with "c" and ends with "t"
+
+
+Route Parameters:
+- Route path can be defined with parameters.
+- A parameter allows to query specific content from a request.
+- Route parameters are defined using following syntax:
+
+        "/name/:param1/:param2
+
+Syntax:
+     app.get("/products")            => without parameter
+     app.get("/products/:id")            => with "id" as parameter
+     app.get("/products/:id/:price")    => can have multiple parameters
+
+- Parameter values are passed from URL
+
+        /products/2
+        /products/2/40000
+
+- You can access the route parameters using "request" object
+
+        request.param    s    =>    { id:2, price:40000}
+        request.params.id
+        request.params.price
+
+-->
