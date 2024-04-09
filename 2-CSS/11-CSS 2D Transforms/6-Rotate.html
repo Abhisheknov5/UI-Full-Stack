@@ -1,0 +1,44 @@
+<!--
+Rotate:
+- It can rotate and change the orientation of element by sepcified angle.
+
+    rotate()
+    rotateX()
+    rotateY()
+
+Syntax:
+    img {
+       transform:rotateX(180deg);
+    }
+Note: You can't apply multiple transform for any element, how even you can manage few set of transforms using matrix().
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate</title>
+    <style>
+        .copy2{
+            transform: rotate(0deg);
+            width: 50px;
+            height: 50px;
+            transition: 2s;
+        }
+        .copy2:hover{
+            transform: rotate(-360deg);
+            width:300px;
+            height:300px;
+            transition: 4s;
+        }
+        img {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <img class="copy1" src="../public/images/Amazon1.jpg" width="300" height="300">
+    <img class="copy2" src="../public/images/Amazon2.jpg" width="300" height="300">
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!--
+Skew:
+- It tilts element by specified angle.
+
+    skew()
+    skewX()
+    skewY()
+
+Syntax:
+    img {
+       transform:skewX(20deg);
+    }
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skew</title>
+    <style>
+        .copy2{
+            transform: skewX(30deg);
+            margin-left: 0px;
+            transition: 2s;
+        }
+        .copy2:hover{
+            transform: skewX(-30deg);
+            margin-left: 180px;
+            transition: 2s;
+        }
+        .copy2:hover, .copy1{
+            opacity: 0.4;
+        }
+        .copy1{
+            transform: skewX(30deg);
+        }
+        img{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <img class="copy1" src="../public/images/Amazon1.jpg" width="300" height="300">
+    <img class="copy2" src="../public/images/Amazon2.jpg" width="300" height="300">
+    
+</body>
+</html>

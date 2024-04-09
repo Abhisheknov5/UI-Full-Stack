@@ -1,0 +1,55 @@
+<!--
+Scale:
+- It changes the width and height of element dynamically.
+- Scale uses value 1=100%.
+
+        scale()    
+        scaleX()
+        scaleY()
+
+Syntax:
+    img {
+       transform:scale(1,1);
+    }
+    img:hover {
+       transform:scale(3,3);
+    }
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        img:hover{
+            transform: scale(4,4);
+            transition: 2s;
+        }
+        img{
+            transition: scale(1,1);
+            transition: 2s;
+        }
+        .container {
+            overflow:hidden;
+            width:200px;
+            height:200px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+        <img src="../public/images/Amazon1.jpg" width="200" height="200">
+
+    </div>
+    
+</body>
+</html>
