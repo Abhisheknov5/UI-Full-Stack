@@ -1,0 +1,33 @@
+<!--
+What is Routing?
+Configure Routes
+Configure Route Parameters
+Wild Card Routes
+Server Side Routes for API
+
+                    Create REST API for To-DO App
+Request Methods:
+    Method        Route                Purpose
+    --------------------------------------------------------------------------------------------------------------
+    GET            /users                return all users.
+    POST        /register-user            add new user into database collection
+                                    [collection => users]
+
+    GET            /appointments/userid    return all appointments related to specific
+                                    user. [collection => appointments]
+
+    POST        /add-task                adds a new appointment
+
+    PUT            /edit-task/id            edits specific appointment
+
+    DELETE        /delete-task/id            removes specific appointment
+
+Note:
+ - API requires following libraries for handling data from client
+        a) Body Parser
+        b) CORS
+- Body Parser is responsible for translating the "form" data into JSON, so that it can be posted to database.
+- CORS [Cross Origin Resource Sharing] is required to configure request methods for data manipulations. You enable or disable various request from client using CORS.
+
+        > npm  i  express  mongodb  cors  --save
+-->
