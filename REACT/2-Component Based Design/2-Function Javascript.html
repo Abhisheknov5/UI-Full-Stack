@@ -1,0 +1,80 @@
+<!--
+JavaScript Function Concepts:-
+- Function Declaration
+- Function Expression
+- Parameters
+- REST Parameters & Spread Syntax
+- Function Return
+- Function Recursion
+- Function Generator
+- Promises
+- CallBack
+- Anonymous Functions
+- IIFE Pattern for function
+- Async Functions
+- Function Closure
+
+Rules for Creating a component in React using Function:
+
+1. A function for component can be created by using 
+		a) declaration
+		b) expression
+
+Syntax: Declaration
+
+		function Name(params)
+		{
+		}
+
+Syntax: Expression
+
+		const  Name = function() { 
+
+		}
+
+Syntax: Arrow
+		
+		const  Name = () => { }
+
+
+2. Every component function must return a function with markup.
+
+Syntax:
+	function Name()
+	{
+	   return (
+			<markup>
+
+			</markup>
+		      )
+	}
+
+3. Every component function can return only one fragment as markup.
+
+		return(					=> Invalid
+			<h1></h1>
+			<p> </p>
+			)
+
+		return(
+		      <div>
+			   <h1> </h1>
+			   <p> </p>
+		      </div>
+			)
+
+4. Component uses JSX as language which will not allow "void" element tokens.
+   
+5. Every tag must end or can be configured as self ending.
+
+		<br>			=> invalid
+		<br> </br>	=> valid
+		<br />
+
+6. JSX will not allow attributes, you must use only properties for JSX elements.
+		
+		<div class="container">  		=> invalid
+		<div className="container">	=> valid
+
+
+-->

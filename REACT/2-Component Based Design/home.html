@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .container {
+            width: 400px;
+            border: 1px solid gray;
+            padding: 20px;
+            box-shadow: 2px 2px 2px black;
+        }
+    </style>
+    <!-- Links to the React and Babel libraries for use in the script -->
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+     <!-- Start of the script containing JSX code -->
+    <script type="text/babel">
+
+        // Defines a functional component called SearchBar
+        function SearchBar(){
+            return(
+                // Returns a div element with center alignment and a class of "container"
+                <div align="center" className="container">
+                    <input type="text" placeholder="Search Amazon.in" /> 
+                    <button>Search</button>
+                </div>
+
+            )
+        }
+        // Render the text as a string directly into the root element
+        ReactDOM.render(<SearchBar></SearchBar> , document.getElementById("root"));
+    </script>
+</head>
+<body>
+     <!-- Display a message if JavaScript is disabled -->
+    <noscript>Please enable JavaScript on your browser.</noscript>
+    <!-- Root element where the React component will be rendered -->
+    <div id="root"></div>
+</body>
+</html>

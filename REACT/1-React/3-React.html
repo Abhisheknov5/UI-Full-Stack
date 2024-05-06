@@ -1,0 +1,133 @@
+<!--
+Features of React:
+1. It is a library
+2. It uses "Virtual DOM"
+	- Browser Architecture
+	- Browser Engines
+	- HTML Parsing
+	- DOM
+	- Virtual DOM
+	- Shadow DOM
+3. It is faster in rendering
+4. It is modular [Application specific library]
+5. It makes the application light weight.
+6. Component Based
+	- It is easy to reuse
+	- It is easy to extend
+	- It is easy to test and maintain
+7. One Way Binding
+
+Issues with React:
+1. It is not designed for what you are using, hence lot of GAP's.
+2. It requires lot of 3rd party plugin's
+3. Poor documentation
+4. Faster pace of development.
+
+
+					              React 18x
+- Previous Versions
+	16x, 17x
+- React 18 is a complete re-write of react libraries.
+- React is a library which you use to build interactive UI for existing web applications.
+
+Create a new Web Application
+
+1. Download and Install  Node JS on your PC
+
+		https://nodejs.org/en
+
+2. Download and Install VS code editor
+
+		- Live Server
+		- Vs Code Icons
+		- IntelliSense for CSS class names in HTML
+
+3. Create a new folder for project in your PC
+
+		E:\web-app
+
+
+4. Open project folder in VS code and setup the environment for web-application
+
+		> npm  init  -y					[run in terminal]
+
+		package.json
+
+5. Add folders
+
+		public		: It comprises of static resources like html, images, pdf, docs..
+		src			: It comprises of dynamic resources like css, scss, js, ts, jsx..
+		build/dist		: It is production folder
+
+
+6. Add following files into public folder
+		
+		- index.html
+		- home.html
+
+7. Index is not using react
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Index</h1>
+    <p>Index Page is not using React.</p>
+    <a href="home.html">Home</a>
+</body>
+</html>
+
+
+8. Home page will use react
+
+- To use react in a page you need the following libraries
+
+	a) React				Core library for react
+	b) React-DOM			Virtual DOM library
+	c) Babel				Compiler library for react
+
+		JIT		- Just-in-Time
+		AOT		- Ahead-of-Time
+
+- You can download the library files using NPM [Package Manager] 
+				(or)
+- You can use CDN links.
+
+	https://legacy.reactjs.org/docs/cdn-links.html
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+	https://babeljs.io/docs/babel-standalone
+
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+Ex:
+home.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+         ReactDOM.render("Welcome to React JS 17x", document.getElementById("root"));
+    </script>
+</head>
+<body>
+    <noscript>Please enable Javascript on your browser.</noscript>
+    <div id="root"></div>
+</body>
+</html>
+
+
+
+-->

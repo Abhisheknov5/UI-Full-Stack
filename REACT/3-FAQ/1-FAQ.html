@@ -1,0 +1,30 @@
+<!--
+FAQ: What are the various techniques of configuring a Fragment in React?
+Ans: 
+ - A fragment can be any HTML container, which is not RC data type.
+
+		<div> <p>, 			=> valid
+		<textarea> <select>	=> invalid
+
+ - You can configure empty fragment.
+		 <>
+		    ...your content...
+		</>
+	* You can't configure styles for empty fragment.
+
+ - You can use <React.Fragment> as container.
+
+		<React.Fragment  yourDependencies>
+			...your content..
+		</React.Fragment>
+
+FAQ: How to reduce the code inconsistency, so that developers will not voilate the coding standards?
+Ans: By configuring React Strict mode, just like JavaScript strict mode.
+
+	ReactDOM.render(
+		<React.Strict>
+		   <Component />
+		</React.Strict>
+	      )
+
+-->

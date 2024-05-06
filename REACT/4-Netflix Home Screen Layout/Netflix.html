@@ -1,0 +1,140 @@
+<!--
+Ex: Netflix Home Screen Layout using React Components
+
+1. Install Bootstrap for project
+
+		>npm install bootstrap  bootstrap-icons  --save
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Home Screen Layout</title>
+    <style>
+        .bg-banner {
+            background-image: url("../public/Netflix\ Banner.jpg");
+            background-size: cover;
+            height: 100vh;
+        }
+        .bg-shade {
+            background-color: rgba(0,0,0,0.5);
+            height: 100vh;
+        }
+        .brand-title {
+            font-size: 35px;
+            font-family: Arial;
+            color: red;
+            font-weight: bold;
+
+        }
+        section {
+            padding-top: 150px;
+        }
+        .main-title {
+            font-size: 50px;
+            font-weight: bold;
+            font-family: Arial;
+            margin-bottom: 20px;
+        }
+        .main-subtitle {
+            font-size: 30px;
+            font-family: Arial;
+        }
+        form {
+            width: 600px;
+            margin-left: 150px;
+            margin-top: 20px;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Links to the React and Babel libraries for use in the script -->
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+     <!-- Start of the script containing JSX code -->
+    <script type="text/babel">
+        
+        // Define a React functional component called Netflix
+        function Netflix(){
+            return(
+                // Return a div element with background banner and shade, containing NetflixHeader and NetflixMain components
+                <div className="bg-banner">
+                    <div className="bg-shade">
+                        <NetflixHeader />
+                        <section className="text-white text-center">
+                            <NetflixMain />
+                        </section>
+                    </div>
+                </div>
+            )
+        }
+
+        // Define a React functional component called NetflixHeader
+        function NetflixHeader(){
+            return(
+                // Return a header element with Netflix logo, language selector, and signin button
+                <header className="d-flex justify-content-between p-4">
+                    <div>
+                        <span className="brand-title"> NETFLIX </span>
+                    </div>
+                    <div>
+                        <div className="input-group">
+                            <span className="bi bi-translate input-group-text"></span>
+                            <select className="form-select">
+                                <option>Language</option>
+                            </select>
+                            <button className="btn btn-danger ms-2">Signin</button>
+                        </div>
+                    </div>
+                </header>
+            )
+        }
+
+        // Define a React functional component called NetflixMain
+        function NetflixMain(){
+            return(
+                // Return a main element with main content including title, subtitle, and registration form
+                <main>
+                    <div className="d-flex justify-content-center">
+                    <div>
+                        <div className="main-title">Unlimited movies, TV shows and more</div>
+                        <div className="main-subtitle">Watch anywhere. Cancel anytime.</div>
+                        <div>
+                            <NetflixRegister />
+                        </div>
+                    </div>
+                    </div>
+                </main>
+            )
+        }
+        // Define a React functional component called NetflixRegister
+        function NetflixRegister(){
+            return(
+                 // Return a form element with registration form fields
+                <form>
+                    <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                    <div>
+                        <div className="input-group">
+                        <input className="form-control" type="email" placeholder="Your email address" />
+                        <button className="btn btn-danger">
+                            Get Started <span className="bi bi-chevron-right"></span>
+                        </button>
+                        </div>
+                    </div>   
+                </form>
+            )
+        }
+        ReactDOM.render(<Netflix />, document.getElementById("root"));
+
+    </script>
+</head>
+<body>
+     <!-- Display a message if JavaScript is disabled -->
+    <noscript>Please enable JavaScript on your browser.</noscript>
+    <!-- Root element where the React component will be rendered -->
+    <div id="root"></div>
+</body>
+</html>
