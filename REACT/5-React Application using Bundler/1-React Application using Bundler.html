@@ -1,0 +1,83 @@
+<!--
+
+Creating a React Application using Bundler:
+- Bundler is a tool used in web development for configuring an application.
+- It can bundle your assets, images, scripts and other resources.
+- It can configure an application with resource mapping that improves performace of application.
+- There are various bundling tools like
+	a) Web Pack
+		https://webpack.js.org/
+	b) Parcel	
+		https://parceljs.org/
+	c) Vite
+		https://vitejs.dev/
+
+- NPX [ Node Package Manager Extention ] provides Webpack as default bundler to create a complete React application.
+
+
+1. Open any location on your PC from command prompt [CLI]
+
+		e:\>
+
+2. Run the following command
+
+		e:\>npx  create-react-app   appName [shopping-react]
+
+    - It uses "webpack" as bundler and set up your project for "React" with all required
+      libraries and configuration.
+    - It is a template for "React App".
+
+3. Open your project folder from "VS Code" editor
+
+		e:\shopping-react
+
+4. React 18 application file system comprises of 
+
+	 File / Folder				Description
+	----------------------------------------------------------------------
+	node_modules		It comprises of all library files installed with NPM.
+						[react, react-dom, babel..]
+
+	public				It comprises of static resources like
+						images, html, docx, .pdf, .txt, .mp3, .mp4..
+
+	src					It comprises of dynamic resources like
+						.js, .jsx, .ts, .tsx, .css, .scss ..
+
+	.gitignore				It is used to configure the resources to be ignored while
+						publishing on GIT.
+
+	package.json			It comprises of project meta data.
+						It can configure batch operations.
+				
+	package.lock.json		It comprises of meta data related to every library installed
+						in project.
+
+	readme.md			It is help documentation provided by developers.
+
+Note: React template provides following batch operations
+
+		>npm start			to run your react app
+		>npm build			to build for production
+		>npm test			to test using "JEST" framework
+		>npm eject			to unplug from default port assigned for application.
+
+	Your react application runs on  "http://localhost:3000"
+
+React 18x Render method for Virtual DOM:
+
+  const  root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(
+	<React.Strict>
+	     <App />
+	</React.Strict>
+	)
+
+React upto 17 Render method for Virtual DOM:
+
+	ReactDOM.render(
+		<React.Strict>
+			<App />
+		</React.Strict>, document.getElementById("root")
+		)
+-->

@@ -37,3 +37,25 @@ The JavaScript spread operator (...) allows us to quickly copy all or part of an
     var result1 = [...one, function(){ document.write("Welcome")}];
     result1[2]();
 </script>
+
+
+
+
+
+<!-- Rest parameter in ES6.
+It's a new feature in ES6 that enhances the ability to manage arguments. Indefinite arguments can be represented as an array using rest parameters. We can invoke a function with any number of parameters by utilizing the rest parameter.
+
+ function display(...args) {  
+    let ans = 0;  
+    for (let i of args) {  
+        ans *= i;  
+    }  
+    console.log("Product = "+ans);  
+  }  
+    
+  display(4, 2, 3); 
+Output:
+
+ Product = 24
+
+-->

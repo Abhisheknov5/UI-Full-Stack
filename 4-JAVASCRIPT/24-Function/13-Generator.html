@@ -23,13 +23,13 @@ Syntax:
         ref.next().done
 -->
 <script>
-    function* collection()
+    function* Collection()
     {
-        yield "Hello !";
-        yield ["Delhi", "Hyd"];
-        yield {Rate: 3.5, count: 4500}
+          yield "Hello !";
+          yield ["Delhi", "Hyd"];
+          yield { Rate: 3.5, Count: 4500}
     }
-    var list = collection();
+    var list = Collection();
     console.log(list.next().value);
     console.log(list.next().value);
     console.log(list.next().value);
