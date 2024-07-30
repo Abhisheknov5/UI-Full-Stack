@@ -1,0 +1,126 @@
+<!--
+2. Modal
+- It is similar to alert but creates a popup dialog.
+- It keeps existing content in background and opens dialog as fade-over.
+
+Classes:
+.modal
+.modal-dialog
+.modal-content
+.modal-header
+.modal-body
+.modal-footer
+
+Syntax:
+    <div class="modal">
+          <div class="modal-dialog">
+         <div class="modal-content">
+             ...header, body, footer...
+         </div>
+          </div>
+    </div>
+
+- A page can have multiple modals hence every modal must have a unique reference id.
+    <div class="modal"  id="login">
+    </div>
+
+- Modal is by default hidden you have to open modal using jQuery attributes
+
+     data-bs-target        : It refers to modal ID.
+     data-bs-toggle        : It refers to component name.
+
+ [Button uses target and toggle attributes to handle on click event]
+
+    <button data-bs-target="#login" data-bs-toggle="modal">  </button>
+    <a  href="#login" data-bs-toggle="modal"> Text | Image </a>
+
+- You can make model open with animation and set position using following classes.
+
+    .fade
+    .modal-dialog-centered
+    .modal-dialog-scrollable    
+    .modal-fullscreen
+
+    <div class="modal  fade">
+    <div class="modal-dialog modal-dialog-centered">
+ 
+Note: Bootstrap 5 disabled nested modals. You can't open a modal with in another modal.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <!-- Linking Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules//bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid">
+    <!-- Button to trigger the Login modal -->
+    <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#login" >Login</button>
+    <!-- Link to trigger the Product Details modal -->
+    <a href="#details" data-bs-toggle="modal">Product Details</a>
+    
+    <!-- Product Details modal -->
+    <div class="modal fade" id="details">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h2>Real me</h2>
+            </div>
+            <div class="modal-body">
+                <img src="../public/images/Amazon1.jpg" width="200" height="300">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- Login modal -->
+<div class="modal-content">
+    <div class="modal fade" id="login">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h2><span class="bi bi-person-fill"></span> User Login</h2>
+                    <button data-bs-dismiss="modal" class="btn btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>User Name</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dd><input type="password" class="form-control"></dd>
+
+                        <dt>User Name</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dd><input type="password" class="form-control"></dd>
+
+                        <dt>User Name</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dd><input type="password" class="form-control"></dd>
+                        
+                        <dt>User Name</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dd><input type="password" class="form-control"></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Login</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linking jQuery and Bootstrap JS for functionality -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>
+
+

@@ -1,0 +1,55 @@
+<!--
+1. Alerts
+- Alert is used to display embedded message box in a page.
+- You can control the message box dynamically.
+
+Classes:
+.alert
+.alert-dismissible
+.alert-{contextual}
+.alert-title
+.alert-link
+.alert-text
+
+jQuery Attributes:
+data-bs-dismiss :-It is an attribute defined for clickable elements like button or
+                link to close the current component.
+
+Syntax:
+    <button  data-bs-dismiss="component-name"> </button>
+    <button  data-bs-dismiss="alert"> </button>  [bootstrap 5]
+    <button  data-dismiss="alert"> </button> [bootstrap 4]
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules//bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid">
+    <h1>Alerts</h1>
+    <div class="alert alert-danger alert-dismissible">
+        <button data-bs-dismiss="alert" class="btn btn-close"></button>
+        <h1>Delete Record</h1>
+        <p>Record will be deleted permanently</p>
+        <a href="#">Help?</a>
+    </div>
+
+    <div class="alert alert-sucess alert-dismissible">
+        <button class="btn btn-close" data-bs-dismiss="alert"></button>
+        <h1 class="alert-title">Record successfully Inserted</h1>
+        <p class="alert-text">Record successfully inserted into database..</p>
+        <button class="btn btn-success" data-bs-dismiss="alert">OK</button>
+
+    </div>
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>
