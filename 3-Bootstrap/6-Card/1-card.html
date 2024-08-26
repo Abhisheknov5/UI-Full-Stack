@@ -1,0 +1,115 @@
+<!--
+ Card Classes :-
+.card
+.card-header
+.card-body
+.card-footer
+.card-title
+.card-subtitle
+.card-img-top
+.card-img-bottom
+.card-img-overlay
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <!-- Linking Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules//bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Custom styling for the card image -->
+    <style>
+        .card-img-top {
+            height: 150px;
+        }
+    </style>
+</head>
+<body class="container-fluid d-flex">
+    <!-- First card -->
+    <div class="card p-2 m-2 bg-dark text-white" style="width: 230px">
+        <!-- Image at the top of the card -->
+        <img src="../public/images/Amazon1.jpg" class="card-img-top">
+
+         <!-- Card header with title and subtitle -->
+        <div class="card-header">
+            <h1 class="card-title">Watches</h1>
+            <p class="card-subtitle">20% off - Sale</p>
+        </div>
+
+        <!-- Card body with a list of items -->
+        <div class="card-body">
+            <ul>
+                <li>Fasttrack</li>
+                <li>Fossil</li>
+                <li>Apple</li>
+            </ul>
+        </div>
+
+          <!-- Card footer with a button -->
+        <div class="card-footer">
+            <button class="btn btn-light w-100">
+                <span class="bi bi-cart3">Buy</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Second card -->
+    <div class="card p-2 m-2" style="width: 230px">
+        <img src="../public/images/Amazon2.jpg" class="card-img-top">
+        <div class="card-header">
+            <h1 class="card-title">Watches</h1>
+            <p class="card-subtitle">20% off - Sale</p>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li>Fasttrack</li>
+                <li>Fossil</li>
+                <li>Apple</li>
+            </ul>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary w-100">
+                <span class="bi bi-cart3">Buy</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Third card -->
+    <div class="card p-2 m-2" style="width: 230px">
+        <img src="../public/images/Amazon3.jpg" class="card-img-top">
+        <div class="card-header">
+            <h1 class="card-title">Watches</h1>
+            <p class="card-subtitle">20% off - Sale</p>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li>Fasttrack</li>
+                <li>Fossil</li>
+                <li>Apple</li>
+            </ul>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary w-100">
+                <span class="bi bi-cart3">Buy</span>
+            </button>
+
+        </div>
+
+    </div>
+   
+    <!-- Linking jQuery and Bootstrap JS for functionality -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,53 @@
+<!--
+Dropdown :-
+- Bootstrap dropdown allows content with icons and images.
+- HTML dropdown <select> is RC data type and will not allow formats.
+
+Classes:
+.dropdown
+.dropup
+.dropend
+.dropstart
+.dropdown-toggle
+.dropdown-menu
+.dropdown-item
+.dropdown-link
+.dropdown-dark [obsolete]  [data-bs-theme="dark"] is new
+.dropdown-divider
+.dropdown-item-text
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <!-- Linking Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules//bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid">
+     <!-- Heading for the dropdown section -->
+    <h2>Dropdown</h2>
+     <!-- Dropdown menu container -->
+    <div class="dropend" id="menu">
+         <!-- Button to trigger dropdown, with a dark theme and a translate icon -->
+        <button data-bs-target="#menu" data-bs-toggle="dropdown" class="btn btn-dark dropdown-toggle"><span class="bi bi-translate"></span>Language</button>
+         <!-- Dropdown menu with a dark theme -->
+        <ul class="dropdown-menu" data-bs-theme="dark">
+             <!-- Dropdown item for English -->
+            <li class="dropdown-item"><a href="#" class="dropdown-item-text">English</a></li>
+              <!-- Dropdown item for Hindi -->
+            <li class="dropdown-item"><a href="#" class="dropdown-item-text">हिंदी</a></li>
+        </ul>
+    </div>
+   
+    <!-- Linking jQuery and Bootstrap JS for functionality -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

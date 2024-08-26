@@ -1,0 +1,81 @@
+<!--
+- Carousel items are animated with default timing, you can change the time interval for every item using "data-bs-interval" attribute.
+
+Syntax:
+    <div class="carousel-item"  data-bs-interval="2000">        1000ms = 1sec
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Indicators Animators Timer</title>
+
+    <!-- Linking Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    
+    <style>
+        /* Set a fixed height for carousel items */
+        .carousel-item {
+            height: 250px;
+        }
+        /* Custom style for carousel indicators */
+        .carousel-indicators button {
+            border-radius: 200px; /* Makes the indicators rounded */
+            width: 20px; /* Width of the indicators */
+            height: 40px; /* Height of the indicators */
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+    <!-- Bootstrap Carousel component with controls, indicators, custom indicator styling, and custom intervals -->
+    <div class="carousel slide" data-bs-theme="dark" id="banners" data-bs-ride="carousel">
+        
+        <!-- Wrapper for slides with custom intervals -->
+        <div class="carousel-inner" data-bs-interval="3000">
+            <!-- First slide (active by default) with the default interval (3000ms) -->
+            <div class="carousel-item active">
+                <img src="../public/images/Slide-1.jpg" class="w-100 d-block" alt="Slide 1">
+            </div>
+            <!-- Second slide with a custom interval of 1000ms (1 second) -->
+            <div class="carousel-item" data-bs-interval="1000">
+                <img src="../public/images/Slide-2.jpg" class="w-100 d-block" alt="Slide 2">
+            </div>
+            <!-- Third slide with a custom interval of 5000ms (5 seconds) -->
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="../public/images/Slide-3.jpg" class="w-100 d-block" alt="Slide 3">
+            </div>
+        </div>
+
+        <!-- Previous control button -->
+        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banners">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <!-- Next control button -->
+        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banners">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+        <!-- Custom styled carousel indicators -->
+        <div class="carousel-indicators">
+            <!-- Indicator for the first slide (active by default) -->
+            <button class="active" data-bs-slide-to="0" data-bs-target="#banners"></button>
+            <!-- Indicator for the second slide -->
+            <button data-bs-slide-to="1" data-bs-target="#banners"></button>
+            <!-- Indicator for the third slide -->
+            <button data-bs-slide-to="2" data-bs-target="#banners"></button>
+        </div>
+    </div>
+
+    <!-- Linking jQuery and Bootstrap JS for functionality -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

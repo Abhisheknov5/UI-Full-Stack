@@ -1,0 +1,104 @@
+<!--
+Nav & Tabs :-
+- It is used to configure tab based navigation.
+- You can display multiple categories of content in one page.
+- It allows to switch between content dynamically.
+
+Classes:
+.nav
+.nav-menu
+.nav-item
+.nav-link [.active]
+.nav-text
+.nav-tabs
+.nav-pills
+.tab-pane
+.tab-content
+
+Note: The nav items can toggle the component called "tab", which refers to tab-pane in tab-content.
+
+Syntax:
+ <a href="#login"  data-bs-toggle="tab"> Login </a>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the web page -->
+    <title>Nav Tabs</title>
+    
+    <!-- Linking Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid">
+    <!-- Main Heading for the Page -->
+    <h1>Shopper.</h1>
+
+    <!-- Navigation tabs for different sections -->
+    <ul class="nav nav-tabs">
+        <!-- Login Tab -->
+        <li class="nav-item">
+            <a href="#login" data-bs-toggle="tab" class="nav-link active">
+                <span>Login</span>
+            </a>
+        </li>
+        <!-- Register Tab -->
+        <li class="nav-item">
+            <a href="#register" data-bs-toggle="tab" class="nav-link">
+                <span>Register</span>
+            </a>
+        </li>
+        <!-- Recover Tab -->
+        <li class="nav-item">
+            <a href="#recover" data-bs-toggle="tab" class="nav-link">
+                <span>Recover</span>
+            </a>
+        </li>
+    </ul>  
+
+    <!-- Content for each tab -->
+    <div class="tab-content mt-3">
+        <!-- Login Tab Content -->
+        <div class="tab-pane active" id="login">
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text" placeholder="Enter username"></dd>
+                <dt>Password</dt>
+                <dd><input type="password" placeholder="Enter password"></dd>
+            </dl>
+            <button class="btn btn-primary">Login</button>
+        </div>
+        
+        <!-- Register Tab Content -->
+        <div class="tab-pane" id="register">
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text" placeholder="Enter username"></dd>
+                <dt>Password</dt>
+                <dd><input type="password" placeholder="Enter password"></dd>
+                <dt>Email</dt>
+                <dd><input type="email" placeholder="Enter email"></dd>
+                <dt>Mobile</dt>
+                <dd><input type="text" placeholder="Enter mobile number"></dd>
+            </dl>
+            <button class="btn btn-primary">Register</button>
+        </div>
+        
+        <!-- Recover Tab Content -->
+        <div class="tab-pane" id="recover">
+            <h3>Forgot Credentials?</h3>
+            <input type="text" placeholder="Your email or Mobile">
+            <button class="btn btn-danger">Recover</button>
+        </div>
+    </div>
+
+    <!-- Linking jQuery and Bootstrap JS for functionality -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

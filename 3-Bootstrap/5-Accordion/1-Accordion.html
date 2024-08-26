@@ -1,0 +1,73 @@
+<!--
+ Accordion :-
+- It is used to show and hide content with Mutex mechanism.
+- Mutex is mutual exclusion.
+- It can display one category by hiding others.
+
+Classes:
+.accordion
+.accordion-button
+.accordion-item
+.accordion-collapse
+.accordion-header
+.accordion-body
+.accordion-footer
+
+Attribute:
+data-bs-parent    : It is used to bind all accordion items to single parent. So that
+                  it can exhibit mutex mechansim.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <!-- Linking Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules//bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid">
+    <h1 class="text-center">Frequently Asked Questions</h1>
+    <div class="accordion" id="faqs">
+
+          <!-- Accordion item 1 -->
+        <div class="accordion-item">
+        <div class="accordion-header">
+             <!-- Button to trigger the collapse for the first FAQ -->
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">What is Netflix?</button>
+        </div>
+        <!-- Content for the first FAQ -->
+        <div class="accordion-collapse collapse show" id="q1" data-bs-parent="#faqs">
+            <div class="accordion-body">
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+                    <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+            </div>
+        </div>
+    </div>
+    <!-- Accordion item 2 -->
+    <div class="accordion-item">
+        <div class="accordion-header">
+             <!-- Button to trigger the collapse for the second FAQ -->
+            <button data-bs-target="#q2" data-bs-toggle="collapse" class="accordion-button">How much does Nerflix cost?</button>
+        </div>
+        <!-- Content for the second FAQ -->
+        <div class="accordion-collapse collapse" id="q2" data-bs-parent="#faqs">
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+        </div>
+    </div>
+</div>
+</div>
+
+    <!-- Linking jQuery and Bootstrap JS for functionality -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,78 @@
+<!--
+Carousel :-
+- It is used to configure sliding and fading content in page.
+
+Basic Carousel Classes:
+.carousel
+.carousel-inner
+.carousel-item
+
+Syntax:
+    <div class="carousel">
+       <div class="carousel-inner">
+          <div class="carousel-item">
+            ...your content...
+          </div>
+       </div>
+    </div>
+- You have to make sure that any one carousel-item is "active".
+
+    <div class="carousel-item active">
+    </div>
+
+- Carousel will not start its animation implicitly. You have to manually start animation by using the attribute "data-bs-ride".
+
+    <div class="carousel"  id="banners"  data-bs-ride="carousel">
+    </div>
+
+- Carousel have 2 types of animations
+
+    a) slide
+    b) carousel-fade
+
+  You can set any one of these animations for carousel.
+
+    <div class="carousel slide">
+    <div class="carousel carousel-fade">
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <!-- Linking Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules//bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body class="container-fluid">
+    <!-- Bootstrap Carousel component -->
+    <div class="carousel slide" id="banners" data-bs-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+              <!-- First slide (active by default) -->
+            <div class="carousel-item active">
+                <img src="../public/images/Slide-1.jpg" class="w-100 d-block">
+            </div>
+
+            <!-- Second slide -->
+            <div class="carousel-item">
+                <img src="../public/images/Slide-2.jpg" class="w-100 d-block">
+            </div>
+
+            <!-- Third slide -->
+            <div class="carousel-item">
+                <img src="../public/images/Slide-3.jpg" class="w-100 d-block">
+            </div>
+        </div>
+    </div>
+    
+     <!-- Linking jQuery and Bootstrap JS for functionality -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!--
+Navbar:-
+- It is used to create a responsive navigation bar.
+
+Classes:
+.navbar
+.navbar-expand-lg|sm|xl
+.navbar-collapse
+.navbar-nav
+.nav-item
+.nav-link
+.navbar-toggler
+.navbar-toggler-icon
+.navbar-brand
+.navbar-dark
+.navbar-light
+.bg-{contextual}
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the web page -->
+    <title>Navbar</title>
+    <!-- Linking Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body class="container-fluid">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- Button for toggling the menu on small screens -->
+            <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Brand name/logo displayed in the navbar -->
+            <h1 class="navbar-brand">Shopper.</h1>
+
+            <!-- Menu items that collapse on small screens -->
+            <div class="navbar-collapse collapse" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link">Home</a></li>
+                    <li class="nav-item"><a class="nav-link">Pages</a></li>
+                    <li class="nav-item"><a class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link">Docs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Shopper-template.html" target="frameBody">Shop</a>
+                    </li>
+
+                    <!-- Search bar inside the navbar -->
+                    <li class="nav-item input-group">
+                        <input type="text" placeholder="Search Shopper.com" class="form-control">
+                        <button class="btn btn-warning bi bi-search"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Section for displaying iframe content -->
+    <section class="mt-4">
+        <iframe width="100%" height="500" name="frameBody"></iframe>
+    </section>
+    <!-- Linking jQuery and Bootstrap JS for functionality -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!--
+
+Carousel Controls:-
+
+.carousel-control-prev
+.carousel-control-prev-icon
+.carousel-control-next
+.carousel-control-next-icon
+
+Syntax:
+    <button class="carousel-control-prev">
+          <span class="carousel-control-prev-icon> </span>
+    </button>
+  
+Note: You can set a dark theme for carousel if controls are not visible over background.
+      "carousel-dark"              => obsolete
+      "data-bs-theme=dark"        => new
+
+- Carousel controls requires functionality to be defined using attributes
+
+    data-bs-slide="prev"
+    data-bs-slide="next"
+    data-bs-target="carousel_id"
+
+    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banners">
+    </button>
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Controls</title>
+    <!-- Linking Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules//bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body class="container-fluid">
+    <!-- Bootstrap Carousel component with controls -->
+    <div class="carousel slide" data-bs-theme="dark" id="banners" data-bs-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <!-- First slide (active by default) -->
+            <div class="carousel-item active">
+                <img src="../public/images/Slide-1.jpg" class="w-100 d-block">
+            </div>
+
+             <!-- Second slide -->
+            <div class="carousel-item">
+                <img src="../public/images/Slide-2.jpg" class="w-100 d-block">
+            </div>
+
+            <!-- Third slide -->
+            <div class="carousel-item">
+                <img src="../public/images/Slide-3.jpg" class="w-100 d-block">
+            </div>
+        </div>
+
+         <!-- Previous control button -->
+        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banners">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <!-- Next control button -->
+        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banners">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    
+      <!-- Linking jQuery and Bootstrap JS for functionality -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
