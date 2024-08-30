@@ -1,0 +1,43 @@
+<!--
+
+FAQ's:
+1. How a react app renders requested component? Who manages the request and response?
+A. Routing, Routing Engine, HttpHandler, RouteTable
+
+2. How the libraries are loaded in React App?
+A. By using DI mechanism.
+
+3. What is DI?
+A. It is a design pattern that specifies how the object get holds of its dependencies.
+
+4. What are the components of DI?
+A. Provider & Injector
+
+5. What is the role of provider?
+A. It locates the dependencies in memory.
+
+6. What is the role of Injector?
+A. It injects the dependences into component or application.
+
+7. What is the startup for React App [Entry Point]
+A. index.js [Developement]
+    main.js [Production]
+ 
+8. How virtual DOM is created?
+A. 
+	React 17x:
+		ReactDOM.render()
+
+	React 18x:
+		const root = ReactDOM.createRoot();
+
+9. How virtual DOM is update to actual DOM?
+A. Using DIFF Algorithm
+	 previousValue == currentValue	=> No Change Detected
+	 previousValue !== currentValue	=> Change Detected
+
+10. What is bootstrapping?
+A. It is the process of converting static DOM into Dynamic DOM.
+
+
+--> 
