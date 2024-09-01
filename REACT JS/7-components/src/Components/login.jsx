@@ -1,8 +1,9 @@
-
+import "./login.css";
 
 export  function Login(){
     return(
-        <form>
+       <div className="form-container">
+         <form>
             <h3>User Login</h3>
             <dl>
                 <dt>User Id</dt>
@@ -12,5 +13,6 @@ export  function Login(){
             </dl>
             <button>Login</button>
         </form>
+       </div>
     )
 }

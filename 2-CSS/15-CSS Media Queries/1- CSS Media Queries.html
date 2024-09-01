@@ -1,0 +1,87 @@
+<!--
+CSS Media Queries :-
+- Media refers to various viewports like
+    a) screen [mobile, tab, pc, laptop]
+    b) print
+    c) speech
+   
+- Query is used to design for specific requirement.
+- CSS media queries are responsible for identifying the screen requirements and make the page responsive.
+
+Syntax:
+        @media  type  and  (query)
+        {
+        }
+
+        type        => screen, print, speech
+        query    => orientation, max-width, min-width, width
+
+- "min-width" refers to the position starting from specified units.
+
+        min-width: 600px        => starting from 600 pixels
+
+- "max-width" refers to the position upto specified units.
+   
+        max-width: 600px        => upto 600px from 0px
+
+- Orientation refers to "landscape or portrait".
+
+FAQ: What are the various styles and markup elements used to make page responsive?
+Ans:
+   
+    1. <meta>  
+    2. Fluid size for images and elements [%]
+    3. display flex
+    4. display grid
+    5. columns
+    6. media queries
+    7. position relative
+    8. relative units
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        li{
+            border: 1px solid gray;
+            padding: 5px;
+            width: 150px;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        @media screen and (max-width:600px){
+            li{
+                margin-bottom:20px;
+            }
+        }
+        @media screen and (min-width:601px) {
+            ul{
+                display: flex;
+            }
+            li{
+                margin-right: 20px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Pages</li>
+            <li>Shop</li>
+            <li>Blog</li>
+            <li>Docs</li>
+        </ul>
+    </nav>
+    
+</body>
+</html>
