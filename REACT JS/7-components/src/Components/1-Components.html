@@ -1,0 +1,89 @@
+<!--
+
+React 18 Components :-
+
+- Component function is configured with a set of rules
+	* Function Name must start with an uppercase letter.
+	* It must return a fragment.
+	* It uses JSX elements.
+- A component is designed with 3 files
+	a)  .jsx					: It is component file
+	b)  .css					: It comprises of styles for component
+	c)  .test.js | .spec.js			: It comprises test functions used to test component.
+
+	[ .css & .test.js  are optional ]
+
+- A component file can be with extention ".js" |  ".jsx"
+
+Ex:
+1. Go to "src" folder and add "components" sub folder
+
+2. For every component keep a folder : eg  "login" 
+
+3. Add following files into login folder
+
+		login.jsx
+		login.css
+
+4. Make sure that login.jsx is importing  login.css
+
+		import  "./login.css";
+
+
+Enable Bootstrap for React application:
+
+1. Open terminal and install the following libraries
+
+	> npm  i  bootstrap  bootstrap-icons  --save
+
+2. Import the CSS into "index.js"  in src
+
+     import '../node_modules/bootstrap/dist/css/bootstrap.css';
+     import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+
+3. You can use bootstrap and icons classes in any component.
+
+			form-control
+			bg-{contextual}		=>  bootstrap css classes
+			text-{contextual}
+			etc..
+
+			bi bi-person
+			bi bi-bell				=>  bootstrap icons
+			bi bi-facebook
+			etc..
+
+			getbootstrap.com 
+
+ Syntax:
+			<h1  className="bi bi-person-fill"> User Login </h1>
+			<input type="text" class="form-control" />
+
+4. Bootstrap provides various Javascript/jQuery attributes with dynamic components, which you have to import in "index.js"
+
+			import  *  as bootstrap  from  "bootstrap";
+							(or)
+			import  alert, carousel, navbar from "bootstrap";
+
+5. After importing bootstrap JS, you can use bootstrap JS properties
+
+			data-bs-target
+			data-bs-toggle
+			data-bs-dismiss
+			data-bs-parent
+			etc..
+Syntax:
+		<button className="btn btn-close"  data-bs-dismiss="alert"> </button>
+
+Note: Once you enabled complete bootstrap css and JS, you can implement the components of bootstrap like
+			- alerts
+			- carousel
+			- navbar
+			- offcanvas
+			- pagination
+			- nav & tabs 
+			 etc..
+
+
+
+-->
