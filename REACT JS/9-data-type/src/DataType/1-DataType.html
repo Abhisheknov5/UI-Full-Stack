@@ -1,0 +1,169 @@
+<!-- 
+ Data Type :-
+ 
+a) Primitive Type
+b) Non Primitive Type
+
+Primitive Types: [ES6]
+1. number
+2. string
+3. boolean
+4. null
+5. undefined
+6. bigint
+7. symbol
+
+Number:
+- It can be signed, unsigned, float, double, exponent, binary, hexa, octa, bigint etc.
+- JSX requires various javascript methods to convert a number into string or other local formats.
+					toString()
+					toLocaleString()
+Syntax:
+		var price = 46000.00;
+
+		{price.toLocaleString('en-in', {style:'currency', currency:'INR'}) }
+		{price.toLocaleString()}
+	
+		var value = 98217769783n;		// BigInt
+		
+		{ value }
+
+Ex:
+data-binding.jsx
+
+
+export function DataBinding(){
+    
+    var price = 46000.00;
+
+    return(
+        <div className="container-fluid">
+            <h2>Data Types</h2>
+            Price : {price.toLocaleString('en-in',{style:'currency', currency:'INR'})}
+        </div>
+    )
+}
+
+- You handle various operations on numbers using Math library or using arithematic operators.
+
+Note: Data binding expression in JSX will not allow statements with in the context.
+
+			Math.PI
+			Math.random()
+			Math.pow()
+			Math.sqrt()
+			Math.sin()
+			Math.round()
+			etc..
+Syntax:
+			var price = 45000.67897777;
+			
+			{ Math.round(price) }
+
+
+2. String Type
+- JavaScript string can be defined in 3 ways
+	a) Single Quote	'   '
+	b) Double Quote 	" "
+	c) Backtick		`  `
+- Backtick allows embedded expression defined using "${ }"
+
+Syntax:
+		var path = "/products";
+		var id = 2;
+
+		<p> {`${path}/${id}`} </p>
+		
+		<p> {path}/{id} </p>
+
+Ex:
+data-binding.jsx
+
+export function DataBinding(){
+    
+    var path = "/products";
+    var id = 2;
+
+    return(
+        <div className="container-fluid">
+            <h2>Data Types</h2>
+            Path : {`${path}/${id}`} <br />
+            Path : {path}/{id}
+        </div>
+    )
+}
+
+- You can use all your JavaScript string methods and properties to format and manipulate string dynamically.
+				bold()
+				italics()
+				fontsize()				=> formats
+				fontcolor()
+				toUpperCase()
+				toLowerCase()
+				etc.. 
+
+				length
+				charAt()
+				charCodeAt()			=> manipulations
+				substring()
+				substr()
+				slice()
+				etc..
+
+- React handles injection attacks [XSS - Cross Site Scripting Attacks], hence several formats are not recommended to bind dynamically.
+- React recommends to use style and class binding instead.
+
+Ex:
+
+export function DataBinding(){
+    
+    var msg = "Welcome to React";
+
+    return(
+        <div className="container-fluid">
+            <h2>Data Types</h2>
+            {msg.toUpperCase().slice(0,7)}
+        </div>
+    )
+}
+
+- You can use various JavaScript parsing methods to convert a numeric string value into number.
+
+		a) parseInt()
+		b) parseFloat()
+
+	Syntax:
+			parseInt("AB45");		// invalid NaN
+			parseInt("45AB");		// valid 45
+
+3. Boolean
+- React can't display a boolean value, it can just use the boolean value.
+- It requires various operators and functions to verify the boolean &  value bind relative data.
+
+Syntax:
+		var stock = true;
+		
+		{ (stock===true) ? "Available": "Out of Stock" }
+
+4. Undefined
+- It specifies that value is not defined into a reference during compile time.
+- The keyword "undefined" is used to verify value in reference.
+
+Syntax:
+		var price;				// undefined
+
+		{ (price) ? price: "Price Not Defined" }					=> Good Code
+
+		{ (price===undefined) ? "Price Not Defined" : price }		=> Bad Code
+
+
+5. Null 
+- It specifies that value is not defined into reference during run time.
+- It is verified using "null" keyword.
+
+Syntax:
+		var price = prompt("Enter Price");
+
+		{ (price===null) ? "Please Enter Price": price }
+
+-->

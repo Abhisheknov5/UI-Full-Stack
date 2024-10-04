@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+//import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { DataBinding } from './DataBinding/data-binding';
+
+import { StateforComponent } from './State for Component/1-State for Component'
+import { StateforComponents } from './State for Component/2-State for Component'
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <DataBinding />
-  
+   
+    <StateforComponent/>
+    <StateforComponents/>
   </React.StrictMode>
 );
 
