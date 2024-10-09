@@ -22,7 +22,7 @@ State for Component :-
 - React 17+ version introduced "useState()" hook to maintain a state for function components.
 - Hook is a service which comprises of pre-defined business logic and data that you implement and use in your component.
 
-							useState()
+useState() :-
 - It is a react hook used to configure state for component.
 - State is dynamic and mutable.
 - It can handle data for your component and make it available accross requests.

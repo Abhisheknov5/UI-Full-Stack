@@ -1,0 +1,6 @@
+nav img:hover {
+    border: 2px solid blue;
+}
+nav img {
+    margin-bottom: 20px;
+}

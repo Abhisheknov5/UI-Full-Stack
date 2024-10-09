@@ -1,0 +1,77 @@
+<!--
+Data Binding :-
+
+- Data binding is a technique of accessing data from source and displaying in UI, identifying the changes in data and updating back to source.
+
+- JavaScript handles data binding using various DOM methods and Browser Events.
+- React uses a data binding expression "{  }" that allows to bind data to any JSX element.
+
+Syntax:
+		var  uname = "John";
+
+		<input type="text"  value={uname} />
+		<p> Hello ! {uname} </p>
+
+- You can bind any type of data to UI
+
+- Data binding is classified into 2 types
+    1) One Way Binding
+    2) Two Way Binding
+- Data Binding evolved from an architectural pattern called "MVC".
+  [Model View Controller]
+- Trygve introduced MVC architecture in early 1970's and formulated with "Small Talk".
+- MVC allows code reusability and separation.
+- It comprises of 3 components
+    a) Model
+    b) View
+    c) Controller
+
+Model
+- Model represents the data you are working with.
+- It comprises of logic that manipulates data.
+
+View
+- It represents the UI.
+- It is responsible for presenting your data.
+
+Controller
+- It is the core component that handle overall process.
+- It handles communication between model and controller.
+- It defines application specific logic.
+
+(1) One Way Binding:
+- It is the process of accessign data from model and updating to UI.
+- React implicitly supports one-way binding.
+- It is faster in rendering UI, as it is un-directional.
+- It is safe for data, as it will not allow any modification in data dynamically.
+
+(2) Two Way Binding:-
+- It is a data binding technique with bi-directional flow.
+- You can access the data from Model and update to UI.
+- You can identify the changes the UI and update back to Model.
+- Model is considered as "Single-Source-of-Truth".
+
+         previousValue == currentValue  => No change detected
+         previousVlaue !== currentValue => Change detected
+
+  Model comprises of data tracking before and after change. As it tracks the changes, it comprises of "Truth" that confirm change and updated.
+
+- React will not support "Two-Way" data binding implicitly.
+- You have to implement explicitly using event binding technique.
+ - React two way binding can be handled only by using "onChange" event.
+
+Syntax:
+      function handleNameChange()
+      {
+      }
+
+      <input type="text"  onChange={handNameChange}  />
+
+- React uses in-built event listener, which can access element and event details using "event" argument.
+
+     function handleNameChange(event)
+     {
+         event.clientX, clientY, keyCode, charCode, which etc..
+         event.target.id, name, value, src, width, height etc..
+    }
+-->

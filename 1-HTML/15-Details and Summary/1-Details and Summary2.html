@@ -1,0 +1,42 @@
+<!--
+Details & Summary:-
+- Details is container with summary as caption.
+- You can show or hide contents dynamically using details & summary.
+
+Syntax:
+    <details>
+        <summary> Caption </summary>
+        .... your content...
+    </details>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detals and Summary</title>
+    <style>
+        details div {
+            margin-left: 50px;
+            margin-bottom: 10px;
+            margin-top: 5px;
+            color: blue;
+        }
+        summary {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- The <details> element acts as a collapsible section -->
+    <details open> <!-- 'open' attribute ensures the section is expanded by default -->
+        <!-- The <summary> is the clickable caption to show/hide the content -->
+        <summary>Need Help?</summary>
+
+        <!-- The collapsible content inside <details> -->
+        <div>Forgot Password</div>
+        <div>Other issues with sign-in</div>
+    </details>
+    
+</body>
+</html>

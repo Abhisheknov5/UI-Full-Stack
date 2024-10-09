@@ -1,0 +1,44 @@
+<!--
+5. How to remove numbering for ordered list?
+A. By configuring the "list-style" set to "none".
+
+Syntax:
+    ol {
+        list-style: none;
+    }
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove numbering for ordered list</title>
+    <style>
+        ol {
+            list-style: none;
+            display: flex;
+        }
+        li {
+            width: 100px;
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            margin: 20px;
+            background-color: yellow;
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ol>
+            <li>Home</li>
+            <li>Electronic</li>
+            <li>Footwear</li>
+            <li>Fashion</li>
+        </ol>
+    </nav>
+    
+</body>
+</html>

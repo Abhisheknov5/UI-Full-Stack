@@ -6,6 +6,8 @@ import { XMLhttpRequestObject } from './Accesing-Data-from-APIs-or-JSON-File/1-X
 import { JavaScriptFetch } from './Accesing-Data-from-APIs-or-JSON-File/2- JavaScript fetch()';
 import { JQueryAjax } from './Accesing-Data-from-APIs-or-JSON-File/3-JQuery-Ajax';
 import { ThirdPartyLibraries } from './Accesing-Data-from-APIs-or-JSON-File/4-3rd Party Libraries';
+import { NasaAPI } from './Accesing-Data-from-APIs-or-JSON-File/5.nasa';
+import { PresentingCard } from './Accesing-Data-from-APIs-or-JSON-File/6-Presenting Card';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
 import $ from "jquery";
@@ -17,9 +19,12 @@ root.render(
     <JavaScriptFetch />
     <JQueryAjax />
     <ThirdPartyLibraries/>
+    <NasaAPI/>
+    <PresentingCard/>
   
   </React.StrictMode>
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

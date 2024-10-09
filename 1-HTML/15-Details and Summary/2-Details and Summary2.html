@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details and Summary-2</title>
+    <style>
+        details div {
+            margin-left: 50px;
+            margin-bottom: 10px;
+            margin-top: 5px;
+            color:blue;
+            background-color: lightgray;
+            padding: 4px;
+            width: 120px;
+        }
+        summary {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+     <!-- First <details> element for the 'Home' section -->
+    <details open> <!-- 'open' attribute ensures this section is expanded by default -->
+        <summary>Home</summary>  <!-- Summary caption (clickable) -->
+        <div>Electronic</div> <!-- Content inside 'Home' -->
+        <div>Footwear</div>   <!-- Content inside 'Home' -->
+        <div>Fashion</div>    <!-- Content inside 'Home' -->
+    </details>
+
+     <!-- Second <details> element for the 'Electronic' section -->
+    <details>
+        <summary>Electronic</summary> <!-- Summary caption for 'Electronic' -->
+        <div>Televisions</div>        <!-- Content inside 'Electronic' -->
+        <div>Mobiles</div>            <!-- Content inside 'Electronic' -->
+        <div>Watches</div>            <!-- Content inside 'Electronic' -->
+    </details>
+
+     <!-- Third <details> element for the 'Footwear' section -->
+    <details>
+        <summary>Footwear</summary>    <!-- Summary caption for 'Footwear' -->
+        <div>Casuals</div>             <!-- Content inside 'Footwear' -->
+        <div>Sneakers</div>            <!-- Content inside 'Footwear' -->
+        <div>Boots</div>               <!-- Content inside 'Footwear' -->
+    </details>
+</body>
+</html>
