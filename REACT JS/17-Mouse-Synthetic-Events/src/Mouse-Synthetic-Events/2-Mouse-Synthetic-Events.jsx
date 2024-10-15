@@ -26,9 +26,6 @@ export function MouseSyntheticEvent_2(){
 
             </div>
             <img style={styleObj} width="50" height="50" src="Afternoon.gif"  />
-
-            
-
         </div>
     )
 }

@@ -1,5 +1,3 @@
-
-
 export function MouseSyntheticEvent_3(){
 
     // Function to handle mouse over event
