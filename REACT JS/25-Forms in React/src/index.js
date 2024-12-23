@@ -1,23 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { TimerDemo } from './Form Events/2-Use Reference Hook';
-import { SetIntervalClearInterval } from './Form Events/3-SetInterval or ClearInterval';
-import { Image } from './Form Events/4-Image';
-import { SlideShow } from './Form Events/5-slide-show';
+import { FormDemo } from './Forms in React/1-Form';
+import { FormValidation } from './Forms in React/2-FormikValidation';
+import { YupforValidation } from './Forms in React/3-Yup-For-Validation';
+import { OnBlur } from './Forms in React/4-onBlur';
+import { FormicComponents } from './Forms in React/5-Fomik components';
 import reportWebVitals from './reportWebVitals';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
-import { SlideShows } from './Form Events/5-slide-show';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <TimerDemo />
-    <SetIntervalClearInterval />
-    <Image/>
-    <SlideShows />
+    <FormDemo />
+    <FormValidation />
+    <YupforValidation />
+    <OnBlur />
+    <FormicComponents />
   </React.StrictMode>
 );
 

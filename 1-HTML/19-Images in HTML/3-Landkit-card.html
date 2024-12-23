@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <!-- Meta tags for character encoding and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landkit-card</title>
+    <!-- Link to Bootstrap icons for icons used in the page -->
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <style>
+     <!-- Inline CSS for styling the page -->
+   <style>
+      /* Header styles */
         header {
             font-size: 25px;
             font-family: Arial;
@@ -13,14 +17,17 @@
             justify-content: space-around;
             padding: 20px;
         }
+         /* Styling for spacing within the header */
         span {
             margin-right: 25px;
         }
+         /* Brand title styling */
         .brand-title {
             font-size: 30px;
             color: blue;
             font-weight: bold;
         }
+        /* Buy button styling */
         .buy {
             background-color: blue;
             color: white;
@@ -30,26 +37,32 @@
             display: inline-block;
             text-align: center;
         }
+        /* Image styling for the section */
         .work-img {
             width: 50%;
             float: right;
         }
+            /* Main section styling */
         main {
             padding-left: 100px;
             padding-right: 100px;
             font-family: Arial;
         }
+          /* Title styling for the main section */
         .section-title {
             font-size: 50px;
             margin-top: 40px;
             margin-bottom: 40px;
         }
+          /* Subtitle styling */
         .section-subtitle {
             font-size: 25px;
         }
+        /* Button section styling */
         .buttons {
             margin-top: 40px;
         }
+         /* Styling for "View all page" button */
         .btn-view {
             display: inline-block;
             width: 200px;
@@ -59,6 +72,7 @@
             border: 1px solid gray;
             background-color: lightskyblue;
         }
+         /* Styling for "Documentation" button */
         .btn-doc {
             display: inline-block;
             width: 200px;
@@ -70,35 +84,47 @@
     </style>
 </head>
 <body>
+     <!-- Header section of the webpage -->
     <header>
+          <!-- Brand title section -->
         <div>
             <span class="brand-title">Landkit</span>
         </div>
+        <!-- Navigation links -->
         <div>
             <span>Ladings</span>
             <span>Pages</span>
             <span>Account</span>
             <span>Documentation</span>
         </div>
+        <!-- Sign-in and Buy button section -->
         <div>
             <span class="bi bi-person">Signin</span>
             <span class="buy">Buy</span>
         </div>
     </header>
+     <!-- Main section containing image, title, subtitle, and buttons -->
     <section>
+          <!-- Image for the section -->
         <img src="../public/images/work.png" class="work-img">
+          <!-- Main content area -->
         <main>
+                <!-- Title for the main section -->
             <div class="section-title">
               Welcome to<span><font color="blue"> Landkit.</font></span><br>
               Ddevelop anything.
             </div>
+            <!-- Subtitle for additional description -->
             <div class="section-subtitle">
                 Build a beautiful, modern website with flexible Bootstrap components built from scratch.
             </div>
+             <!-- Buttons for viewing pages and accessing documentation -->
             <div class="buttons">
+                 <!-- View all pages button with right arrow icon -->
                 <span class="btn-view">
                     View all page <span class="bi bi-arrow-right"></span>
                 </span>
+                 <!-- Documentation button -->
                 <span class="btn-doc">
                     Documentation
                 </span>

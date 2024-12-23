@@ -1,23 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { TimerDemo } from './Form Events/2-Use Reference Hook';
-import { SetIntervalClearInterval } from './Form Events/3-SetInterval or ClearInterval';
-import { Image } from './Form Events/4-Image';
-import { SlideShow } from './Form Events/5-slide-show';
+import { TouchEvent } from './Touch Events/Touch Events';
 import reportWebVitals from './reportWebVitals';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
-import { SlideShows } from './Form Events/5-slide-show';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <TimerDemo />
-    <SetIntervalClearInterval />
-    <Image/>
-    <SlideShows />
+    <TouchEvent />
   </React.StrictMode>
 );
 
